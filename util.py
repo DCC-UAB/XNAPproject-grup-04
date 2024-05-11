@@ -5,7 +5,7 @@ from keras.layers import Input, LSTM, Dense, GRU
 from keras.models import load_model
 from keras.callbacks import TensorBoard
 import numpy as np
-import _pickle as pickle
+import pickle
 
 batch_size = 128  # Batch size for training.
 epochs = 20  # Number of epochs to train for.
