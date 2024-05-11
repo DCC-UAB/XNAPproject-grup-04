@@ -1,5 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/L30CyvB9)
-# XNAP-Project title (replace it by the title of your project)
+# XNAP-Projecte : Machine Translation
 Write here a short summary about your project. The text must include a short introduction and the targeted goals
 
 ## Code structure
