@@ -11,11 +11,14 @@ batch_size = 128  # Batch size for training.
 epochs = 20  # Number of epochs to train for.
 latent_dim = 1024#256  # Latent dimensionality of the encoding space.
 num_samples = 145437  # Number of samples to train on.
+
 # Path to the data txt file on disk.
-data_path = 'fra.txt' # to replace by the actual dataset name
+data_path = './Data/Spa-Eng/spa.txt' 
 encoder_path='encoder_modelPredTranslation.h5'
 decoder_path='decoder_modelPredTranslation.h5'
-LOG_PATH="log"
+
+LOG_PATH="./log"
+
 
 
 def prepareData(data_path):
