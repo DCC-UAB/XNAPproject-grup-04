@@ -1,5 +1,6 @@
 from keras.models import load_model
 from util import *
+
 filename="char2encoding.pkl"
 sentence="I work"
 #saveChar2encoding("char2encoding.pkl",input_token_index,16,71,reverse_target_char_index,num_decoder_tokens,target_token_index)
