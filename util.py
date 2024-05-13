@@ -9,13 +9,15 @@ import pickle
 
 batch_size = 128  # Batch size for training.
 epochs = 20  # Number of epochs to train for.
-latent_dim = 1024#256  # Latent dimensionality of the encoding space.
+latent_dim = 1024 #256  # Latent dimensionality of the encoding space.
 num_samples = 145437  # Number of samples to train on.
+
 # Path to the data txt file on disk.
-data_path = 'fra.txt' # to replace by the actual dataset name
+data_path = './Data/Spa-Eng/spa.txt' 
 encoder_path='encoder_modelPredTranslation.h5'
 decoder_path='decoder_modelPredTranslation.h5'
-LOG_PATH="log"
+
+LOG_PATH="./log"
 
 
 def prepareData(data_path):
@@ -140,8 +142,9 @@ def modelTranslation(num_encoder_tokens,num_decoder_tokens):
     return model,decoder_outputs,encoder_inputs,encoder_states,decoder_inputs,decoder_lstm,decoder_dense
 
 def trainSeq2Seq(model,encoder_input_data, decoder_input_data,decoder_target_data):
-# We load tensorboad
-# We train the model
+    # We load tensorboad
+    # We train the model
+
     LOG_PATH="/output/log"
     
     tbCallBack = TensorBoard(log_dir=LOG_PATH, histogram_freq=0, write_graph=True, write_images=True)
