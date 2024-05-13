@@ -19,10 +19,42 @@ decoder_path='decoder_modelPredTranslation.h5'
 
 LOG_PATH="./log"
 
+learingrate = 0.0001
+
+opti = 'rmsprop' #'adam'
+
+
+# start a new wandb run to track this script
+config_defaults = {
+    "batch_size": batch_size,
+    "learning_rate": learingrate,
+    "dataset": data_path,
+    "epochs": epochs,
+    "latent_dim": latent_dim,
+    "cell_type": 'LSTM', #'GRU'
+    "optimizer":  opti,
+    "lstm_layers": 1, 
+    'dropouts': 0
+    }
+
+wandb.init(
+    # set the wandb project where this run will be logged
+    project="Translation",
+    # track hyperparameters and run metadata
+    config=config_defaults,
+    name = name,
+    allow_val_change=True
+)
+
+
 
 def prepareData(data_path):
+
     input_characters,target_characters,input_texts,target_texts=extractChar(data_path)
+
     encoder_input_data, decoder_input_data, decoder_target_data, input_token_index, target_token_index,num_encoder_tokens,num_decoder_tokens,num_decoder_tokens,max_encoder_seq_length =encodingChar(input_characters,target_characters,input_texts,target_texts)
+
+    encoder_dataset, decoder_input_dataset, decoder_target_dataset  = create_data_loader(encoder_input_data, decoder_input_data, decoder_target_data)
     
     return encoder_input_data, decoder_input_data, decoder_target_data, input_token_index, target_token_index,input_texts,target_texts,num_encoder_tokens,num_decoder_tokens,num_decoder_tokens,max_encoder_seq_length
 
