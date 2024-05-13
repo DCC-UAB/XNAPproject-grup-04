@@ -24,29 +24,6 @@ learingrate = 0.0001
 opti = 'rmsprop' #'adam'
 
 
-# start a new wandb run to track this script
-config_defaults = {
-    "batch_size": batch_size,
-    "learning_rate": learingrate,
-    "dataset": data_path,
-    "epochs": epochs,
-    "latent_dim": latent_dim,
-    "cell_type": 'LSTM', #'GRU'
-    "optimizer":  opti,
-    "lstm_layers": 1, 
-    'dropouts': 0
-    }
-
-wandb.init(
-    # set the wandb project where this run will be logged
-    project="Translation",
-    # track hyperparameters and run metadata
-    config=config_defaults,
-    name = name,
-    allow_val_change=True
-)
-
-
 
 def prepareData(data_path):
 
