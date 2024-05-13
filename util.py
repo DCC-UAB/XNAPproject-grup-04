@@ -142,13 +142,9 @@ def modelTranslation(num_encoder_tokens,num_decoder_tokens):
     return model,decoder_outputs,encoder_inputs,encoder_states,decoder_inputs,decoder_lstm,decoder_dense
 
 def trainSeq2Seq(model,encoder_input_data, decoder_input_data,decoder_target_data):
-<<<<<<< HEAD
     # We load tensorboad
     # We train the model
-=======
-# We load tensorboad
-# We train the model
->>>>>>> ad66be68184bea1843580d908cb74264c490cfdc
+
     LOG_PATH="/output/log"
     
     tbCallBack = TensorBoard(log_dir=LOG_PATH, histogram_freq=0, write_graph=True, write_images=True)
