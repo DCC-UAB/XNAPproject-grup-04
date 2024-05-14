@@ -6,6 +6,7 @@ from keras.models import load_model
 from keras.callbacks import TensorBoard
 import numpy as np
 import pickle
+import wandb
 
 batch_size = 128  # Batch size for training.
 epochs = 20  # Number of epochs to train for.
@@ -25,6 +26,25 @@ opti = 'rmsprop' #'adam'
 
 validation_split = 0.01
 
+# Wandb 
+wandb.init(
+    project="Machine Translation",
+    config={
+
+        "batchsize" = batch_size
+        "epochs" = epochs
+        "latentdim" = latent_dim
+        "numsamples" = num_samples
+        "data" = data_path
+        "celltype" = 'LSTM' #'GRU'
+        "opti" = opti
+        "layers" = 1
+        "dropouts = 0
+        "learingrate" = learingrate
+        "validationsplit" = validation_split
+      
+    }
+)
 
 
 def prepareData(data_path):
