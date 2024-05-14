@@ -22,28 +22,24 @@ LOG_PATH="./log"
 
 learingrate = 0.0001
 
-opti = 'rmsprop' #'adam'
+optimizer = 'rmsprop' #'adam'
 
 validation_split = 0.01
 
 # Wandb 
 wandb.init(
     project="Machine Translation",
-    config={
-
-        "batchsize" = batch_size
-        "epochs" = epochs
-        "latentdim" = latent_dim
-        "numsamples" = num_samples
-        "data" = data_path
-        "celltype" = 'LSTM' #'GRU'
-        "opti" = opti
-        "layers" = 1
-        "dropouts = 0
-        "learingrate" = learingrate
-        "validationsplit" = validation_split
-      
-    }
+    config= { "batchsize" : batch_size,
+        "epochs" : epochs, 
+        "latentdim" : latent_dim,
+        "numsamples" : num_samples,
+        "data" : data_path,
+        "celltype" : 'LSTM' #'GRU',
+        "opti" : optimizer,
+        "layers" : 1,
+        "dropouts" : 0,
+        "learingrate" : learingrate,
+        "validationsplit" : validation_split }
 )
 
 
@@ -179,7 +175,7 @@ def trainSeq2Seq(model,encoder_input_data, decoder_input_data,decoder_target_dat
     
     tbCallBack = TensorBoard(log_dir=LOG_PATH, histogram_freq=0, write_graph=True, write_images=True)
     # Run training
-    model.compile(optimizer='rmsprop', loss='categorical_crossentropy',metrics=['accuracy'])
+    model.compile(optimizer=wandb.config.opti, loss='categorical_crossentropy',metrics=['accuracy'])
     model.fit([encoder_input_data, decoder_input_data], decoder_target_data,
               batch_size=batch_size,
               epochs=epochs,
