@@ -23,6 +23,8 @@ learingrate = 0.0001
 
 opti = 'rmsprop' #'adam'
 
+validation_split = 0.01
+
 
 
 def prepareData(data_path):
@@ -40,7 +42,8 @@ def extractChar(data_path,exchangeLanguage=False):
     input_characters = set()
     target_characters = set()
     lines = open(data_path).read().split('\n')
-    print(str(len(lines) - 1))
+    print(lines)
+    #print(str(len(lines) - 1))
     if (exchangeLanguage==False):
         for line in lines[: min(num_samples, len(lines) - 1)]:
             input_text, target_text = line.split('\t')
@@ -152,7 +155,7 @@ def trainSeq2Seq(model,encoder_input_data, decoder_input_data,decoder_target_dat
     # We load tensorboad
     # We train the model
 
-    LOG_PATH="/output/log"
+    LOG_PATH="./output/log"
     
     tbCallBack = TensorBoard(log_dir=LOG_PATH, histogram_freq=0, write_graph=True, write_images=True)
     # Run training
@@ -160,7 +163,7 @@ def trainSeq2Seq(model,encoder_input_data, decoder_input_data,decoder_target_dat
     model.fit([encoder_input_data, decoder_input_data], decoder_target_data,
               batch_size=batch_size,
               epochs=epochs,
-              validation_split=0.01,
+              validation_split=validation_split,
               callbacks = [tbCallBack])
     
 def generateInferenceModel(encoder_inputs, encoder_states,input_token_index,target_token_index,decoder_lstm,decoder_inputs,decoder_dense):
