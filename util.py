@@ -46,7 +46,7 @@ def extractChar(data_path,exchangeLanguage=False):
     #print(str(len(lines) - 1))
     if (exchangeLanguage==False):
         for line in lines[: min(num_samples, len(lines) - 1)]:
-            input_text, target_text = line.split('\t')
+            input_text, target_text = line.split('\t')[0], line.split('\t')[1]
             target_text = '\t' + target_text + '\n'
             input_texts.append(input_text)
             target_texts.append(target_text)

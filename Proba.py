@@ -26,11 +26,14 @@ target_characters = set()
 
 lines = open(data_path).read().split('\n')
 
-print(lines)
+#print(lines)
 
 for line in lines[: min(num_samples, len(lines) - 1)]:
-    input_text, target_text = line.split('\t')
+    #print(line)
+    input_text, target_text = line.split('\t')[0], line.split('\t')[1]
+    #print(input_text,"----", target_text, "\n")
     target_text = '\t' + target_text + '\n'
+    print(input_text,"----", target_text, "\n")
     input_texts.append(input_text)
     target_texts.append(target_text)
     for char in input_text:
