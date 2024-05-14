@@ -45,3 +45,7 @@ for line in lines[: min(num_samples, len(lines) - 1)]:
 
 input_characters = sorted(list(input_characters))
 target_characters = sorted(list(target_characters))
+
+import torch
+
+print(torch.cuda.is_available()) # Ha de ser True
