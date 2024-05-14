@@ -13,7 +13,7 @@ latent_dim = 1024 #256  # Latent dimensionality of the encoding space.
 num_samples = 145437  # Number of samples to train on.
 
 # Path to the data txt file on disk.
-data_path = './Data/Car-Eng/cat.txt' 
+data_path = './Data/Cat-Eng/cat.txt' 
 encoder_path='encoder_modelPredTranslation.h5'
 decoder_path='decoder_modelPredTranslation.h5'
 
