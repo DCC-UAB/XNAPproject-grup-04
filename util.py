@@ -20,12 +20,6 @@ decoder_path='decoder_modelPredTranslation.h5'
 
 LOG_PATH="./log"
 
-learingrate = 0.0001
-
-optimizer = 'rmsprop' #'adam'
-
-validation_split = 0.01
-
 # Wandb 
 wandb.init(
     project="Machine Translation",
@@ -35,11 +29,11 @@ wandb.init(
         "numsamples" : num_samples,
         "data" : data_path,
         "celltype" : 'LSTM' #'GRU',
-        "opti" : optimizer,
+        "optimizer" : 'rmsprop',
         "layers" : 1,
         "dropouts" : 0,
-        "learingrate" : learingrate,
-        "validationsplit" : validation_split }
+        "learingrate" : 0.0001,
+        "validationsplit" : 0.01 }
 )
 
 
