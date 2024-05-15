@@ -28,7 +28,7 @@ wandb.init(
         "latentdim" : latent_dim,
         "numsamples" : num_samples,
         "data" : data_path,
-        "celltype" : 'LSTM' #'GRU',
+        "celltype" : 'LSTM', #'GRU'
         "optimizer" : 'rmsprop',
         "layers" : 1,
         "dropouts" : 0,
@@ -175,7 +175,6 @@ def trainSeq2Seq(model,encoder_input_data, decoder_input_data,decoder_target_dat
               epochs=epochs,
               validation_split=validation_split,
               callbacks = [tbCallBack])
-    
 def generateInferenceModel(encoder_inputs, encoder_states,input_token_index,target_token_index,decoder_lstm,decoder_inputs,decoder_dense):
 # Once the model is trained, we connect the encoder/decoder and we create a new model
 # Finally we save everything
