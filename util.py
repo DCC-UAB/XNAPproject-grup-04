@@ -20,15 +20,10 @@ decoder_path='decoder_modelPredTranslation.h5'
 
 LOG_PATH="./log"
 
-learingrate = 0.0001
-
-opti = 'rmsprop' #'adam'
-
-validation_split = 0.01
-
 # Wandb 
 wandb.init(
     project="Machine Translation",
+<<<<<<< HEAD
     config={
 
         "batchsize" = batch_size
@@ -44,6 +39,19 @@ wandb.init(
         "validationsplit" = validation_split
       
     }
+=======
+    config= { "batchsize" : batch_size,
+        "epochs" : epochs, 
+        "latentdim" : latent_dim,
+        "numsamples" : num_samples,
+        "data" : data_path,
+        "celltype" : 'LSTM', #'GRU'
+        "optimizer" : 'rmsprop',
+        "layers" : 1,
+        "dropouts" : 0,
+        "learingrate" : 0.0001,
+        "validationsplit" : 0.01 }
+>>>>>>> a69e0474ccb1b2523187883862b85b991cea3df3
 )
 
 
@@ -179,13 +187,12 @@ def trainSeq2Seq(model,encoder_input_data, decoder_input_data,decoder_target_dat
     
     tbCallBack = TensorBoard(log_dir=LOG_PATH, histogram_freq=0, write_graph=True, write_images=True)
     # Run training
-    model.compile(optimizer='rmsprop', loss='categorical_crossentropy',metrics=['accuracy'])
+    model.compile(optimizer=wandb.config.opti, loss='categorical_crossentropy',metrics=['accuracy'])
     model.fit([encoder_input_data, decoder_input_data], decoder_target_data,
               batch_size=batch_size,
               epochs=epochs,
               validation_split=validation_split,
               callbacks = [tbCallBack])
-    
 def generateInferenceModel(encoder_inputs, encoder_states,input_token_index,target_token_index,decoder_lstm,decoder_inputs,decoder_dense):
 # Once the model is trained, we connect the encoder/decoder and we create a new model
 # Finally we save everything
