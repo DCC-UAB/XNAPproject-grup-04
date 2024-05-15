@@ -36,7 +36,7 @@ wandb.init(
         "latentdim" = latent_dim
         "numsamples" = num_samples
         "data" = data_path
-        "celltype" = 'LSTM' #'GRU'
+        "celltype" = 'LSTM', #'GRU'
         "opti" = opti
         "layers" = 1
         "dropouts = 0
