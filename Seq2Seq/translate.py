@@ -71,6 +71,6 @@ if __name__ == '__main__':
 	args = parser.parse_args()
 
 	global  input_lang, output_lang, pairs
-	input_lang, output_lang, pairs = prepareData('eng', 'fra')
+	input_lang, output_lang, pairs = prepareData('eng', 'cat')
 	main(args.translate_sentence)
  
