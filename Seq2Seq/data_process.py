@@ -4,7 +4,6 @@ import string
 import re
 import random
 
-dataset = 'data/cat.txt'
 
 class Language:
     def __init__(self, name):
