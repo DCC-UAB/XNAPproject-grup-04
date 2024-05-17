@@ -4,7 +4,6 @@ import string
 import re
 import random
 
-dataset = 'data/cat.txt'
 
 class Language:
     def __init__(self, name):
@@ -53,7 +52,7 @@ def readLangs(lang1, lang2, reverse=False):
     '''
     read data file and get pairs of english-french translation
     '''
-    lines = open(dataset, encoding='utf-8').\
+    lines = open('data/%s-%s.txt' % (lang1, lang2), encoding='utf-8').\
         read().strip().split('\n')
     pairs = [[process_sentence(s) for s in l.split('\t')] for l in lines]
     if reverse:
