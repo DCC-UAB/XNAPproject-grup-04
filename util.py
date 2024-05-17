@@ -6,6 +6,7 @@ from keras.models import load_model
 from keras.callbacks import TensorBoard
 import numpy as np
 import pickle
+import wandb
 
 batch_size = 128  # Batch size for training.
 epochs = 20  # Number of epochs to train for.
@@ -19,14 +20,26 @@ decoder_path='decoder_modelPredTranslation.h5'
 
 LOG_PATH="./log"
 
-learingrate = 0.0001
+# Wandb 
+"""wandb.init(
+    project="Machine Translation",
+    config={
 
-opti = 'rmsprop' #'adam'
+        "batchsize" = batch_size
+        "epochs" = epochs
+        "latentdim" = latent_dim
+        "numsamples" = num_samples
+        "data" = data_path
+        "celltype" = 'LSTM', #'GRU'
+        "opti" = opti
+        "layers" = 1
+        "dropouts = 0
+        "learingrate" = learingrate
+        "validationsplit" = validation_split
+      
+    }
 
-validation_split = 0.01
-
-
-
+"""
 def prepareData(data_path):
 
     input_characters,target_characters,input_texts,target_texts=extractChar(data_path)
@@ -159,13 +172,11 @@ def trainSeq2Seq(model,encoder_input_data, decoder_input_data,decoder_target_dat
     
     tbCallBack = TensorBoard(log_dir=LOG_PATH, histogram_freq=0, write_graph=True, write_images=True)
     # Run training
-    model.compile(optimizer='rmsprop', loss='categorical_crossentropy',metrics=['accuracy'])
+    model.compile(optimizer="rmsprop", loss='categorical_crossentropy',metrics=['accuracy'])
     model.fit([encoder_input_data, decoder_input_data], decoder_target_data,
               batch_size=batch_size,
               epochs=epochs,
-              validation_split=validation_split,
-              callbacks = [tbCallBack])
-    
+              validation_split=0.3)
 def generateInferenceModel(encoder_inputs, encoder_states,input_token_index,target_token_index,decoder_lstm,decoder_inputs,decoder_dense):
 # Once the model is trained, we connect the encoder/decoder and we create a new model
 # Finally we save everything
