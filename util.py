@@ -1,9 +1,9 @@
 from __future__ import print_function
 
-from keras.models import Model
-from keras.layers import Input, LSTM, Dense, GRU
-from keras.models import load_model
-from keras.callbacks import TensorBoard
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, LSTM, Dense, GRU
+from tensorflow.keras.models import load_model
+from tensorflow.keras.callbacks import TensorBoard
 import numpy as np
 import pickle
 import wandb
