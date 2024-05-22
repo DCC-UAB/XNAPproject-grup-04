@@ -4,7 +4,7 @@ import string
 import re
 import random
 
-dataset = 'Seq2Seq/data/spa.txt'
+dataset = './data/spa.txt'
 
 class Language:
     def __init__(self, name):
