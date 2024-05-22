@@ -1,69 +1,28 @@
-# Seq2Seq-Machine-Translation
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/L30CyvB9)
+# XNAP-Projecte : Machine Translation
+Write here a short summary about your project. The text must include a short introduction and the targeted goals
 
-![](https://smerity.com/media/images/articles/2016/gnmt_arch_1_enc_dec.svg)
+## Code structure
+You must create as many folders as you consider. You can use the proposed structure or replace it by the one in the base code that you use as starting point. Do not forget to add Markdown files as needed to explain well the code and how to use it.
 
+## Example Code
+The given code is a simple CNN example training on the MNIST dataset. It shows how to set up the [Weights & Biases](https://wandb.ai/site)  package to monitor how your network is learning, or not.
+
+Before running the code you have to create a local environment with conda and activate it. The provided [environment.yml](https://github.com/DCC-UAB/XNAP-Project/environment.yml) file has all the required dependencies. Run the following command: ``conda env create --file environment.yml `` to create a conda environment with all the required dependencies and then activate it:
 ```
-git clone https://github.com/shangeth/Seq2Seq-Machine-Translation.git
-cd Seq2Seq-Machine-Translation
-mkdir trained_model
-```
-
-Check [DEMO Notebook](./DEMO.ipynb)
-
-## Training the model
-Place the data in data/ directory.
-
-```
-python train.py -h
-```
-```
-usage: train.py [-h] [--epochs EPOCHS] [--lr LR]
-
-optional arguments:
-  -h, --help       show this help message and exit
-  --epochs EPOCHS  no of epochs to train
-  --lr LR          learning rate
+conda activate xnap-example
 ```
 
-Change the hyperparameters as needed and optimizer in the train.py file and train the model. Data preprocessing will be done before training.
+To run the example code:
 ```
-python train.py --epoch=5000 --lr=0.0001
-```
-```
-135842 translation pairs found in dataset.
-Reduced dataset to 135690 translation pairs.
-No of words in each language:
-eng 12996
-fra 21267
-
-Starting Training Loop...
-3m 44s (- 0m 0s) (5000 100%) 5.0887
-```
-## Translationg English sentence to French with the trained model.
-make sure the saved model exists in trained_model/ directory/
-
-```
-python translate.py -h
-```
-```
-usage: translate.py [-h] [--translate_sentence TRANSLATE_SENTENCE]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --translate_sentence TRANSLATE_SENTENCE
-                        sentence to translate
-
+python main.py
 ```
 
-```
-!python translate.py --translate_sentence='This is my sister!'
-```
-```
-135842 translation pairs found in dataset.
-Reduced dataset to 135690 translation pairs.
-No of words in each language:
-eng 12996
-fra 21267
-input = this is my sister !
-output = je ne que vous vous pas <EOS>
-```
+
+
+## Contributors
+Write here the name and UAB mail of the group members
+
+Xarxes Neuronals i Aprenentatge Profund
+Grau de __Write here the name of your estudies (Artificial Intelligence, Data Engineering or Computational Mathematics & Data analyitics)__, 
+UAB, 2023
