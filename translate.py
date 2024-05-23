@@ -67,10 +67,11 @@ def main(sentence):
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
-	parser.add_argument("--translate_sentence", help="sentence to translate", default=True)
+	parser.add_argument("--translate_sentence", help="sentence to translate", default="Hello")
 	args = parser.parse_args()
 
 	global  input_lang, output_lang, pairs
-	input_lang, output_lang, pairs = prepareData('eng', 'cat')
+	input_lang, output_lang, pairs = prepareData('eng', 'spa')
+	print(args.translate_sentence)
 	main(args.translate_sentence)
  
