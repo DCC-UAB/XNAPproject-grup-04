@@ -128,7 +128,7 @@ def main():
 	args = parser.parse_args()
 
 	global  input_lang, output_lang, pairs
-	input_lang, output_lang, pairs = prepareData('eng', 'cat')
+	input_lang, output_lang, pairs = prepareData('eng', 'spa')
 
 	hidden_size = 256
 	encoder1 = EncoderRNN(input_lang.n_words, hidden_size).to(device)
