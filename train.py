@@ -147,8 +147,5 @@ def main():
 	trainIters(encoder1, attn_decoder1, int(args.epochs), pairs, print_every=5000, learning_rate=float(args.lr))
 
 
-
-
-
 if __name__ == '__main__':
 	main()
