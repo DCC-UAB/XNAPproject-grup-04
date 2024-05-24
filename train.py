@@ -13,18 +13,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 import wandb
 import random
 
-# start a new wandb run to track this script
-wandb.init(
-    # set the wandb project where this run will be logged
-    project="Machine Translation",
 
-    # track hyperparameters and run metadata
-    config={
-    "learning_rate": 0.02,
-    "architecture": "CNN",
-    "dataset": "CIFAR-100",
-    }
-)
 
 def asMinutes(s):
     m = math.floor(s / 60)
@@ -115,6 +104,9 @@ def trainIters(encoder, decoder, n_iters, pairs, print_every=1000, plot_every=10
 
 	    loss = train(input_tensor, target_tensor, encoder,
 	                 decoder, encoder_optimizer, decoder_optimizer, criterion)
+		
+		wandb.log({"Training Loss": loss}, step=iter)
+
 	    print_loss_total += loss
 	    plot_loss_total += loss
 
@@ -136,7 +128,7 @@ def save_model(e, d):
 
 
 def main():
-	print(int(args.epochs))
+	
 	parser = argparse.ArgumentParser()
 	parser.add_argument("--epochs", help="no of epochs to train", default=75000)
 	parser.add_argument("--lr", help="learning rate", default=0.001)
@@ -148,6 +140,10 @@ def main():
 	hidden_size = 256
 	encoder1 = EncoderRNN(input_lang.n_words, hidden_size).to(device)
 	attn_decoder1 = AttnDecoderRNN(hidden_size, output_lang.n_words, dropout_p=0.1).to(device)
+
+	wandb.init(project="Machine Translation", config={"epochs": args.epochs, "learning_rate": args.lr})
+
+
 	trainIters(encoder1, attn_decoder1, int(args.epochs), pairs, print_every=5000, learning_rate=float(args.lr))
 
 
