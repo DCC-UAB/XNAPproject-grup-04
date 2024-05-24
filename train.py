@@ -10,6 +10,21 @@ teacher_forcing_ratio = 0.5
 MAX_LENGTH = 25
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+import wandb
+import random
+
+# start a new wandb run to track this script
+wandb.init(
+    # set the wandb project where this run will be logged
+    project="Machine Translation",
+
+    # track hyperparameters and run metadata
+    config={
+    "learning_rate": 0.02,
+    "architecture": "CNN",
+    "dataset": "CIFAR-100",
+    }
+)
 
 def asMinutes(s):
     m = math.floor(s / 60)
@@ -121,7 +136,7 @@ def save_model(e, d):
 
 
 def main():
-
+	print(int(args.epochs))
 	parser = argparse.ArgumentParser()
 	parser.add_argument("--epochs", help="no of epochs to train", default=75000)
 	parser.add_argument("--lr", help="learning rate", default=0.001)
