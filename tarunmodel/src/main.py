@@ -14,6 +14,9 @@ import copy
 import heapq
 import sentencepiece as spm
 
+
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:500"
+
 class Manager():
     def __init__(self, is_train=True, ckpt_name=None):
         # Load vocabs
