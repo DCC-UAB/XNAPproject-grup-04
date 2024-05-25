@@ -10,10 +10,6 @@ teacher_forcing_ratio = 0.5
 MAX_LENGTH = 25
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-import wandb
-import random
-
-
 
 def asMinutes(s):
     m = math.floor(s / 60)
@@ -63,13 +59,15 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
 	if use_teacher_forcing:
 	    # Teacher forcing: Feed the target as the next input
 	    for di in range(target_length):
-	        decoder_output, decoder_hidden, decoder_attention = decoder(decoder_input, decoder_hidden, encoder_outputs)
+	        decoder_output, decoder_hidden, decoder_attention = decoder(
+	            decoder_input, decoder_hidden, encoder_outputs)
 	        loss += criterion(decoder_output, target_tensor[di])
 	        decoder_input = target_tensor[di]  # Teacher forcing
 	else:
 	    # Without teacher forcing: use its own predictions as the next input
 	    for di in range(target_length):
-	        decoder_output, decoder_hidden, decoder_attention = decoder(decoder_input, decoder_hidden, encoder_outputs)
+	        decoder_output, decoder_hidden, decoder_attention = decoder(
+	            decoder_input, decoder_hidden, encoder_outputs)
 	        topv, topi = decoder_output.topk(1)
 	        decoder_input = topi.squeeze().detach()  # detach from history as input
 
@@ -99,10 +97,8 @@ def trainIters(encoder, decoder, n_iters, pairs, print_every=1000, plot_every=10
 	    input_tensor = training_pair[0]
 	    target_tensor = training_pair[1]
 
-	    loss = train(input_tensor, target_tensor, encoder,decoder, encoder_optimizer, decoder_optimizer, criterion)
-		
-		wandb.log({"Training Loss": loss}, step=iter)
-
+	    loss = train(input_tensor, target_tensor, encoder,
+	                 decoder, encoder_optimizer, decoder_optimizer, criterion)
 	    print_loss_total += loss
 	    plot_loss_total += loss
 
@@ -123,24 +119,24 @@ def save_model(e, d):
 	torch.save({'encoder':e.state_dict(), 'decoder':d.state_dict()}, './trained_model/seq2seq.net')
 
 
+
 def main():
-	
+
 	parser = argparse.ArgumentParser()
 	parser.add_argument("--epochs", help="no of epochs to train", default=75000)
 	parser.add_argument("--lr", help="learning rate", default=0.001)
 	args = parser.parse_args()
 
 	global  input_lang, output_lang, pairs
-	input_lang, output_lang, pairs = prepareData('eng', 'spa')
+	input_lang, output_lang, pairs = prepareData('eng', 'cat')
 
 	hidden_size = 256
 	encoder1 = EncoderRNN(input_lang.n_words, hidden_size).to(device)
 	attn_decoder1 = AttnDecoderRNN(hidden_size, output_lang.n_words, dropout_p=0.1).to(device)
-
-	wandb.init(project="Machine Translation", config={"epochs": args.epochs, "learning_rate": args.lr})
-
-
 	trainIters(encoder1, attn_decoder1, int(args.epochs), pairs, print_every=5000, learning_rate=float(args.lr))
+
+
+
 
 
 if __name__ == '__main__':
