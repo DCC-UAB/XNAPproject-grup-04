@@ -84,7 +84,7 @@ def main(sentence):
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
-	parser.add_argument("--translate_sentence", help="sentence to translate", default="Hello")
+	parser.add_argument("--translate_sentence", help="sentence to translate", default="Nice to meet you")
 	args = parser.parse_args()
 
 	global  input_lang, output_lang, pairs
