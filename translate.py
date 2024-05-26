@@ -45,6 +45,7 @@ def evaluateAndShowAttention(input_sentence):
 	output_words, attentions = evaluate(encoder1, attn_decoder1, input_sentence)
 	print('input =', input_sentence)
 	print('output =', ' '.join(output_words))
+	return ' '.join(output_words)
 
 def load_model():
 	hidden_size = 256
