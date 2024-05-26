@@ -104,7 +104,8 @@ def trainIters(encoder, decoder, n_iters, pairs, print_every=1000, plot_every=10
 
         print_loss_total += loss
         plot_loss_total += loss
-
+        print(iter, print_every)
+        print(iter % print_every ==  0)
         if iter % print_every == 0:
             print_loss_avg = print_loss_total / print_every
             print_loss_total = 0
