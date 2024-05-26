@@ -2,6 +2,9 @@ from data_process import *
 from model import *
 import argparse
 from train import *
+import nltk
+from nltk.translate.bleu_score import sentence_bleu
+
 
 MAX_LENGTH = 25
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -62,7 +65,20 @@ def load_model():
 
 def main(sentence):
 	sentence = process_sentence(sentence)
-	evaluateAndShowAttention(sentence)
+	translated_sentence = evaluateAndShowAttention(sentence)
+	print(translated_sentence)
+    
+    # Convert the translated sentence and reference sentence to the format required by BLEU score
+	translatedsentence = []
+	for word in translated_sentence:
+		if  word != '<EOS>':
+			translatedsentence.append(word)
+		
+	reference_sentence = [word for word in sentence.split(' ')]
+    
+    # Calculate BLEU score
+	bleu_score = sentence_bleu([reference_sentence], translated_sentence)
+	print('BLEU score =', bleu_score)
 
 
 if __name__ == '__main__':
