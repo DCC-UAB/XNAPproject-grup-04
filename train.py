@@ -15,7 +15,6 @@ teacher_forcing_ratio = 0.5
 MAX_LENGTH = 25
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-
 def asMinutes(s):
     m = math.floor(s / 60)
     s -= m * 60
@@ -82,7 +81,39 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
     decoder_optimizer.step()
     return loss.item() / target_length
 
-def trainIters(encoder, decoder, n_iters, pairs, print_every=1000, plot_every=100, learning_rate=0.01):
+def validate(encoder, decoder, pairs, criterion, max_length=MAX_LENGTH):
+    encoder.eval()
+    decoder.eval()
+    with torch.no_grad():
+        total_loss = 0
+        for pair in pairs:
+            input_tensor, target_tensor = tensorsFromPair(pair)
+            encoder_hidden = encoder.initHidden()
+
+            input_length = input_tensor.size(0)
+            target_length = target_tensor.size(0)
+            encoder_outputs = torch.zeros(max_length, encoder.hidden_size, device=device)
+            loss = 0
+            for ei in range(input_length):
+                encoder_output, encoder_hidden = encoder(input_tensor[ei], encoder_hidden)
+                encoder_outputs[ei] = encoder_output[0, 0]
+
+            decoder_input = torch.tensor([[SOS_token]], device=device)
+            decoder_hidden = encoder_hidden
+            for di in range(target_length):
+                decoder_output, decoder_hidden, decoder_attention = decoder(decoder_input, decoder_hidden, encoder_outputs)
+                topv, topi = decoder_output.topk(1)
+                decoder_input = topi.squeeze().detach()
+
+                loss += criterion(decoder_output, target_tensor[di])
+                if decoder_input.item() == EOS_token:
+                    break
+            total_loss += loss.item() / target_length
+    encoder.train()
+    decoder.train()
+    return total_loss / len(pairs)
+
+def trainIters(encoder, decoder, n_iters, train_pairs, val_pairs, print_every=1000, plot_every=100, learning_rate=0.01):
     print('Starting Training Loop...')
     start = time.time()
     plot_losses = []
@@ -91,7 +122,7 @@ def trainIters(encoder, decoder, n_iters, pairs, print_every=1000, plot_every=10
 
     encoder_optimizer = optim.SGD(encoder.parameters(), lr=learning_rate)
     decoder_optimizer = optim.SGD(decoder.parameters(), lr=learning_rate)
-    training_pairs = [tensorsFromPair(random.choice(pairs)) for i in range(n_iters)]
+    training_pairs = [tensorsFromPair(random.choice(train_pairs)) for i in range(n_iters)]
     criterion = nn.NLLLoss()
     for iter in range(1, n_iters + 1):
         training_pair = training_pairs[iter - 1]
@@ -108,7 +139,9 @@ def trainIters(encoder, decoder, n_iters, pairs, print_every=1000, plot_every=10
         if iter % print_every == 0:
             print_loss_avg = print_loss_total / print_every
             print_loss_total = 0
-            print('%s (%d %d%%) %.4f' % (timeSince(start, iter / n_iters), iter, iter / n_iters * 100, print_loss_avg))
+            val_loss = validate(encoder, decoder, val_pairs, criterion)
+            wandb.log({"Validation Loss": val_loss}, step=iter)
+            print('%s (%d %d%%) %.4f (Validation Loss: %.4f)' % (timeSince(start, iter / n_iters), iter, iter / n_iters * 100, print_loss_avg, val_loss))
 
         if iter % plot_every == 0:
             plot_loss_avg = plot_loss_total / plot_every
@@ -127,6 +160,11 @@ def main():
 
     global input_lang, output_lang, pairs
     input_lang, output_lang, pairs = prepareData('eng', 'spa')
+    
+    # Split the pairs into training and validation sets
+    train_size = int(0.8 * len(pairs))
+    train_pairs = pairs[:train_size]
+    val_pairs = pairs[train_size:]
 
     hidden_size = 256
     encoder1 = EncoderRNN(input_lang.n_words, hidden_size).to(device)
@@ -136,15 +174,14 @@ def main():
     wandb.init(project="Machine Translation", config={
         										"epochs": args.epochs, 
                                                 "learning_rate": args.lr, 
-                                                "cell_type": 'GRU', #LSTM',
+                                                "cell_type": 'LSTM', #'GRU',
                                                 "opti": "SDG",
                                                 "layers": 1,
                                                 "dataset": "eng-spa",
                                                 "hidden_size": hidden_size,
                                                 "dropout": 0.1})
 
-    trainIters(encoder1, attn_decoder1, int(args.epochs), pairs, print_every=5000, learning_rate=float(args.lr))
+    trainIters(encoder1, attn_decoder1, int(args.epochs), train_pairs, val_pairs, print_every=5000, learning_rate=float(args.lr))
 
 if __name__ == '__main__':
     main()
-

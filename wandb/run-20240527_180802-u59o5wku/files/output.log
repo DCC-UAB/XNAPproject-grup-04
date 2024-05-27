@@ -1,0 +1,6 @@
+
+Starting Training Loop...
+4m 48s (- 67m 24s) (5000 6%) 5.2826 (Validation Loss: 3.2435)
+10m 17s (- 66m 56s) (10000 13%) 5.1121 (Validation Loss: 3.8192)
+15m 44s (- 62m 56s) (15000 20%) 4.9872 (Validation Loss: 4.3116)
+22m 1s (- 60m 33s) (20000 26%) 4.9262 (Validation Loss: 5.3765)
