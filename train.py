@@ -141,6 +141,7 @@ def trainIters(encoder, decoder, n_iters, train_pairs, val_pairs, print_every=10
             print_loss_total = 0
             val_loss = validate(encoder, decoder, val_pairs, criterion)
             wandb.log({"Validation Loss": val_loss}, step=iter)
+            wandb.log({"Training Loss Avg": print_loss_avg}, step=iter)
             print('%s (%d %d%%) %.4f (Validation Loss: %.4f)' % (timeSince(start, iter / n_iters), iter, iter / n_iters * 100, print_loss_avg, val_loss))
 
         if iter % plot_every == 0:
@@ -174,7 +175,7 @@ def main():
     wandb.init(project="Machine Translation", config={
         										"epochs": args.epochs, 
                                                 "learning_rate": args.lr, 
-                                                "cell_type": 'LSTM', #'GRU',
+                                                "cell_type": 'GRU', #'GRU', LSTM
                                                 "opti": "SDG",
                                                 "layers": 1,
                                                 "dataset": "eng-spa",
