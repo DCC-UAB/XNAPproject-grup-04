@@ -25,3 +25,4 @@ config: {'epochs': 75000, 'learning_rate': 0.001, 'cell_type': 'LSTM', 'opti': '
 2024-05-27 18:08:18,551 INFO    MainThread:17130 [wandb_run.py:_redirect():2294] Wrapping output streams.
 2024-05-27 18:08:18,551 INFO    MainThread:17130 [wandb_run.py:_redirect():2319] Redirects installed.
 2024-05-27 18:08:18,560 INFO    MainThread:17130 [wandb_init.py:init():838] run started, returning control to user process
+2024-05-27 19:35:35,043 WARNING MsgRouterThr:17130 [router.py:message_loop():77] message_loop has been closed
