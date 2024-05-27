@@ -59,7 +59,6 @@ def load_model():
 	return e, d
 
 
-
 def main(sentence):
 	sentence = process_sentence(sentence)
 	evaluateAndShowAttention(sentence)
