@@ -222,8 +222,8 @@ def main():
     input_lang, output_lang, pairs = prepareData('eng', 'spa')
     
     # Split the pairs into training and validation sets
-    train_size = 15000
-    val_size = 5000
+    train_size = 50
+    val_size = 15
     train_pairs = pairs[:train_size]
     val_pairs = pairs[train_size:train_size + val_size]
     
