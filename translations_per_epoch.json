@@ -5,27 +5,27 @@
             {
                 "Idx": 2,
                 "Original": "i hid .",
-                "Translation": " ! copieis"
+                "Translation": " "
             },
             {
                 "Idx": 4,
                 "Original": "i hid .",
-                "Translation": " ! copieis"
+                "Translation": " "
             },
             {
                 "Idx": 6,
                 "Original": "i ran .",
-                "Translation": " ! copieis"
+                "Translation": " "
             },
             {
                 "Idx": 8,
                 "Original": "i try .",
-                "Translation": " ! copieis"
+                "Translation": " "
             },
             {
                 "Idx": 10,
                 "Original": "i won !",
-                "Translation": " ! hombros copieis"
+                "Translation": " "
             }
         ]
     },
@@ -35,27 +35,27 @@
             {
                 "Idx": 2,
                 "Original": "i hid .",
-                "Translation": " !"
+                "Translation": ""
             },
             {
                 "Idx": 4,
                 "Original": "i hid .",
-                "Translation": " !"
+                "Translation": ""
             },
             {
                 "Idx": 6,
                 "Original": "i ran .",
-                "Translation": " !"
+                "Translation": " "
             },
             {
                 "Idx": 8,
                 "Original": "i try .",
-                "Translation": " !"
+                "Translation": " "
             },
             {
                 "Idx": 10,
                 "Original": "i won !",
-                "Translation": "  !"
+                "Translation": " "
             }
         ]
     },
@@ -80,12 +80,12 @@
             {
                 "Idx": 8,
                 "Original": "i try .",
-                "Translation": ""
+                "Translation": " "
             },
             {
                 "Idx": 10,
                 "Original": "i won !",
-                "Translation": " !"
+                "Translation": " "
             }
         ]
     },
@@ -95,22 +95,22 @@
             {
                 "Idx": 2,
                 "Original": "i hid .",
-                "Translation": ""
+                "Translation": " "
             },
             {
                 "Idx": 4,
                 "Original": "i hid .",
-                "Translation": ""
+                "Translation": " "
             },
             {
                 "Idx": 6,
                 "Original": "i ran .",
-                "Translation": ""
+                "Translation": " "
             },
             {
                 "Idx": 8,
                 "Original": "i try .",
-                "Translation": ""
+                "Translation": " "
             },
             {
                 "Idx": 10,
@@ -155,27 +155,27 @@
             {
                 "Idx": 2,
                 "Original": "i hid .",
-                "Translation": " ."
+                "Translation": ""
             },
             {
                 "Idx": 4,
                 "Original": "i hid .",
-                "Translation": " ."
+                "Translation": ""
             },
             {
                 "Idx": 6,
                 "Original": "i ran .",
-                "Translation": " ."
+                "Translation": ""
             },
             {
                 "Idx": 8,
                 "Original": "i try .",
-                "Translation": " ."
+                "Translation": ""
             },
             {
                 "Idx": 10,
                 "Original": "i won !",
-                "Translation": ""
+                "Translation": " "
             }
         ]
     },
@@ -205,7 +205,7 @@
             {
                 "Idx": 10,
                 "Original": "i won !",
-                "Translation": " "
+                "Translation": ""
             }
         ]
     },
@@ -245,27 +245,27 @@
             {
                 "Idx": 2,
                 "Original": "i hid .",
-                "Translation": " !"
+                "Translation": " ."
             },
             {
                 "Idx": 4,
                 "Original": "i hid .",
-                "Translation": " !"
+                "Translation": " ."
             },
             {
                 "Idx": 6,
                 "Original": "i ran .",
-                "Translation": " !"
+                "Translation": " ."
             },
             {
                 "Idx": 8,
                 "Original": "i try .",
-                "Translation": " !"
+                "Translation": " ."
             },
             {
                 "Idx": 10,
                 "Original": "i won !",
-                "Translation": " !"
+                "Translation": ""
             }
         ]
     },
@@ -275,27 +275,27 @@
             {
                 "Idx": 2,
                 "Original": "i hid .",
-                "Translation": " !"
+                "Translation": " ."
             },
             {
                 "Idx": 4,
                 "Original": "i hid .",
-                "Translation": " !"
+                "Translation": " ."
             },
             {
                 "Idx": 6,
                 "Original": "i ran .",
-                "Translation": " !"
+                "Translation": " ."
             },
             {
                 "Idx": 8,
                 "Original": "i try .",
-                "Translation": " !"
+                "Translation": " ."
             },
             {
                 "Idx": 10,
                 "Original": "i won !",
-                "Translation": " !"
+                "Translation": ""
             }
         ]
     }
