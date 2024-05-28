@@ -1,0 +1,1 @@
+{"Validation Loss": 4.557784469392564, "Validation BLEU": 6.536957915142695e-232, "Validation METEOR": 0.11624319419237748, "_timestamp": 1716931546.2917612, "_runtime": 57.686859130859375, "_step": 19, "Training loss": 0.03709526394208273, "_wandb": {"runtime": 57}}

@@ -1,0 +1,49 @@
+Starting Training Loop...
+Epoch 1/10
+Validation Loss: 7.4471, Validation BLEU: 0.0000, Validation METEOR: 0.0000
+0m 9s (- 0m 0s) (50 100%) 0.0981
+Epoch 2/10
+Validation Loss: 6.3226, Validation BLEU: 0.0000, Validation METEOR: 0.0000
+0m 14s (- 0m 0s) (50 100%) 0.0890
+Epoch 3/10
+Validation Loss: 5.7860, Validation BLEU: 0.0000, Validation METEOR: 0.0000
+0m 20s (- 0m 0s) (50 100%) 0.0844
+Epoch 4/10
+Validation Loss: 6.7312, Validation BLEU: 0.0000, Validation METEOR: 0.0000
+0m 25s (- 0m 0s) (50 100%) 0.0795
+Epoch 5/10
+Validation Loss: 5.1383, Validation BLEU: 0.0000, Validation METEOR: 0.0000
+0m 31s (- 0m 0s) (50 100%) 0.0705
+Epoch 6/10
+Validation Loss: 4.8327, Validation BLEU: 0.0000, Validation METEOR: 0.0000
+0m 36s (- 0m 0s) (50 100%) 0.0554
+Epoch 7/10
+Validation Loss: 4.1679, Validation BLEU: 0.0000, Validation METEOR: 0.0000
+0m 41s (- 0m 0s) (50 100%) 0.0474
+Epoch 8/10
+Validation Loss: 4.1409, Validation BLEU: 0.0000, Validation METEOR: 0.0000
+0m 46s (- 0m 0s) (50 100%) 0.0401
+Epoch 9/10
+Validation Loss: 4.5514, Validation BLEU: 0.0000, Validation METEOR: 0.1162
+0m 51s (- 0m 0s) (50 100%) 0.0392
+Epoch 10/10
+C:\Users\marbj\AppData\Local\Programs\Python\Python311\Lib\site-packages\nltk\translate\bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+C:\Users\marbj\AppData\Local\Programs\Python\Python311\Lib\site-packages\nltk\translate\bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+C:\Users\marbj\AppData\Local\Programs\Python\Python311\Lib\site-packages\nltk\translate\bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+Validation Loss: 4.5578, Validation BLEU: 0.0000, Validation METEOR: 0.1162
+0m 56s (- 0m 0s) (50 100%) 0.0371
