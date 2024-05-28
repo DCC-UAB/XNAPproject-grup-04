@@ -1,0 +1,20 @@
+Starting Training Loop...
+Epoch 1/10
+Traceback (most recent call last):
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\TrainMar.py", line 248, in <module>
+    main()
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\TrainMar.py", line 245, in main
+    trainIters(encoder1, attn_decoder1, int(args.epochs), train_pairs, val_pairs, print_every=5000, learning_rate=float(args.lr))
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\TrainMar.py", line 181, in trainIters
+    val_loss, val_bleu, val_meteor, selected_translations = validate(encoder, decoder, val_pairs, selected_indices, criterion=criterion)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\TrainMar.py", line 125, in validate
+    loss += criterion(decoder_output, target_tensor[di].unsqueeze(0))
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\modules\loss.py", line 216, in forward
+    return F.nll_loss(input, target, weight=self.weight, ignore_index=self.ignore_index, reduction=self.reduction)
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\functional.py", line 2733, in nll_loss
+    return torch._C._nn.nll_loss_nd(input, target, weight, _Reduction.get_enum(reduction), ignore_index)
+RuntimeError: 0D or 1D target tensor expected, multi-target not supported

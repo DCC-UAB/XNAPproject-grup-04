@@ -1,0 +1,302 @@
+[
+    {
+        "Epoch": 1,
+        "Sentences": [
+            {
+                "Idx": 2,
+                "Original": "i hid .",
+                "Translation": " ! copieis"
+            },
+            {
+                "Idx": 4,
+                "Original": "i hid .",
+                "Translation": " ! copieis"
+            },
+            {
+                "Idx": 6,
+                "Original": "i ran .",
+                "Translation": " ! copieis"
+            },
+            {
+                "Idx": 8,
+                "Original": "i try .",
+                "Translation": " ! copieis"
+            },
+            {
+                "Idx": 10,
+                "Original": "i won !",
+                "Translation": " ! hombros copieis"
+            }
+        ]
+    },
+    {
+        "Epoch": 2,
+        "Sentences": [
+            {
+                "Idx": 2,
+                "Original": "i hid .",
+                "Translation": " !"
+            },
+            {
+                "Idx": 4,
+                "Original": "i hid .",
+                "Translation": " !"
+            },
+            {
+                "Idx": 6,
+                "Original": "i ran .",
+                "Translation": " !"
+            },
+            {
+                "Idx": 8,
+                "Original": "i try .",
+                "Translation": " !"
+            },
+            {
+                "Idx": 10,
+                "Original": "i won !",
+                "Translation": "  !"
+            }
+        ]
+    },
+    {
+        "Epoch": 3,
+        "Sentences": [
+            {
+                "Idx": 2,
+                "Original": "i hid .",
+                "Translation": ""
+            },
+            {
+                "Idx": 4,
+                "Original": "i hid .",
+                "Translation": ""
+            },
+            {
+                "Idx": 6,
+                "Original": "i ran .",
+                "Translation": ""
+            },
+            {
+                "Idx": 8,
+                "Original": "i try .",
+                "Translation": ""
+            },
+            {
+                "Idx": 10,
+                "Original": "i won !",
+                "Translation": " !"
+            }
+        ]
+    },
+    {
+        "Epoch": 4,
+        "Sentences": [
+            {
+                "Idx": 2,
+                "Original": "i hid .",
+                "Translation": ""
+            },
+            {
+                "Idx": 4,
+                "Original": "i hid .",
+                "Translation": ""
+            },
+            {
+                "Idx": 6,
+                "Original": "i ran .",
+                "Translation": ""
+            },
+            {
+                "Idx": 8,
+                "Original": "i try .",
+                "Translation": ""
+            },
+            {
+                "Idx": 10,
+                "Original": "i won !",
+                "Translation": " "
+            }
+        ]
+    },
+    {
+        "Epoch": 5,
+        "Sentences": [
+            {
+                "Idx": 2,
+                "Original": "i hid .",
+                "Translation": ""
+            },
+            {
+                "Idx": 4,
+                "Original": "i hid .",
+                "Translation": ""
+            },
+            {
+                "Idx": 6,
+                "Original": "i ran .",
+                "Translation": ""
+            },
+            {
+                "Idx": 8,
+                "Original": "i try .",
+                "Translation": ""
+            },
+            {
+                "Idx": 10,
+                "Original": "i won !",
+                "Translation": " "
+            }
+        ]
+    },
+    {
+        "Epoch": 6,
+        "Sentences": [
+            {
+                "Idx": 2,
+                "Original": "i hid .",
+                "Translation": " ."
+            },
+            {
+                "Idx": 4,
+                "Original": "i hid .",
+                "Translation": " ."
+            },
+            {
+                "Idx": 6,
+                "Original": "i ran .",
+                "Translation": " ."
+            },
+            {
+                "Idx": 8,
+                "Original": "i try .",
+                "Translation": " ."
+            },
+            {
+                "Idx": 10,
+                "Original": "i won !",
+                "Translation": ""
+            }
+        ]
+    },
+    {
+        "Epoch": 7,
+        "Sentences": [
+            {
+                "Idx": 2,
+                "Original": "i hid .",
+                "Translation": ""
+            },
+            {
+                "Idx": 4,
+                "Original": "i hid .",
+                "Translation": ""
+            },
+            {
+                "Idx": 6,
+                "Original": "i ran .",
+                "Translation": ""
+            },
+            {
+                "Idx": 8,
+                "Original": "i try .",
+                "Translation": ""
+            },
+            {
+                "Idx": 10,
+                "Original": "i won !",
+                "Translation": " "
+            }
+        ]
+    },
+    {
+        "Epoch": 8,
+        "Sentences": [
+            {
+                "Idx": 2,
+                "Original": "i hid .",
+                "Translation": ""
+            },
+            {
+                "Idx": 4,
+                "Original": "i hid .",
+                "Translation": ""
+            },
+            {
+                "Idx": 6,
+                "Original": "i ran .",
+                "Translation": ""
+            },
+            {
+                "Idx": 8,
+                "Original": "i try .",
+                "Translation": ""
+            },
+            {
+                "Idx": 10,
+                "Original": "i won !",
+                "Translation": ""
+            }
+        ]
+    },
+    {
+        "Epoch": 9,
+        "Sentences": [
+            {
+                "Idx": 2,
+                "Original": "i hid .",
+                "Translation": " !"
+            },
+            {
+                "Idx": 4,
+                "Original": "i hid .",
+                "Translation": " !"
+            },
+            {
+                "Idx": 6,
+                "Original": "i ran .",
+                "Translation": " !"
+            },
+            {
+                "Idx": 8,
+                "Original": "i try .",
+                "Translation": " !"
+            },
+            {
+                "Idx": 10,
+                "Original": "i won !",
+                "Translation": " !"
+            }
+        ]
+    },
+    {
+        "Epoch": 10,
+        "Sentences": [
+            {
+                "Idx": 2,
+                "Original": "i hid .",
+                "Translation": " !"
+            },
+            {
+                "Idx": 4,
+                "Original": "i hid .",
+                "Translation": " !"
+            },
+            {
+                "Idx": 6,
+                "Original": "i ran .",
+                "Translation": " !"
+            },
+            {
+                "Idx": 8,
+                "Original": "i try .",
+                "Translation": " !"
+            },
+            {
+                "Idx": 10,
+                "Original": "i won !",
+                "Translation": " !"
+            }
+        ]
+    }
+]

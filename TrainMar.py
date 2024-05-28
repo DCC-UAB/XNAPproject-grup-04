@@ -11,6 +11,9 @@ import random
 import nltk
 from nltk.translate.bleu_score import sentence_bleu
 from nltk.translate.meteor_score import meteor_score
+import json
+
+
 
 SOS_token = 0
 EOS_token = 1
@@ -122,7 +125,7 @@ def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_
                 topv, topi = decoder_output.data.topk(1)
                 
                 if di < target_length:
-                    loss += criterion(decoder_output, target_tensor[di].unsqueeze(0))
+                    loss += criterion(decoder_output, target_tensor[di])
                 
                 if topi.item() == EOS_token:
                     decoded_words.append('<EOS>')
@@ -137,7 +140,7 @@ def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_
             reference = [target_sentence.split()]
             hypothesis = decoded_words[:-1] if decoded_words[-1] == '<EOS>' else decoded_words
             total_bleu += sentence_bleu(reference, hypothesis)
-            total_meteor += meteor_score(reference, ' '.join(hypothesis))
+            total_meteor += meteor_score(reference, hypothesis)  # Asegúrate de que 'hypothesis' es una lista de palabras
 
             # Guardar la traducción si es una de las frases seleccionadas
             if idx in selected_pairs:
@@ -148,6 +151,8 @@ def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_
     avg_meteor = total_meteor / num_sentences
     
     return avg_loss, avg_bleu, avg_meteor, selected_translations
+
+
 
 
 def trainIters(encoder, decoder, n_epochs, train_pairs, val_pairs, print_every=1000, plot_every=100, learning_rate=0.01):
@@ -184,7 +189,7 @@ def trainIters(encoder, decoder, n_epochs, train_pairs, val_pairs, print_every=1
 
         print_loss_avg = print_loss_total / print_every
         print_loss_total = 0
-        wand.log({"Training loss": print_loss_avg})
+        wandb.log({"Training loss": print_loss_avg})
         print('%s (%d %d%%) %.4f' % (timeSince(start, iter / len(train_pairs)), iter, iter / len(train_pairs) * 100, print_loss_avg))
 
         # Guardar las traducciones en el diccionario

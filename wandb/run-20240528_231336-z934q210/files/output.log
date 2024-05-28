@@ -1,0 +1,29 @@
+Starting Training Loop...
+Epoch 1/10
+C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+Traceback (most recent call last):
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\TrainMar.py", line 253, in <module>
+    main()
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\TrainMar.py", line 250, in main
+    trainIters(encoder1, attn_decoder1, int(args.epochs), train_pairs, val_pairs, print_every=5000, learning_rate=float(args.lr))
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\TrainMar.py", line 192, in trainIters
+    wand.log({"Training loss": print_loss_avg})
+NameError: name 'wand' is not defined
+Validation Loss: 6.9912, Validation BLEU: 0.0000, Validation METEOR: 0.0466
