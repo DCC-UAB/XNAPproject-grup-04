@@ -1,8 +1,8 @@
 import random
 
 # Define el nombre del archivo de entrada y salida
-input_filename = 'spa.txt'
-output_filename = 'spa_sample.txt'
+input_filename = '/home/xnmaster/XNAPproject-grup-04/data/spa.txt'
+output_filename = '/home/xnmaster/XNAPproject-grup-04/data/spa_sample.txt'
 
 # Número de líneas a seleccionar
 num_lines_to_select = 20000
