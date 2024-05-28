@@ -81,7 +81,7 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
     decoder_optimizer.step()
     return loss.item() / target_length
 
-def validate(encoder, decoder, validation_pairs, max_length=MAX_LENGTH, criterion=nn.NLLLoss()):
+def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_LENGTH, criterion=nn.NLLLoss()):
     encoder.eval()
     decoder.eval()
     
@@ -90,8 +90,11 @@ def validate(encoder, decoder, validation_pairs, max_length=MAX_LENGTH, criterio
     total_meteor = 0
     num_sentences = len(validation_pairs)
     
+    # Guardar las traducciones de las frases seleccionadas
+    selected_translations = []
+
     with torch.no_grad():
-        for pair in validation_pairs:
+        for idx, pair in enumerate(validation_pairs):
             input_sentence = pair[0]
             target_sentence = pair[1]
             
@@ -135,12 +138,17 @@ def validate(encoder, decoder, validation_pairs, max_length=MAX_LENGTH, criterio
             hypothesis = decoded_words[:-1] if decoded_words[-1] == '<EOS>' else decoded_words
             total_bleu += sentence_bleu(reference, hypothesis)
             total_meteor += meteor_score(reference, ' '.join(hypothesis))
+
+            # Guardar la traducción si es una de las frases seleccionadas
+            if idx in selected_pairs:
+                selected_translations.append((input_sentence, ' '.join(hypothesis)))
     
     avg_loss = total_loss / num_sentences
     avg_bleu = total_bleu / num_sentences
     avg_meteor = total_meteor / num_sentences
     
-    return avg_loss, avg_bleu, avg_meteor
+    return avg_loss, avg_bleu, avg_meteor, selected_translations
+
 
 def trainIters(encoder, decoder, n_epochs, train_pairs, val_pairs, print_every=1000, plot_every=100, learning_rate=0.01):
     print('Starting Training Loop...')
@@ -152,6 +160,12 @@ def trainIters(encoder, decoder, n_epochs, train_pairs, val_pairs, print_every=1
     decoder_optimizer = optim.SGD(decoder.parameters(), lr=learning_rate)
     criterion = nn.NLLLoss()
     
+    selected_indices = [2,4,6,8,10]
+
+    # Estructura para almacenar las traducciones
+    translations_per_epoch = []
+
+
     for epoch in range(1, n_epochs + 1):
         print(f"Epoch {epoch}/{n_epochs}")
         for iter in range(1, len(train_pairs) + 1):
@@ -164,7 +178,7 @@ def trainIters(encoder, decoder, n_epochs, train_pairs, val_pairs, print_every=1
             print_loss_total += loss
             
         # Validation at the end of each epoch
-        val_loss, val_bleu, val_meteor = validate(encoder, decoder, val_pairs, criterion=criterion)
+        val_loss, val_bleu, val_meteor, selected_translations = validate(encoder, decoder, val_pairs, selected_indices, criterion=criterion)
         wandb.log({"Validation Loss": val_loss, "Validation BLEU": val_bleu, "Validation METEOR": val_meteor})
         print(f'Validation Loss: {val_loss:.4f}, Validation BLEU: {val_bleu:.4f}, Validation METEOR: {val_meteor:.4f}')
 
@@ -172,6 +186,25 @@ def trainIters(encoder, decoder, n_epochs, train_pairs, val_pairs, print_every=1
         print_loss_total = 0
         wand.log({"Training loss": print_loss_avg})
         print('%s (%d %d%%) %.4f' % (timeSince(start, iter / len(train_pairs)), iter, iter / len(train_pairs) * 100, print_loss_avg))
+
+        # Guardar las traducciones en el diccionario
+        epoch_translations = {
+            "Epoch": epoch,
+            "Sentences": []
+        }
+        
+        for idx, (input_sentence, translation) in zip(selected_indices, selected_translations):
+            epoch_translations["Sentences"].append({
+                "Idx": idx,
+                "Original": input_sentence,
+                "Translation": translation
+            })
+
+        translations_per_epoch.append(epoch_translations)
+
+        # Guardar las traducciones en un archivo JSON
+        with open('translations_per_epoch.json', 'w') as json_file:
+            json.dump(translations_per_epoch, json_file, ensure_ascii=False, indent=4)
 
  
     save_model(encoder, decoder)
