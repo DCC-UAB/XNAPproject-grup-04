@@ -1,0 +1,17 @@
+
+Starting Training Loop...
+4m 48s (- 67m 24s) (5000 6%) 5.2826 (Validation Loss: 3.2435)
+10m 17s (- 66m 56s) (10000 13%) 5.1121 (Validation Loss: 3.8192)
+15m 44s (- 62m 56s) (15000 20%) 4.9872 (Validation Loss: 4.3116)
+22m 1s (- 60m 33s) (20000 26%) 4.9262 (Validation Loss: 5.3765)
+27m 40s (- 55m 21s) (25000 33%) 4.8820 (Validation Loss: 4.8058)
+33m 55s (- 50m 52s) (30000 40%) 4.8190 (Validation Loss: 5.1738)
+39m 57s (- 45m 40s) (35000 46%) 4.7436 (Validation Loss: 4.9783)
+45m 43s (- 40m 0s) (40000 53%) 4.6334 (Validation Loss: 4.8736)
+51m 47s (- 34m 31s) (45000 60%) 4.6019 (Validation Loss: 4.8148)
+57m 52s (- 28m 56s) (50000 66%) 4.5156 (Validation Loss: 5.0654)
+63m 41s (- 23m 9s) (55000 73%) 4.4507 (Validation Loss: 4.8706)
+69m 31s (- 17m 22s) (60000 80%) 4.3984 (Validation Loss: 4.8527)
+75m 11s (- 11m 34s) (65000 86%) 4.3396 (Validation Loss: 4.6788)
+81m 9s (- 5m 47s) (70000 93%) 4.3175 (Validation Loss: 4.9509)
+87m 10s (- 0m 0s) (75000 100%) 4.2577 (Validation Loss: 5.0363)

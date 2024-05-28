@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/train.py", line 158, in <module>
+    main()
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/train.py", line 139, in main
+    print(int(args.epochs))
+UnboundLocalError: local variable 'args' referenced before assignment
