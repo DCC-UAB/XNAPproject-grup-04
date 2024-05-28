@@ -147,7 +147,6 @@ def trainIters(encoder, decoder, n_epochs, train_pairs, val_pairs, print_every=1
     start = time.time()
     plot_losses = []
     print_loss_total = 0  # Reset every print_every
-    plot_loss_total = 0  # Reset every plot_every
 
     encoder_optimizer = optim.SGD(encoder.parameters(), lr=learning_rate)
     decoder_optimizer = optim.SGD(decoder.parameters(), lr=learning_rate)
@@ -163,22 +162,18 @@ def trainIters(encoder, decoder, n_epochs, train_pairs, val_pairs, print_every=1
             loss = train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion)
 
             print_loss_total += loss
-            plot_loss_total += loss
-
-            if iter % print_every == 0:
-                print_loss_avg = print_loss_total / print_every
-                print_loss_total = 0
-                print('%s (%d %d%%) %.4f' % (timeSince(start, iter / len(train_pairs)), iter, iter / len(train_pairs) * 100, print_loss_avg))
-
+            
         # Validation at the end of each epoch
         val_loss, val_bleu, val_meteor = validate(encoder, decoder, val_pairs, criterion=criterion)
-        wandb.log({"Validation Loss": val_loss, "Validation BLEU": val_bleu, "Validation METEOR": val_meteor, "Epoch": epoch})
+        wandb.log({"Validation Loss": val_loss, "Validation BLEU": val_bleu, "Validation METEOR": val_meteor})
         print(f'Validation Loss: {val_loss:.4f}, Validation BLEU: {val_bleu:.4f}, Validation METEOR: {val_meteor:.4f}')
 
-        plot_loss_avg = plot_loss_total / plot_every
-        plot_losses.append(plot_loss_avg)
-        plot_loss_total = 0
-    
+        print_loss_avg = print_loss_total / print_every
+        print_loss_total = 0
+        wand.log({"Training loss": print_loss_avg})
+        print('%s (%d %d%%) %.4f' % (timeSince(start, iter / len(train_pairs)), iter, iter / len(train_pairs) * 100, print_loss_avg))
+
+ 
     save_model(encoder, decoder)
 
 def save_model(e, d):
