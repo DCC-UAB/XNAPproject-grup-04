@@ -174,7 +174,7 @@ def main():
     wandb.init(project="Machine Translation", config={
         										"epochs": args.epochs, 
                                                 "learning_rate": args.lr, 
-                                                "cell_type": 'LSTM', #'GRU',
+                                                "cell_type": 'GRU', #'GRU', LSTM
                                                 "opti": "SDG",
                                                 "layers": 1,
                                                 "dataset": "eng-spa",
