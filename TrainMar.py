@@ -13,7 +13,12 @@ from nltk.translate.bleu_score import sentence_bleu
 from nltk.translate.meteor_score import meteor_score
 import json
 
+from data_process import prepareData
+from model import EncoderRNN, AttnDecoderRNN
 
+# Descarga el recurso 'wordnet'
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 
 SOS_token = 0
 EOS_token = 1
@@ -50,6 +55,8 @@ def tensorsFromPair(pair):
     return (input_tensor, target_tensor)
 
 def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, max_length=MAX_LENGTH):
+    encoder.train()  # Establece el modo de entrenamiento para el encoder
+    decoder.train()  # Establece el modo de entrenamiento para el decoder
     encoder_hidden = encoder.initHidden()
     encoder_optimizer.zero_grad()
     decoder_optimizer.zero_grad()
@@ -85,8 +92,8 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
     return loss.item() / target_length
 
 def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_LENGTH, criterion=nn.NLLLoss()):
-    encoder.eval()
-    decoder.eval()
+    encoder.eval()   # Establece el modo de evaluación para el encoder
+    decoder.eval()   # Establece el modo de evaluación para el decoder
     
     total_loss = 0
     total_bleu = 0
@@ -227,8 +234,8 @@ def main():
     input_lang, output_lang, pairs = prepareData('eng', 'spa')
     
     # Split the pairs into training and validation sets
-    train_size = 50
-    val_size = 15
+    train_size = 15000
+    val_size = 5000
     train_pairs = pairs[:train_size]
     val_pairs = pairs[train_size:train_size + val_size]
     

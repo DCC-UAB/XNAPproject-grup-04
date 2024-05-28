@@ -1,0 +1,73 @@
+Starting Training Loop...
+Epoch 1/10
+Traceback (most recent call last):
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/corpus/util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError:
+**********************************************************************
+  Resource [93mwordnet[39m not found.
+  Please use the NLTK Downloader to obtain the resource:
+  [31m>>> import nltk
+[31m  >>> nltk.download('wordnet')
+[31m  
+  For more information see: https://www.nltk.org/data.html
+  Attempted to load [93mcorpora/wordnet.zip/wordnet/
+  Searched in:
+    - '/home/xnmaster/nltk_data'
+    - '/anaconda/envs/py38_default/nltk_data'
+    - '/anaconda/envs/py38_default/share/nltk_data'
+    - '/anaconda/envs/py38_default/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/home/xnmaster/XNAPproject-grup-04/TrainMar.py", line 253, in <module>
+    main()
+  File "/home/xnmaster/XNAPproject-grup-04/TrainMar.py", line 250, in main
+    trainIters(encoder1, attn_decoder1, int(args.epochs), train_pairs, val_pairs, print_every=5000, learning_rate=float(args.lr))
+  File "/home/xnmaster/XNAPproject-grup-04/TrainMar.py", line 186, in trainIters
+    val_loss, val_bleu, val_meteor, selected_translations = validate(encoder, decoder, val_pairs, selected_indices, criterion=criterion)
+  File "/home/xnmaster/XNAPproject-grup-04/TrainMar.py", line 143, in validate
+    total_meteor += meteor_score(reference, hypothesis)  # Asegúrate de que 'hypothesis' es una lista de palabras
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/meteor_score.py", line 397, in meteor_score
+    return max(
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/meteor_score.py", line 398, in <genexpr>
+    single_meteor_score(
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/meteor_score.py", line 331, in single_meteor_score
+    matches, _, _ = _enum_align_words(
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/meteor_score.py", line 223, in _enum_align_words
+    wns_matches, enum_hypothesis_list, enum_reference_list = _enum_wordnetsyn_match(
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/meteor_score.py", line 161, in _enum_wordnetsyn_match
+    for synset in wordnet.synsets(enum_hypothesis_list[i][1])
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/corpus/util.py", line 121, in __getattr__
+    self.__load()
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/corpus/util.py", line 86, in __load
+    raise e
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/corpus/util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError:
+**********************************************************************
+  Resource [93mwordnet[39m not found.
+  Please use the NLTK Downloader to obtain the resource:
+  [31m>>> import nltk
+[31m  >>> nltk.download('wordnet')
+[31m  
+  For more information see: https://www.nltk.org/data.html
+  Attempted to load [93mcorpora/wordnet
+  Searched in:
+    - '/home/xnmaster/nltk_data'
+    - '/anaconda/envs/py38_default/nltk_data'
+    - '/anaconda/envs/py38_default/share/nltk_data'
+    - '/anaconda/envs/py38_default/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
