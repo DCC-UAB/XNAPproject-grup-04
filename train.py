@@ -130,8 +130,6 @@ def trainIters(encoder, decoder, n_iters, train_pairs, val_pairs, print_every=10
         target_tensor = training_pair[1]
 
         loss = train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion)
-        
-        wandb.log({"Training Loss": loss}, step=iter)
 
         print_loss_total += loss
         plot_loss_total += loss
