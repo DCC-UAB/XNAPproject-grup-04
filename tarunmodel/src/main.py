@@ -15,7 +15,9 @@ import heapq
 import sentencepiece as spm
 
 
-os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:500"
+
+
+
 
 class Manager():
     def __init__(self, is_train=True, ckpt_name=None):
@@ -325,6 +327,7 @@ class Manager():
 
 
 if __name__=='__main__':
+    os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:500"
     parser = argparse.ArgumentParser()
     parser.add_argument('--mode', required=True, help="train or inference?")
     parser.add_argument('--ckpt_name', required=False, help="best checkpoint file")
