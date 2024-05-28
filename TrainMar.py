@@ -86,10 +86,6 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
 
 
 
-def tensorFromSentence(lang, sentence):
-    # Esta función debe convertir una frase en un tensor de índices de palabras.
-    pass
-
 def validate(encoder, decoder, validation_pairs, max_length=MAX_LENGTH, criterion=nn.NLLLoss()):
     encoder.eval()
     decoder.eval()
