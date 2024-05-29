@@ -15,6 +15,7 @@ import json
 
 from data_process import prepareData
 from model import EncoderRNN, AttnDecoderRNN
+from torch.utils.data import DataLoader
 
 # Descarga el recurso 'wordnet'
 nltk.download('wordnet')
