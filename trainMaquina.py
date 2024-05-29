@@ -53,6 +53,8 @@ def tensorsFromPair(pair):
     return (input_tensor, target_tensor)
 
 def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, max_length=MAX_LENGTH):
+    encoder.train()  # Establece el modo de entrenamiento para el encoder
+    decoder.train()  # Establece el modo de entrenamiento para el decoder
     encoder_hidden = encoder.initHidden()
     encoder_optimizer.zero_grad()
     decoder_optimizer.zero_grad()
@@ -88,8 +90,8 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
     return loss.item() / target_length
 
 def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_LENGTH, criterion=nn.NLLLoss()):
-    encoder.eval()
-    decoder.eval()
+    encoder.eval()   # Establece el modo de evaluación para el encoder
+    decoder.eval()   # Establece el modo de evaluación para el decoder
     
     total_loss = 0
     total_bleu = 0

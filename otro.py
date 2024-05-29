@@ -13,13 +13,6 @@ from nltk.translate.bleu_score import sentence_bleu
 from nltk.translate.meteor_score import meteor_score
 import json
 
-from data_process import prepareData
-from model import EncoderRNN, AttnDecoderRNN
-
-# Descarga el recurso 'wordnet'
-nltk.download('wordnet')
-nltk.download('omw-1.4')
-
 SOS_token = 0
 EOS_token = 1
 teacher_forcing_ratio = 0.5
@@ -90,8 +83,8 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
     return loss.item() / target_length
 
 def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_LENGTH, criterion=nn.NLLLoss()):
-    encoder.eval()   # Establece el modo de evaluación para el encoder
-    decoder.eval()   # Establece el modo de evaluación para el decoder
+    encoder.eval()
+    decoder.eval()
     
     total_loss = 0
     total_bleu = 0
@@ -130,7 +123,7 @@ def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_
                 topv, topi = decoder_output.data.topk(1)
                 
                 if di < target_length:
-                    loss += criterion(decoder_output, target_tensor[di])
+                    loss += criterion(decoder_output, target_tensor[di].unsqueeze(0))
                 
                 if topi.item() == EOS_token:
                     decoded_words.append('<EOS>')
@@ -145,7 +138,7 @@ def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_
             reference = [target_sentence.split()]
             hypothesis = decoded_words[:-1] if decoded_words[-1] == '<EOS>' else decoded_words
             total_bleu += sentence_bleu(reference, hypothesis)
-            total_meteor += meteor_score(reference, hypothesis)  # Asegúrate de que 'hypothesis' es una lista de palabras
+            total_meteor += meteor_score(reference, ' '.join(hypothesis))
 
             # Guardar la traducción si es una de las frases seleccionadas
             if idx in selected_pairs:
@@ -156,8 +149,6 @@ def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_
     avg_meteor = total_meteor / num_sentences
     
     return avg_loss, avg_bleu, avg_meteor, selected_translations
-
-
 
 
 def trainIters(encoder, decoder, n_epochs, train_pairs, val_pairs, print_every=1000, plot_every=100, learning_rate=0.01):
@@ -189,12 +180,12 @@ def trainIters(encoder, decoder, n_epochs, train_pairs, val_pairs, print_every=1
             
         # Validation at the end of each epoch
         val_loss, val_bleu, val_meteor, selected_translations = validate(encoder, decoder, val_pairs, selected_indices, criterion=criterion)
-        
+        wandb.log({"Validation Loss": val_loss, "Validation BLEU": val_bleu, "Validation METEOR": val_meteor})
         print(f'Validation Loss: {val_loss:.4f}, Validation BLEU: {val_bleu:.4f}, Validation METEOR: {val_meteor:.4f}')
 
         print_loss_avg = print_loss_total / print_every
         print_loss_total = 0
-        wandb.log({"Validation Loss": val_loss, "Validation BLEU": val_bleu, "Validation METEOR": val_meteor,"Training loss": print_loss_avg}, step = epoch)
+        wand.log({"Training loss": print_loss_avg})
         print('%s (%d %d%%) %.4f' % (timeSince(start, iter / len(train_pairs)), iter, iter / len(train_pairs) * 100, print_loss_avg))
 
         # Guardar las traducciones en el diccionario
@@ -232,8 +223,8 @@ def main():
     input_lang, output_lang, pairs = prepareData('eng', 'spa')
     
     # Split the pairs into training and validation sets
-    train_size = 15000
-    val_size = 5000
+    train_size = 50
+    val_size = 15
     train_pairs = pairs[:train_size]
     val_pairs = pairs[train_size:train_size + val_size]
     
@@ -250,8 +241,7 @@ def main():
                                                 "layers": 1,
                                                 "dataset": "eng-spa",
                                                 "hidden_size": hidden_size,
-                                                "dropout": 0.1,
-                                                "batch_size":1}, name="experiment1")
+                                                "dropout": 0.1})
 
     trainIters(encoder1, attn_decoder1, int(args.epochs), train_pairs, val_pairs, print_every=5000, learning_rate=float(args.lr))
 
