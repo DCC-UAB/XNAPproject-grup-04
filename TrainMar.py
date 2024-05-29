@@ -191,12 +191,12 @@ def trainIters(encoder, decoder, n_epochs, train_pairs, val_pairs, print_every=1
             
         # Validation at the end of each epoch
         val_loss, val_bleu, val_meteor, selected_translations = validate(encoder, decoder, val_pairs, selected_indices, criterion=criterion)
-        wandb.log({"Validation Loss": val_loss, "Validation BLEU": val_bleu, "Validation METEOR": val_meteor})
+        
         print(f'Validation Loss: {val_loss:.4f}, Validation BLEU: {val_bleu:.4f}, Validation METEOR: {val_meteor:.4f}')
 
         print_loss_avg = print_loss_total / print_every
         print_loss_total = 0
-        wandb.log({"Training loss": print_loss_avg})
+        wandb.log({"Validation Loss": val_loss, "Validation BLEU": val_bleu, "Validation METEOR": val_meteor,"Training loss": print_loss_avg}, step = epoch)
         print('%s (%d %d%%) %.4f' % (timeSince(start, iter / len(train_pairs)), iter, iter / len(train_pairs) * 100, print_loss_avg))
 
         # Guardar las traducciones en el diccionario
@@ -252,7 +252,8 @@ def main():
                                                 "layers": 1,
                                                 "dataset": "eng-spa",
                                                 "hidden_size": hidden_size,
-                                                "dropout": 0.1})
+                                                "dropout": 0.1,
+                                                "batch_size":1}, name="experiment1")
 
     trainIters(encoder1, attn_decoder1, int(args.epochs), train_pairs, val_pairs, print_every=5000, learning_rate=float(args.lr))
 
