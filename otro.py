@@ -132,6 +132,7 @@ def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_
                     decoded_words.append(output_lang.index2word[topi.item()])
                 
                 decoder_input = topi.squeeze().detach()
+                decoder_input = decoder_output.squeeze(-1).detach()
 
             total_loss += loss.item() / target_length
             
@@ -185,7 +186,7 @@ def trainIters(encoder, decoder, n_epochs, train_pairs, val_pairs, print_every=1
 
         print_loss_avg = print_loss_total / print_every
         print_loss_total = 0
-        wand.log({"Training loss": print_loss_avg})
+        wandb.log({"Training loss": print_loss_avg})
         print('%s (%d %d%%) %.4f' % (timeSince(start, iter / len(train_pairs)), iter, iter / len(train_pairs) * 100, print_loss_avg))
 
         # Guardar las traducciones en el diccionario

@@ -116,7 +116,7 @@ def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_
 
             for ei in range(input_length):
                 encoder_output, encoder_hidden = encoder(input_tensor[ei], encoder_hidden)
-                encoder_outputs[ei] += encoder_output[0, 0]
+                encoder_outputs[ei] = encoder_output[0, 0]
 
             decoder_input = torch.tensor([[SOS_token]], device=device)  # SOS
             decoder_hidden = encoder_hidden
