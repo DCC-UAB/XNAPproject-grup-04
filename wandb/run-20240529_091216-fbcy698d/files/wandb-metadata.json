@@ -1,0 +1,72 @@
+{
+    "os": "Linux-5.15.0-1064-azure-x86_64-with-glibc2.17",
+    "python": "3.8.19",
+    "heartbeatAt": "2024-05-29T09:12:16.827746",
+    "startedAt": "2024-05-29T09:12:16.392804",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "TrainMar.py",
+    "codePathLocal": "TrainMar.py",
+    "codePath": "TrainMar.py",
+    "host": "labDAGLBU",
+    "username": "xnmaster",
+    "executable": "/anaconda/envs/py38_default/bin/python",
+    "cpu_count": 6,
+    "cpu_count_logical": 6,
+    "cpu_freq": {
+        "current": 2593.994,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2593.994,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.994,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.994,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.994,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.994,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.994,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 145.1909637451172,
+            "used": 103.0877799987793
+        }
+    },
+    "gpu": "Tesla V100-PCIE-16GB",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Tesla V100-PCIE-16GB",
+            "memory_total": 16945512448
+        }
+    ],
+    "memory": {
+        "total": 110.04522705078125
+    }
+}
