@@ -1,0 +1,19 @@
+Starting Training Loop...
+Epoch 1/10
+Validation Loss: 4.8293, Validation BLEU: 0.0000, Validation METEOR: 0.0000
+0m 2s (- 0m 0s) (50 100%) 0.0777
+Epoch 2/10
+Traceback (most recent call last):
+  File "c:/Users/paucl/Desktop/Uni/DL/XNAPproject-grup-04/trainMaquina.py", line 256, in <module>
+    main()
+  File "c:/Users/paucl/Desktop/Uni/DL/XNAPproject-grup-04/trainMaquina.py", line 253, in main
+    trainIters(encoder1, attn_decoder1, int(args.epochs), train_pairs, val_pairs, print_every=5000, learning_rate=float(args.lr))
+  File "c:/Users/paucl/Desktop/Uni/DL/XNAPproject-grup-04/trainMaquina.py", line 184, in trainIters
+    loss = train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion)
+  File "c:/Users/paucl/Desktop/Uni/DL/XNAPproject-grup-04/trainMaquina.py", line 85, in train
+    loss.backward()
+  File "C:\Users\paucl\Desktop\Uni\DL\XNAPproject-grup-04\.conda\lib\site-packages\torch\_tensor.py", line 396, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "C:\Users\paucl\Desktop\Uni\DL\XNAPproject-grup-04\.conda\lib\site-packages\torch\autograd\__init__.py", line 173, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: cudnn RNN backward can only be called in training mode
