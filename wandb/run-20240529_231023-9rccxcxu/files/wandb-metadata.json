@@ -1,0 +1,45 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.9.0",
+    "heartbeatAt": "2024-05-29T21:10:24.233004",
+    "startedAt": "2024-05-29T21:10:23.549724",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\LAURA\\Deep Learning\\XNAPproject-grup-04\\trainMaquina.py",
+    "codePathLocal": "trainMaquina.py",
+    "codePath": "trainMaquina.py",
+    "git": {
+        "remote": "https://github.com/DCC-UAB/XNAPproject-grup-04.git",
+        "commit": "323a140659d9ee9cf88ae389586627bc43b8623e"
+    },
+    "email": "1636713@uab.com",
+    "root": "C:/Users/LAURA/Deep Learning/XNAPproject-grup-04",
+    "host": "MSILAURA",
+    "username": "LAURA",
+    "executable": "C:\\Users\\LAURA\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "cpu_count": 10,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 1700.0,
+        "min": 0.0,
+        "max": 1700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1700.0,
+            "min": 0.0,
+            "max": 1700.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 953.0830039978027,
+            "used": 118.15922927856445
+        }
+    },
+    "memory": {
+        "total": 15.708599090576172
+    }
+}

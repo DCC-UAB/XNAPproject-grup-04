@@ -4,28 +4,28 @@
         "Sentences": [
             {
                 "Idx": 2,
-                "Original": "tom is eccentric .",
-                "Translation": "tom es . . ."
+                "Original": "tom is a nervous wreck .",
+                "Translation": "propias empieza"
             },
             {
                 "Idx": 4,
-                "Original": "tom is energetic .",
-                "Translation": "tom es . . ."
+                "Original": "we did it ourselves .",
+                "Translation": "historico historico"
             },
             {
                 "Idx": 6,
-                "Original": "tom is forgetful .",
-                "Translation": "tom es . . ."
+                "Original": "tom said it was none of my business .",
+                "Translation": "conducir conducir viejito panico panico"
             },
             {
                 "Idx": 8,
-                "Original": "tom is happy now .",
-                "Translation": "tom es un ."
+                "Original": "i ll buy one .",
+                "Translation": "acordeon empieza daran"
             },
             {
                 "Idx": 10,
-                "Original": "tom is improving .",
-                "Translation": "tom es . . ."
+                "Original": "everything is much more complicated .",
+                "Translation": "ajustar comida"
             }
         ]
     },
@@ -34,28 +34,28 @@
         "Sentences": [
             {
                 "Idx": 2,
-                "Original": "tom is eccentric .",
-                "Translation": "tom es tom ."
+                "Original": "tom is a nervous wreck .",
+                "Translation": "propias"
             },
             {
                 "Idx": 4,
-                "Original": "tom is energetic .",
-                "Translation": "tom es tom ."
+                "Original": "we did it ourselves .",
+                "Translation": "conducir abaco"
             },
             {
                 "Idx": 6,
-                "Original": "tom is forgetful .",
-                "Translation": "tom es tom ."
+                "Original": "tom said it was none of my business .",
+                "Translation": "conducir referia"
             },
             {
                 "Idx": 8,
-                "Original": "tom is happy now .",
-                "Translation": "tom es un . ."
+                "Original": "i ll buy one .",
+                "Translation": "ajustar"
             },
             {
                 "Idx": 10,
-                "Original": "tom is improving .",
-                "Translation": "tom es tom ."
+                "Original": "everything is much more complicated .",
+                "Translation": "ajustar"
             }
         ]
     },
@@ -64,28 +64,28 @@
         "Sentences": [
             {
                 "Idx": 2,
-                "Original": "tom is eccentric .",
-                "Translation": "tom esta tom ."
+                "Original": "tom is a nervous wreck .",
+                "Translation": ""
             },
             {
                 "Idx": 4,
-                "Original": "tom is energetic .",
-                "Translation": "tom esta a ."
+                "Original": "we did it ourselves .",
+                "Translation": "conducir"
             },
             {
                 "Idx": 6,
-                "Original": "tom is forgetful .",
-                "Translation": "tom esta tom ."
+                "Original": "tom said it was none of my business .",
+                "Translation": "conducir"
             },
             {
                 "Idx": 8,
-                "Original": "tom is happy now .",
-                "Translation": "tom esta un . ."
+                "Original": "i ll buy one .",
+                "Translation": "."
             },
             {
                 "Idx": 10,
-                "Original": "tom is improving .",
-                "Translation": "tom esta tom ."
+                "Original": "everything is much more complicated .",
+                "Translation": "."
             }
         ]
     },
@@ -94,28 +94,28 @@
         "Sentences": [
             {
                 "Idx": 2,
-                "Original": "tom is eccentric .",
-                "Translation": "tom es . ."
+                "Original": "tom is a nervous wreck .",
+                "Translation": ""
             },
             {
                 "Idx": 4,
-                "Original": "tom is energetic .",
-                "Translation": "tom es . ."
+                "Original": "we did it ourselves .",
+                "Translation": "."
             },
             {
                 "Idx": 6,
-                "Original": "tom is forgetful .",
-                "Translation": "tom es . ."
+                "Original": "tom said it was none of my business .",
+                "Translation": "."
             },
             {
                 "Idx": 8,
-                "Original": "tom is happy now .",
-                "Translation": "tom es es . ."
+                "Original": "i ll buy one .",
+                "Translation": "."
             },
             {
                 "Idx": 10,
-                "Original": "tom is improving .",
-                "Translation": "tom es . ."
+                "Original": "everything is much more complicated .",
+                "Translation": "."
             }
         ]
     },
@@ -124,178 +124,28 @@
         "Sentences": [
             {
                 "Idx": 2,
-                "Original": "tom is eccentric .",
-                "Translation": "tom es . ."
+                "Original": "tom is a nervous wreck .",
+                "Translation": ""
             },
             {
                 "Idx": 4,
-                "Original": "tom is energetic .",
-                "Translation": "tom es . ."
+                "Original": "we did it ourselves .",
+                "Translation": ""
             },
             {
                 "Idx": 6,
-                "Original": "tom is forgetful .",
-                "Translation": "tom es . ."
+                "Original": "tom said it was none of my business .",
+                "Translation": "."
             },
             {
                 "Idx": 8,
-                "Original": "tom is happy now .",
-                "Translation": "tom es es . ."
+                "Original": "i ll buy one .",
+                "Translation": ""
             },
             {
                 "Idx": 10,
-                "Original": "tom is improving .",
-                "Translation": "tom es . ."
-            }
-        ]
-    },
-    {
-        "Epoch": 6,
-        "Sentences": [
-            {
-                "Idx": 2,
-                "Original": "tom is eccentric .",
-                "Translation": "tom es un ."
-            },
-            {
-                "Idx": 4,
-                "Original": "tom is energetic .",
-                "Translation": "tom esta . ."
-            },
-            {
-                "Idx": 6,
-                "Original": "tom is forgetful .",
-                "Translation": "tom esta . ."
-            },
-            {
-                "Idx": 8,
-                "Original": "tom is happy now .",
-                "Translation": "tom es esta . ."
-            },
-            {
-                "Idx": 10,
-                "Original": "tom is improving .",
-                "Translation": "tom es . ."
-            }
-        ]
-    },
-    {
-        "Epoch": 7,
-        "Sentences": [
-            {
-                "Idx": 2,
-                "Original": "tom is eccentric .",
-                "Translation": "tom es un ."
-            },
-            {
-                "Idx": 4,
-                "Original": "tom is energetic .",
-                "Translation": "tom es . ."
-            },
-            {
-                "Idx": 6,
-                "Original": "tom is forgetful .",
-                "Translation": "tom esta bien ."
-            },
-            {
-                "Idx": 8,
-                "Original": "tom is happy now .",
-                "Translation": "tom no es . ."
-            },
-            {
-                "Idx": 10,
-                "Original": "tom is improving .",
-                "Translation": "tom es . ."
-            }
-        ]
-    },
-    {
-        "Epoch": 8,
-        "Sentences": [
-            {
-                "Idx": 2,
-                "Original": "tom is eccentric .",
-                "Translation": "tom es un ."
-            },
-            {
-                "Idx": 4,
-                "Original": "tom is energetic .",
-                "Translation": "tom es de ."
-            },
-            {
-                "Idx": 6,
-                "Original": "tom is forgetful .",
-                "Translation": "tom es de ."
-            },
-            {
-                "Idx": 8,
-                "Original": "tom is happy now .",
-                "Translation": "tom no es . ."
-            },
-            {
-                "Idx": 10,
-                "Original": "tom is improving .",
-                "Translation": "tom es un ."
-            }
-        ]
-    },
-    {
-        "Epoch": 9,
-        "Sentences": [
-            {
-                "Idx": 2,
-                "Original": "tom is eccentric .",
-                "Translation": "tom esta un ."
-            },
-            {
-                "Idx": 4,
-                "Original": "tom is energetic .",
-                "Translation": "tom es . ."
-            },
-            {
-                "Idx": 6,
-                "Original": "tom is forgetful .",
-                "Translation": "tom esta bien ."
-            },
-            {
-                "Idx": 8,
-                "Original": "tom is happy now .",
-                "Translation": "tom esta esta . ."
-            },
-            {
-                "Idx": 10,
-                "Original": "tom is improving .",
-                "Translation": "tom es . ."
-            }
-        ]
-    },
-    {
-        "Epoch": 10,
-        "Sentences": [
-            {
-                "Idx": 2,
-                "Original": "tom is eccentric .",
-                "Translation": "tom esta un ."
-            },
-            {
-                "Idx": 4,
-                "Original": "tom is energetic .",
-                "Translation": "tom esta . ."
-            },
-            {
-                "Idx": 6,
-                "Original": "tom is forgetful .",
-                "Translation": "tom esta es ."
-            },
-            {
-                "Idx": 8,
-                "Original": "tom is happy now .",
-                "Translation": "tom esta esta en ."
-            },
-            {
-                "Idx": 10,
-                "Original": "tom is improving .",
-                "Translation": "tom es . ."
+                "Original": "everything is much more complicated .",
+                "Translation": "."
             }
         ]
     }

@@ -138,7 +138,8 @@ def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_
                 else:
                     decoded_words.append(output_lang.index2word[topi.item()])
                 
-                decoder_input = topi.squeeze().detach()
+                #decoder_input = topi.squeeze().detach()
+                decoder_input = decoder_output.squeeze(-1).detach()
 
             total_loss += loss.item() / target_length
             
@@ -213,7 +214,7 @@ def trainIters(encoder, decoder, n_epochs, train_pairs, val_pairs, print_every=1
         translations_per_epoch.append(epoch_translations)
 
         # Guardar las traducciones en un archivo JSON
-        with open('translations_per_epoch.json', 'w') as json_file:
+        with open('translations_per_epoch_prueba.json', 'w') as json_file:
             json.dump(translations_per_epoch, json_file, ensure_ascii=False, indent=4)
 
  
