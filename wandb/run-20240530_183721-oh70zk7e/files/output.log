@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/xnmaster/testproject/XNAPproject-grup-04/CodigoMar.py", line 486, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=5, plot_every=5)
+  File "/home/xnmaster/testproject/XNAPproject-grup-04/CodigoMar.py", line 402, in train
+    train_loss, val_loss, avg_bleu, avg_meteor, selected_translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "/home/xnmaster/testproject/XNAPproject-grup-04/CodigoMar.py", line 353, in train_epoch
+    bleu_score = sentence_bleu([target_words], decoded_words)
+  File "/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/bleu_score.py", line 107, in sentence_bleu
+    return corpus_bleu(
+  File "/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/bleu_score.py", line 210, in corpus_bleu
+    p_i = modified_precision(references, hypothesis, i)
+  File "/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/bleu_score.py", line 347, in modified_precision
+    counts = Counter(ngrams(hypothesis, n)) if len(hypothesis) >= n else Counter()
+  File "/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/collections/__init__.py", line 552, in __init__
+    self.update(iterable, **kwds)
+  File "/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/collections/__init__.py", line 637, in update
+    _count_elements(self, iterable)
+TypeError: unhashable type: 'list'

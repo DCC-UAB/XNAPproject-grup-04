@@ -1,0 +1,9 @@
+/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+2m 44s (- 5m 29s) (5 33%) Train Loss: 1.2402, Val Loss: 1.1857
+5m 29s (- 2m 44s) (10 66%) Train Loss: 0.7005, Val Loss: 0.9321
+8m 14s (- 0m 0s) (15 100%) Train Loss: 0.4576, Val Loss: 0.8840

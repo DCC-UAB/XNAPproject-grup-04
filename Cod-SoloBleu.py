@@ -11,6 +11,7 @@ import torch.nn.functional as F
 from nltk.translate.bleu_score import sentence_bleu
 from nltk.translate.meteor_score import meteor_score
 
+
 import numpy as np
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler
 
@@ -285,15 +286,12 @@ def get_dataloaders(batch_size, val_split=0.2):
 
     return input_lang, output_lang, train_dataloader, val_dataloader
 
-
-def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader):
-     
-    # Modo de entrenamiento
+def train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader):
     encoder.train()
     decoder.train()
 
     total_loss = 0
-    for data in dataloader:
+    for data in train_dataloader:
         input_tensor, target_tensor = data
 
         encoder_optimizer.zero_grad()
@@ -313,21 +311,19 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
 
         total_loss += loss.item()
     
-    avg_train_loss = total_loss / len(dataloader)
+    avg_train_loss = total_loss / len(train_dataloader)
 
     total_val_loss = 0
-    
     total_bleu = 0
     total_meteor = 0
 
-    # Guardar las traducciones de las frases seleccionadas
     selected_translations = []
-    selected_indices = [2,4,6,8,10]
-    encoder.eval()  # Cambiar a modo de evaluación
-    decoder.eval()  # Cambiar a modo de evaluación
+    selected_indices = [2, 4, 6, 8, 10]
+
+    encoder.eval()
+    decoder.eval()
     with torch.no_grad():
         for idx, data in enumerate(val_dataloader):
-        #for data in val_dataloader:
             input_tensor, target_tensor = data
 
             encoder_outputs, encoder_hidden = encoder(input_tensor)
@@ -337,31 +333,43 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
                 decoder_outputs.view(-1, decoder_outputs.size(-1)),
                 target_tensor.view(-1)
             )
-
             total_val_loss += val_loss.item()
 
-            
+            # Convertir índices a palabras para BLEU y METEOR
+            decoded_words_batch = []
+            target_words_batch = []
+            for t in decoder_outputs.argmax(2):
+                decoded_words_batch.append([output_lang.index2word[token.item()] for token in t if token.item() != EOS_token])
+            for t in target_tensor:
+                target_words_batch.append([output_lang.index2word[token.item()] for token in t if token.item() != EOS_token])
 
             # Calcular BLEU y METEOR
-            bleu_score = sentence_bleu([target_words], decoded_words)
-            meteor_score_value = meteor_score([' '.join(target_words)], ' '.join(decoded_words))
+            for decoded_words, target_words in zip(decoded_words_batch, target_words_batch):
+                # Convertir listas de palabras a cadenas
+                decoded_sentence = ' '.join(decoded_words)
+                target_sentence = ' '.join(target_words)
 
-            total_bleu += bleu_score
-            total_meteor += meteor_score_value
+                # Calcular BLEU
+                bleu_score_value = sentence_bleu([target_words], decoded_words)
+
+                # Calcular METEOR
+                #meteor_score_value = meteor_score([target_sentence], decoded_sentence)
+
+                total_bleu += bleu_score_value
+                #total_meteor += meteor_score_value
 
             if idx in selected_indices:
-                selected_translations.append((decoded_words, target_words))
+                selected_translations.append((decoded_words_batch, target_words_batch))
 
-        avg_val_loss = total_val_loss / len(val_dataloader)
-        avg_bleu = total_bleu / len(val_dataloader)
-        avg_meteor = total_meteor / len(val_dataloader)
+    avg_val_loss = total_val_loss / len(val_dataloader)
+    avg_bleu = total_bleu / len(val_dataloader.dataset)
+    #avg_meteor = total_meteor / len(val_dataloader.dataset)
+    avg_meteor = 1
 
     return avg_train_loss, avg_val_loss, avg_bleu, avg_meteor, selected_translations
 
-
 import time
 import math
-
 def asMinutes(s):
     m = math.floor(s / 60)
     s -= m * 60
