@@ -54,7 +54,7 @@ def normalizeString(s):
     s = re.sub(r"[^a-zA-Z!?]+", r" ", s)
     return s.strip()
 
-dataset = './data/spa_sample100.txt'
+dataset = './data/spa_sample.txt'
 
 def readLangs(lang1, lang2, reverse=False):
     print("Reading lines...")
@@ -90,8 +90,7 @@ eng_prefixes = (
 
 def filterPair(p):
     return len(p[0].split(' ')) < MAX_LENGTH and \
-        len(p[1].split(' ')) < MAX_LENGTH and \
-        p[1].startswith(eng_prefixes)
+        len(p[1].split(' ')) < MAX_LENGTH 
 
 
 def filterPairs(pairs):
@@ -376,7 +375,7 @@ def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning
     plot_val_loss_total = 0  # Reset every plot_every
     encoder_optimizer = optim.Adam(encoder.parameters(), lr=learning_rate)
     decoder_optimizer = optim.Adam(decoder.parameters(), lr=learning_rate)
-    criterion = nn.NLLLoss()
+    criterion = nn.CrossEntropyLoss()
 
     for epoch in range(1, n_epochs + 1):
         train_loss, val_loss, selected_translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
@@ -440,7 +439,7 @@ wandb.init(project="Machine Translation", config={
                                             "opti": "Adam", #"SDG",
                                             "dataset": "eng-spa",
                                             "hidden_size": hidden_size,
-                                            "batch_size": batch_size} , name="experiment1")
+                                            "batch_size": batch_size} , name="experiment3")
 
 
 train(train_dataloader, val_dataloader, encoder, decoder, 80, learning_rate =learning_rate, print_every=5, plot_every=5)
