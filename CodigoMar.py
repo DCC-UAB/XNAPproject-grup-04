@@ -336,17 +336,29 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
 
             total_val_loss += val_loss.item()
 
-            if idx in selected_indices:
-                print(data)
-                output_words, _ = evaluate(encoder, decoder, data[0], input_lang, output_lang)
-                output_sentence = ' '.join(output_words)
-                print(output_sentence)
-                selected_translations.append((data[0], output_sentence))
+            # Decodificar las salidas del decodificador
+            _, topi = decoder_outputs.topk(1)
+            decoded_ids = topi.squeeze().tolist()
+            decoded_words = [output_lang.index2word[idx] for idx in decoded_ids if idx != EOS_token]
+            
+            # Traducción de referencia
+            target_words = [output_lang.index2word[idx.item()] for idx in target_tensor.squeeze() if idx.item() != EOS_token]
 
+            # Calcular BLEU y METEOR
+            bleu_score = sentence_bleu([target_words], decoded_words)
+            meteor_score_value = meteor_score([' '.join(target_words)], ' '.join(decoded_words))
+
+            total_bleu += bleu_score
+            total_meteor += meteor_score_value
+
+            if idx in selected_indices:
+                selected_translations.append((decoded_words, target_words))
 
         avg_val_loss = total_val_loss / len(val_dataloader)
+        avg_bleu = total_bleu / len(val_dataloader)
+        avg_meteor = total_meteor / len(val_dataloader)
 
-    return avg_train_loss, avg_val_loss, selected_translations
+    return avg_train_loss, avg_val_loss, avg_bleu, avg_meteor, selected_translations
 
 
 import time
@@ -378,7 +390,7 @@ def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning
     criterion = nn.CrossEntropyLoss()
 
     for epoch in range(1, n_epochs + 1):
-        train_loss, val_loss, selected_translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+        train_loss, val_loss, avg_bleu, avg_meteor, selected_translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
         print_loss_total += train_loss
         print_val_loss_total += val_loss
 
@@ -388,10 +400,30 @@ def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning
         
             print_val_loss_avg = print_val_loss_total / print_every
             print_val_loss_total = 0
-            wandb.log({"Validation Loss": print_val_loss_avg,"Training loss": print_loss_avg}, step = epoch)
+            wandb.log({"Validation Loss": print_val_loss_avg,"Training loss": print_loss_avg, "Score Bleu": avg_bleu, "Score Meteor": avg_meteor}, step = epoch)
             print('%s (%d %d%%) Train Loss: %.4f, Val Loss: %.4f' % (timeSince(start, epoch / n_epochs),
                                                                          epoch, epoch / n_epochs * 100, print_loss_avg, print_val_loss_avg))
+            # Guardar las traducciones en el diccionario
+            epoch_translations = {
+                "Epoch": epoch,
+                "Sentences": []
+            }
             
+            for idx, (input_sentence, translation) in zip(selected_indices, selected_translations):
+                epoch_translations["Sentences"].append({
+                    "Idx": idx,
+                    "Original": input_sentence,
+                    "Translation": translation,
+                    "Score Bleu": avg_bleu, 
+                    "Score Meteor": avg_meteor
+                })
+
+            translations_per_epoch.append(epoch_translations)
+
+            # Guardar las traducciones en un archivo JSON
+            with open('translations_per_epoch_exp1.json', 'w') as json_file:
+                json.dump(translations_per_epoch, json_file, ensure_ascii=False, indent=4)
+
 
         if epoch % plot_every == 0:
             plot_loss_avg = plot_loss_total / plot_every
@@ -424,7 +456,7 @@ def evaluate(encoder, decoder, sentence, input_lang, output_lang):
 
 hidden_size = 128
 batch_size = 32
-epoch = 50
+epoch = 15
 learning_rate = 0.001
 
 input_lang, output_lang, train_dataloader, val_dataloader = get_dataloaders(batch_size)
