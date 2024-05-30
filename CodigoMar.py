@@ -15,6 +15,8 @@ from torch.utils.data import TensorDataset, DataLoader, RandomSampler
 import wandb
 from torch.utils.data import Subset
 
+import json
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 SOS_token = 0
@@ -386,7 +388,7 @@ def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning
     selected_indices = [2,4,6,8,10]
 
     translations_per_epoch = []
-    
+
     for epoch in range(1, n_epochs + 1):
         train_loss, val_loss, avg_bleu, avg_meteor, selected_translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
         print_loss_total += train_loss
