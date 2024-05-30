@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 482, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=5, plot_every=5)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 397, in train
+    train_loss, val_loss, avg_bleu, avg_meteor, selected_translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 350, in train_epoch
+    meteor_score_result  = meteor_score(' '.join(reference_sentence), ' '.join(candidate_sentence))
+TypeError: sequence item 0: expected str instance, int found

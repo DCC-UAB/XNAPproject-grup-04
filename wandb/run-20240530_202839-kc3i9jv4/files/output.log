@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 503, in <module>
+    train(train_dataloader, val_dataloader,val_pairs, encoder, decoder, epoch, learning_rate =learning_rate, print_every=5, plot_every=5)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 419, in train
+    train_loss, val_loss, avg_bleu, selected_translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader, val_pairs)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 342, in train_epoch
+    decoder_output, decoder_hidden = decoder(decoder_input, decoder_hidden)
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 205, in forward
+    decoder_output, decoder_hidden, attn_weights = self.forward_step(
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 230, in forward_step
+    context, attn_weights = self.attention(query, encoder_outputs)
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 180, in forward
+    scores = self.Va(torch.tanh(self.Wa(query) + self.Ua(keys)))
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x1 and 128x128)

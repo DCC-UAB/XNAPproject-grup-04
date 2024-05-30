@@ -319,7 +319,7 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
     total_val_loss = 0
     
     total_bleu = 0
-    total_meteor = 0
+    #total_meteor = 0
 
     # Guardar las traducciones de las frases seleccionadas
     selected_translations = []
@@ -328,7 +328,6 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
     decoder.eval()  # Cambiar a modo de evaluación
     with torch.no_grad():
         for idx, data in enumerate(val_dataloader):
-        #for data in val_dataloader:
             input_tensor, target_tensor = data
 
             encoder_outputs, encoder_hidden = encoder(input_tensor)
@@ -341,24 +340,19 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
 
             total_val_loss += val_loss.item()
 
-            # Calcular BLEU
-            reference_sentence = target_tensor[0].tolist()
-            candidate_sentence = decoder_outputs.argmax(dim=-1)[0].tolist()
-            bleu_score = sentence_bleu([reference_sentence], candidate_sentence)
 
-            # Calcular METEOR
-            meteor_score = meteor_score(' '.join(reference_sentence), ' '.join(candidate_sentence))
+            # Calcular BLEU
+            bleu_score = sentence_bleu([reference_sentence.split()], candidate_sentence.split())
 
             total_bleu += bleu_score
-            total_meteor += meteor_score
 
-            selected_translations.append(('Reference', ' '.join(reference_sentence)), ('Candidate', ' '.join(candidate_sentence)))
+            if idx in selected_indices:
+                selected_translations.append((input_sentence, reference_sentence, candidate_sentence))
 
         avg_val_loss = total_val_loss / len(val_dataloader)
         avg_bleu = total_bleu / len(val_dataloader)
-        avg_meteor = total_meteor / len(val_dataloader)
 
-    return avg_train_loss, avg_val_loss, avg_bleu, avg_meteor, selected_translations
+    return avg_train_loss, avg_val_loss, avg_bleu, selected_translations
 
 
 import time
@@ -377,7 +371,7 @@ def timeSince(since, percent):
     return '%s (- %s)' % (asMinutes(s), asMinutes(rs))
 
 
-def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning_rate=0.001, print_every=100, plot_every=100):
+def train(train_dataloader, val_dataloader, val_pairs , encoder, decoder, n_epochs, learning_rate=0.001, print_every=100, plot_every=100):
     start = time.time()
     plot_losses = []
     plot_val_losses = []
@@ -394,7 +388,7 @@ def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning
     translations_per_epoch = []
 
     for epoch in range(1, n_epochs + 1):
-        train_loss, val_loss, avg_bleu, avg_meteor, selected_translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+        train_loss, val_loss, avg_bleu, selected_translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
         print_loss_total += train_loss
         print_val_loss_total += val_loss
 
@@ -404,7 +398,7 @@ def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning
         
             print_val_loss_avg = print_val_loss_total / print_every
             print_val_loss_total = 0
-            wandb.log({"Validation Loss": print_val_loss_avg,"Training loss": print_loss_avg, "Score Bleu": avg_bleu, "Score Meteor": avg_meteor}, step = epoch)
+            wandb.log({"Validation Loss": print_val_loss_avg,"Training loss": print_loss_avg, "Score Bleu": avg_bleu}, step = epoch)
             print('%s (%d %d%%) Train Loss: %.4f, Val Loss: %.4f' % (timeSince(start, epoch / n_epochs),
                                                                          epoch, epoch / n_epochs * 100, print_loss_avg, print_val_loss_avg))
             # Guardar las traducciones en el diccionario
@@ -418,8 +412,7 @@ def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning
                     "Idx": idx,
                     "Original": input_sentence,
                     "Translation": translation,
-                    "Score Bleu": avg_bleu, 
-                    "Score Meteor": avg_meteor
+                    "Score Bleu": avg_bleu
                 })
 
 
