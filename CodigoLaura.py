@@ -420,7 +420,7 @@ def evaluate(encoder, decoder, sentence, input_lang, output_lang):
 
 hidden_size = 128
 batch_size = 32
-epoch = 15
+epoch = 50
 learning_rate = 0.001
 
 input_lang, output_lang, train_dataloader, val_dataloader, val_pairs = get_dataloaders(batch_size)
