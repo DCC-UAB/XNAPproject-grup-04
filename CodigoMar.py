@@ -313,10 +313,18 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
     avg_train_loss = total_loss / len(dataloader)
 
     total_val_loss = 0
+    
+    total_bleu = 0
+    total_meteor = 0
+
+    # Guardar las traducciones de las frases seleccionadas
+    selected_translations = []
+    selected_indices = [2,4,6,8,10]
     encoder.eval()  # Cambiar a modo de evaluación
     decoder.eval()  # Cambiar a modo de evaluación
     with torch.no_grad():
-        for data in val_dataloader:
+        for idx, data in enumerate(val_dataloader):
+        #for data in val_dataloader:
             input_tensor, target_tensor = data
 
             encoder_outputs, encoder_hidden = encoder(input_tensor)
@@ -329,9 +337,17 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
 
             total_val_loss += val_loss.item()
 
+            if idx in selected_indices:
+                print(data)
+                output_words, _ = evaluate(encoder, decoder, data[0], input_lang, output_lang)
+                output_sentence = ' '.join(output_words)
+                print(output_sentence)
+                selected_translations.append((data[0], output_sentence))
+
+
         avg_val_loss = total_val_loss / len(val_dataloader)
 
-    return avg_train_loss, avg_val_loss
+    return avg_train_loss, avg_val_loss, selected_translations
 
 
 import time
@@ -363,7 +379,7 @@ def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning
     criterion = nn.NLLLoss()
 
     for epoch in range(1, n_epochs + 1):
-        train_loss, val_loss = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+        train_loss, val_loss, selected_translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
         print_loss_total += train_loss
         print_val_loss_total += val_loss
 
