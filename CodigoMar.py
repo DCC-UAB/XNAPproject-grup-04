@@ -13,6 +13,7 @@ import numpy as np
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler
 
 import wand
+from torch.utils.data import Subset
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -244,7 +245,7 @@ def tensorsFromPair(pair):
     target_tensor = tensorFromSentence(output_lang, pair[1])
     return (input_tensor, target_tensor)
 
-def get_dataloader(batch_size):
+def get_dataloaders(batch_size, val_split=0.2):
     input_lang, output_lang, pairs = prepareData('eng', 'fra', True)
 
     n = len(pairs)
@@ -259,16 +260,30 @@ def get_dataloader(batch_size):
         input_ids[idx, :len(inp_ids)] = inp_ids
         target_ids[idx, :len(tgt_ids)] = tgt_ids
 
-    train_data = TensorDataset(torch.LongTensor(input_ids).to(device),
-                               torch.LongTensor(target_ids).to(device))
+    dataset = TensorDataset(torch.LongTensor(input_ids).to(device),
+                            torch.LongTensor(target_ids).to(device))
 
-    train_sampler = RandomSampler(train_data)
-    train_dataloader = DataLoader(train_data, sampler=train_sampler, batch_size=batch_size)
-    return input_lang, output_lang, train_dataloader
+    # Calcular el tamaño de los conjuntos de entrenamiento y validación
+    val_size = int(val_split * len(dataset))
+    train_size = len(dataset) - val_size
+
+    # Crear índices para los conjuntos de entrenamiento y validación
+    indices = list(range(len(dataset)))
+    train_indices = indices[:train_size]
+    val_indices = indices[train_size:]
+
+    # Crear subconjuntos de entrenamiento y validación
+    train_dataset = Subset(dataset, train_indices)
+    val_dataset = Subset(dataset, val_indices)
+
+    # Crear DataLoaders para el conjunto de entrenamiento y validación
+    train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    val_dataloader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
+
+    return input_lang, output_lang, train_dataloader, val_dataloader
 
 
-def train_epoch(dataloader, encoder, decoder, encoder_optimizer,
-          decoder_optimizer, criterion):
+def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion):
 
     total_loss = 0
     for data in dataloader:
@@ -290,8 +305,29 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer,
         decoder_optimizer.step()
 
         total_loss += loss.item()
+    
+    avg_train_loss = total_loss / len(dataloader)
 
-    return total_loss / len(dataloader)
+    total_val_loss = 0
+    encoder.eval()  # Cambiar a modo de evaluación
+    decoder.eval()  # Cambiar a modo de evaluación
+    with torch.no_grad():
+        for data in val_dataloader:
+            input_tensor, target_tensor = data
+
+            encoder_outputs, encoder_hidden = encoder(input_tensor)
+            decoder_outputs, _, _ = decoder(encoder_outputs, encoder_hidden, target_tensor)
+
+            val_loss = criterion(
+                decoder_outputs.view(-1, decoder_outputs.size(-1)),
+                target_tensor.view(-1)
+            )
+
+            total_val_loss += val_loss.item()
+
+        avg_val_loss = total_val_loss / len(val_dataloader)
+
+    return avg_train_loss, avg_val_loss
 
 
 import time
@@ -310,34 +346,43 @@ def timeSince(since, percent):
     return '%s (- %s)' % (asMinutes(s), asMinutes(rs))
 
 
-def train(train_dataloader, encoder, decoder, n_epochs, learning_rate=0.001,
-               print_every=100, plot_every=100):
+def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning_rate=0.001, print_every=100, plot_every=100):
     start = time.time()
     plot_losses = []
+    plot_val_losses = []
     print_loss_total = 0  # Reset every print_every
+    print_val_loss_total = 0  # Reset every print_every
     plot_loss_total = 0  # Reset every plot_every
-
+    plot_val_loss_total = 0  # Reset every plot_every
     encoder_optimizer = optim.Adam(encoder.parameters(), lr=learning_rate)
     decoder_optimizer = optim.Adam(decoder.parameters(), lr=learning_rate)
     criterion = nn.NLLLoss()
 
     for epoch in range(1, n_epochs + 1):
-        loss = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion)
-        print_loss_total += loss
-        plot_loss_total += loss
+        train_loss, val_loss = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader, input_lang, output_lang)
+        print_loss_total += train_loss
+        plot_loss_total += train_loss
 
         if epoch % print_every == 0:
             print_loss_avg = print_loss_total / print_every
             print_loss_total = 0
-            print('%s (%d %d%%) %.4f' % (timeSince(start, epoch / n_epochs),
-                                        epoch, epoch / n_epochs * 100, print_loss_avg))
+        
+            print_val_loss_avg = print_val_loss_total / print_every
+            print_val_loss_total = 0
+            wandb.log({"Validation Loss": print_val_loss_avg, ,"Training loss": print_loss_avg}, step = epoch)
+            print('%s (%d %d%%) Train Loss: %.4f, Val Loss: %.4f' % (timeSince(start, epoch / n_epochs),
+                                                                         epoch, epoch / n_epochs * 100, print_loss_avg, print_val_loss_avg))
+            
 
         if epoch % plot_every == 0:
             plot_loss_avg = plot_loss_total / plot_every
             plot_losses.append(plot_loss_avg)
             plot_loss_total = 0
+            plot_val_loss_avg = plot_val_loss_total / plot_every
+            plot_val_losses.append(plot_val_loss_avg)
+            plot_val_loss_total = 0
 
-    showPlot(plot_losses)
+    
 
 def evaluate(encoder, decoder, sentence, input_lang, output_lang):
     with torch.no_grad():
@@ -363,22 +408,22 @@ batch_size = 32
 epoch = 50
 learning_rate = 0.001
 
-input_lang, output_lang, train_dataloader = get_dataloader(batch_size)
+input_lang, output_lang, train_dataloader, val_dataloader = get_dataloader(batch_size)
 
 encoder = EncoderRNN(input_lang.n_words, hidden_size).to(device)
 decoder = AttnDecoderRNN(hidden_size, output_lang.n_words).to(device)
 
 wandb.init(project="Machine Translation", config={
-        										"epochs": epoch 
-                                                "learning_rate": learning_rate 
-                                                "cell_type": 'GRU', #'GRU', LSTM
-                                                "opti": "Adam", #"SDG",
-                                                "dataset": "eng-spa",
-                                                "hidden_size": hidden_size,
-                                                "batch_size": batch_size})
+        									"epochs": epoch 
+                                            "learning_rate": learning_rate 
+                                            "cell_type": 'GRU', #'GRU', LSTM
+                                            "opti": "Adam", #"SDG",
+                                            "dataset": "eng-spa",
+                                            "hidden_size": hidden_size,
+                                            "batch_size": batch_size} , name="experiment1")
 
 
-train(train_dataloader, encoder, decoder, 80, print_every=5, plot_every=5)
+train(train_dataloader, val_dataloader, encoder, decoder, 80, learning_rate =learning_rate, print_every=5, plot_every=5)
 
 
 
