@@ -336,13 +336,14 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
 
             total_val_loss += val_loss.item()
 
-            # Decodificar las salidas del decodificador
+            # Decodificar las salidas del decodificado
             _, topi = decoder_outputs.topk(1)
-            decoded_ids = topi.squeeze().tolist()
+            decoded_ids = [topi.squeeze().tolist()] if topi.dim() == 1 else topi.squeeze().tolist()
             decoded_words = [output_lang.index2word[idx] for idx in decoded_ids if idx != EOS_token]
             
             # Traducción de referencia
             target_words = [output_lang.index2word[idx.item()] for idx in target_tensor.squeeze() if idx.item() != EOS_token]
+
 
             # Calcular BLEU y METEOR
             bleu_score = sentence_bleu([target_words], decoded_words)
