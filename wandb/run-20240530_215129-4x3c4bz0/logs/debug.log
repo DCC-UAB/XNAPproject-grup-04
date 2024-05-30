@@ -25,3 +25,4 @@ config: {'epochs': 15, 'learning_rate': 0.001, 'cell_type': 'GRU', 'opti': 'Adam
 2024-05-30 21:51:30,899 INFO    MainThread:14900 [wandb_run.py:_redirect():2294] Wrapping output streams.
 2024-05-30 21:51:30,899 INFO    MainThread:14900 [wandb_run.py:_redirect():2319] Redirects installed.
 2024-05-30 21:51:30,904 INFO    MainThread:14900 [wandb_init.py:init():838] run started, returning control to user process
+2024-05-30 21:53:43,580 WARNING MsgRouterThr:14900 [router.py:message_loop():77] message_loop has been closed
