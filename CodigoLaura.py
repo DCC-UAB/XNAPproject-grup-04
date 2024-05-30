@@ -336,6 +336,8 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
             )
 
             total_val_loss += val_loss.item()
+        
+        avg_val_loss = total_val_loss / len(dataloader)
 
     return avg_train_loss, avg_val_loss
 
