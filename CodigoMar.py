@@ -12,6 +12,8 @@ import torch.nn.functional as F
 import numpy as np
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler
 
+import wand
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 SOS_token = 0
@@ -358,11 +360,23 @@ def evaluate(encoder, decoder, sentence, input_lang, output_lang):
 
 hidden_size = 128
 batch_size = 32
+epoch = 50
+learning_rate = 0.001
 
 input_lang, output_lang, train_dataloader = get_dataloader(batch_size)
 
 encoder = EncoderRNN(input_lang.n_words, hidden_size).to(device)
 decoder = AttnDecoderRNN(hidden_size, output_lang.n_words).to(device)
+
+wandb.init(project="Machine Translation", config={
+        										"epochs": epoch 
+                                                "learning_rate": learning_rate 
+                                                "cell_type": 'GRU', #'GRU', LSTM
+                                                "opti": "Adam", #"SDG",
+                                                "dataset": "eng-spa",
+                                                "hidden_size": hidden_size,
+                                                "batch_size": batch_size})
+
 
 train(train_dataloader, encoder, decoder, 80, print_every=5, plot_every=5)
 
