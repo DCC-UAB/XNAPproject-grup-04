@@ -1,0 +1,37 @@
+2024-05-30 21:51:29,271 INFO    StreamThr :25344 [internal.py:wandb_internal():85] W&B internal server running at pid: 25344, started at: 2024-05-30 21:51:29.270546
+2024-05-30 21:51:29,273 DEBUG   HandlerThread:25344 [handler.py:handle_request():158] handle_request: status
+2024-05-30 21:51:29,280 INFO    WriterThread:25344 [datastore.py:open_for_write():87] open: C:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\wandb\run-20240530_215129-4x3c4bz0\run-4x3c4bz0.wandb
+2024-05-30 21:51:29,281 DEBUG   SenderThread:25344 [sender.py:send():378] send: header
+2024-05-30 21:51:29,353 DEBUG   SenderThread:25344 [sender.py:send():378] send: run
+2024-05-30 21:51:29,863 INFO    SenderThread:25344 [dir_watcher.py:__init__():211] watching files in: C:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\wandb\run-20240530_215129-4x3c4bz0\files
+2024-05-30 21:51:29,863 INFO    SenderThread:25344 [sender.py:_start_run_threads():1123] run started: 4x3c4bz0 with start time 1717098689.273546
+2024-05-30 21:51:29,877 DEBUG   HandlerThread:25344 [handler.py:handle_request():158] handle_request: check_version
+2024-05-30 21:51:29,878 DEBUG   SenderThread:25344 [sender.py:send_request():405] send_request: check_version
+2024-05-30 21:51:30,476 DEBUG   HandlerThread:25344 [handler.py:handle_request():158] handle_request: run_start
+2024-05-30 21:51:30,494 DEBUG   HandlerThread:25344 [system_info.py:__init__():26] System info init
+2024-05-30 21:51:30,494 DEBUG   HandlerThread:25344 [system_info.py:__init__():41] System info init done
+2024-05-30 21:51:30,494 INFO    HandlerThread:25344 [system_monitor.py:start():194] Starting system monitor
+2024-05-30 21:51:30,495 INFO    SystemMonitor:25344 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-30 21:51:30,495 INFO    HandlerThread:25344 [system_monitor.py:probe():214] Collecting system info
+2024-05-30 21:51:30,503 INFO    SystemMonitor:25344 [interfaces.py:start():188] Started cpu monitoring
+2024-05-30 21:51:30,509 DEBUG   HandlerThread:25344 [system_info.py:probe():150] Probing system
+2024-05-30 21:51:30,510 INFO    SystemMonitor:25344 [interfaces.py:start():188] Started disk monitoring
+2024-05-30 21:51:30,522 INFO    SystemMonitor:25344 [interfaces.py:start():188] Started memory monitoring
+2024-05-30 21:51:30,539 INFO    SystemMonitor:25344 [interfaces.py:start():188] Started network monitoring
+2024-05-30 21:51:30,541 DEBUG   HandlerThread:25344 [system_info.py:_probe_git():135] Probing git
+2024-05-30 21:51:30,678 DEBUG   HandlerThread:25344 [system_info.py:_probe_git():143] Probing git done
+2024-05-30 21:51:30,678 DEBUG   HandlerThread:25344 [system_info.py:probe():198] Probing system done
+2024-05-30 21:51:30,678 DEBUG   HandlerThread:25344 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.11.0', 'heartbeatAt': '2024-05-30T19:51:30.510248', 'startedAt': '2024-05-30T19:51:29.259545', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'c:\\Users\\marbj\\Desktop\\Xarxes Neuronals i Aprenentatge Profund\\ProjecteDL\\XNAPproject-grup-04\\CodigoLaura.py', 'codePathLocal': 'CodigoLaura.py', 'codePath': 'CodigoLaura.py', 'git': {'remote': 'https://github.com/DCC-UAB/XNAPproject-grup-04.git', 'commit': 'b278015c45cf749b1e12c13fef25bfb66354e3ce'}, 'email': 'mar.blazquez@autonoma.cat', 'root': 'C:/Users/marbj/Desktop/Xarxes Neuronals i Aprenentatge Profund/ProjecteDL/XNAPproject-grup-04', 'host': 'LAPTOP-GH2S6GEQ', 'username': 'marbj', 'executable': 'C:\\Users\\marbj\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2300.0, 'min': 0.0, 'max': 2300.0}, 'cpu_freq_per_core': [{'current': 2300.0, 'min': 0.0, 'max': 2300.0}], 'disk': {'/': {'total': 256.71874618530273, 'used': 203.76930236816406}}, 'memory': {'total': 14.938488006591797}}
+2024-05-30 21:51:30,678 INFO    HandlerThread:25344 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-30 21:51:30,678 INFO    HandlerThread:25344 [system_monitor.py:probe():227] Publishing system info
+2024-05-30 21:51:30,681 INFO    HandlerThread:25344 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-30 21:51:30,714 DEBUG   SenderThread:25344 [sender.py:send():378] send: files
+2024-05-30 21:51:30,715 INFO    SenderThread:25344 [sender.py:_save_file():1389] saving file wandb-metadata.json with policy now
+2024-05-30 21:51:30,873 INFO    Thread-16 :25344 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\wandb\run-20240530_215129-4x3c4bz0\files\wandb-metadata.json
+2024-05-30 21:51:30,897 DEBUG   HandlerThread:25344 [handler.py:handle_request():158] handle_request: python_packages
+2024-05-30 21:51:30,898 DEBUG   SenderThread:25344 [sender.py:send_request():405] send_request: python_packages
+2024-05-30 21:51:30,898 DEBUG   HandlerThread:25344 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-30 21:51:30,900 DEBUG   SenderThread:25344 [sender.py:send_request():405] send_request: stop_status
+2024-05-30 21:51:31,130 DEBUG   SenderThread:25344 [sender.py:send():378] send: telemetry
+2024-05-30 21:51:31,431 INFO    wandb-upload_0:25344 [upload_job.py:push():130] Uploaded file C:\Users\marbj\AppData\Local\Temp\tmp3fuf3rfdwandb\pp48cnfy-wandb-metadata.json
+2024-05-30 21:51:31,880 INFO    Thread-16 :25344 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\wandb\run-20240530_215129-4x3c4bz0\files\requirements.txt

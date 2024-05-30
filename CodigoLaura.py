@@ -341,21 +341,18 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
 
             total_val_loss += val_loss.item()
 
-             # Convertir tensores a palabras
-            decoded_ids = decoder_outputs.argmax(dim=-1)
-            decoded_words = [[output_lang.index2word[idx.item()] for idx in sent if idx.item() != EOS_token] for sent in decoded_ids]
-            target_words = [[output_lang.index2word[idx.item()] for idx in sent if idx.item() != EOS_token] for sent in target_tensor]
+            # Calcular BLEU
+            reference_sentence = target_tensor[0].tolist()
+            candidate_sentence = decoder_outputs.argmax(dim=-1)[0].tolist()
+            bleu_score = sentence_bleu([reference_sentence], candidate_sentence)
 
-            # Calcular BLEU y METEOR
-            for tgt, pred in zip(target_words, decoded_words):
-                bleu_score = sentence_bleu([tgt], pred)
-                meteor_score_value = meteor_score([' '.join(tgt)], ' '.join(pred))
+            # Calcular METEOR
+            meteor_score = meteor_score(' '.join(reference_sentence), ' '.join(candidate_sentence))
 
-                total_bleu += bleu_score
-                total_meteor += meteor_score_value
+            total_bleu += bleu_score
+            total_meteor += meteor_score
 
-            if idx in selected_indices:
-                selected_translations.append((decoded_words, target_words))
+            selected_translations.append(('Reference', ' '.join(reference_sentence)), ('Candidate', ' '.join(candidate_sentence)))
 
         avg_val_loss = total_val_loss / len(val_dataloader)
         avg_bleu = total_bleu / len(val_dataloader)
