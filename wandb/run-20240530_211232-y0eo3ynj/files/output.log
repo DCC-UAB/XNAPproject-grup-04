@@ -1,0 +1,24 @@
+
+2m 14s (- 4m 28s) (5 33%) Train Loss: 1.2608, Val Loss: 0.3007
+Traceback (most recent call last):
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 441, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=5, plot_every=5)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 378, in train
+    train_loss, val_loss = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 306, in train_epoch
+    decoder_outputs, _, _ = decoder(encoder_outputs, encoder_hidden, target_tensor)
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 205, in forward
+    decoder_output, decoder_hidden, attn_weights = self.forward_step(
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 230, in forward_step
+    context, attn_weights = self.attention(query, encoder_outputs)
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 180, in forward
+    scores = self.Va(torch.tanh(self.Wa(query) + self.Ua(keys)))
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt

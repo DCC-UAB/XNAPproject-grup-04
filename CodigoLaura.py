@@ -337,7 +337,7 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
 
             total_val_loss += val_loss.item()
         
-        avg_val_loss = total_val_loss / len(dataloader)
+        avg_val_loss = total_val_loss / len(val_dataloader)
 
     return avg_train_loss, avg_val_loss
 
@@ -438,30 +438,6 @@ wandb.init(project="Machine Translation", config={
                                             "batch_size": batch_size} , name="experiment3")
 
 
-train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=5, plot_every=5)
+train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
 
-# Lista para almacenar los resultados
-bleu_scores = []
 
-# Calcular y almacenar BLEU score para cada par de frases en val_pairs
-for pair in val_pairs:
-    # Generar la traducción utilizando el modelo
-    output_words, _ = evaluate(encoder, decoder, pair[0], input_lang, output_lang)
-    output_sentence = ' '.join(output_words)
-    
-    # Calcular BLEU score
-    reference = [pair[1].split()]  # La referencia es una lista de lista de palabras
-    candidate = output_sentence.split()  # La candidata es una lista de palabras
-    bleu = sentence_bleu(reference, candidate)
-    
-    # Almacenar los resultados
-    bleu_scores.append({
-        "original": pair[0],
-        "reference": pair[1],
-        "translation": output_sentence,
-        "bleu_score": bleu
-    })
-
-# Guardar los resultados en un archivo JSON
-with open('bleu_scores.json', 'w') as file:
-    json.dump(bleu_scores, file, indent=4)
