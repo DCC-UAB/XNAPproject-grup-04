@@ -1,11 +1,17 @@
 import random
+import os
+
+directorio_actual = os.getcwd()
+print(directorio_actual)
 
 # Define el nombre del archivo de entrada y salida
-input_filename = '/home/xnmaster/XNAPproject-grup-04/data/spa.txt'
-output_filename = '/home/xnmaster/XNAPproject-grup-04/data/spa_sample.txt'
+input_filename = r'C:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\data\spa.txt'
+
+#input_filename = 'C:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04/data/spa.txt'
+output_filename = r'C:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04/data/spa_sample100.txt'
 
 # Número de líneas a seleccionar
-num_lines_to_select = 20000
+num_lines_to_select = 100000
 
 # Lee todas las líneas del archivo
 with open(input_filename, 'r', encoding='utf-8') as file:
