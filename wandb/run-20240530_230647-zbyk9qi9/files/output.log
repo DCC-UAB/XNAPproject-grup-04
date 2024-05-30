@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 439, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=5, plot_every=5)
+TypeError: train() missing 1 required positional argument: 'n_epochs'

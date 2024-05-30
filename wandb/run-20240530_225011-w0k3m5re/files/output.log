@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 477, in <module>
+    output_words, _ = evaluate(encoder, decoder, "Hello, who are you", input_lang, output_lang)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 438, in evaluate
+    input_tensor = tensorFromSentence(input_lang, sentence)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 243, in tensorFromSentence
+    indexes = indexesFromSentence(lang, sentence)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 240, in indexesFromSentence
+    return [lang.word2index[word] for word in sentence.split(' ')]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 240, in <listcomp>
+    return [lang.word2index[word] for word in sentence.split(' ')]
+            ~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'Hello,'
