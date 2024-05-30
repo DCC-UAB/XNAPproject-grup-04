@@ -12,7 +12,7 @@ import torch.nn.functional as F
 import numpy as np
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler
 
-import wand
+import wandb
 from torch.utils.data import Subset
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -77,7 +77,7 @@ def readLangs(lang1, lang2, reverse=False):
 
     return input_lang, output_lang, pairs
 
-MAX_LENGTH = 10
+MAX_LENGTH = 25
 
 eng_prefixes = (
     "i am ", "i m ",
@@ -283,7 +283,11 @@ def get_dataloaders(batch_size, val_split=0.2):
     return input_lang, output_lang, train_dataloader, val_dataloader
 
 
-def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion):
+def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader):
+     
+    # Modo de entrenamiento
+    encoder.train()
+    decoder.train()
 
     total_loss = 0
     for data in dataloader:
@@ -359,9 +363,9 @@ def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning
     criterion = nn.NLLLoss()
 
     for epoch in range(1, n_epochs + 1):
-        train_loss, val_loss = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader, input_lang, output_lang)
+        train_loss, val_loss = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
         print_loss_total += train_loss
-        plot_loss_total += train_loss
+        print_val_loss_total += val_loss
 
         if epoch % print_every == 0:
             print_loss_avg = print_loss_total / print_every
@@ -369,7 +373,7 @@ def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning
         
             print_val_loss_avg = print_val_loss_total / print_every
             print_val_loss_total = 0
-            wandb.log({"Validation Loss": print_val_loss_avg, ,"Training loss": print_loss_avg}, step = epoch)
+            wandb.log({"Validation Loss": print_val_loss_avg,"Training loss": print_loss_avg}, step = epoch)
             print('%s (%d %d%%) Train Loss: %.4f, Val Loss: %.4f' % (timeSince(start, epoch / n_epochs),
                                                                          epoch, epoch / n_epochs * 100, print_loss_avg, print_val_loss_avg))
             
@@ -408,14 +412,14 @@ batch_size = 32
 epoch = 50
 learning_rate = 0.001
 
-input_lang, output_lang, train_dataloader, val_dataloader = get_dataloader(batch_size)
+input_lang, output_lang, train_dataloader, val_dataloader = get_dataloaders(batch_size)
 
 encoder = EncoderRNN(input_lang.n_words, hidden_size).to(device)
 decoder = AttnDecoderRNN(hidden_size, output_lang.n_words).to(device)
 
 wandb.init(project="Machine Translation", config={
-        									"epochs": epoch 
-                                            "learning_rate": learning_rate 
+        									"epochs": epoch, 
+                                            "learning_rate": learning_rate ,
                                             "cell_type": 'GRU', #'GRU', LSTM
                                             "opti": "Adam", #"SDG",
                                             "dataset": "eng-spa",
