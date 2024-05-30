@@ -383,6 +383,10 @@ def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning
     decoder_optimizer = optim.Adam(decoder.parameters(), lr=learning_rate)
     criterion = nn.CrossEntropyLoss()
 
+    selected_indices = [2,4,6,8,10]
+
+    translations_per_epoch = []
+    
     for epoch in range(1, n_epochs + 1):
         train_loss, val_loss, avg_bleu, avg_meteor, selected_translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
         print_loss_total += train_loss
