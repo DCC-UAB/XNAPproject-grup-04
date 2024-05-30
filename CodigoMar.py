@@ -442,7 +442,7 @@ wandb.init(project="Machine Translation", config={
                                             "batch_size": batch_size} , name="experiment3")
 
 
-train(train_dataloader, val_dataloader, encoder, decoder, 80, learning_rate =learning_rate, print_every=5, plot_every=5)
+train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=5, plot_every=5)
 
 
 
