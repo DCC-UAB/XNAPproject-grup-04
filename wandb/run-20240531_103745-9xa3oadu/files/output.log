@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 479, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 416, in train
+    train_loss, val_loss = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 333, in train_epoch
+    input_sentence = indexes_to_sentence(input_tensor[i], input_lang)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 298, in indexes_to_sentence
+    return ' '.join([lang.index2word.get(idx, '') for idx in indexes if idx!= lang.EOS_token])
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 298, in <listcomp>
+    return ' '.join([lang.index2word.get(idx, '') for idx in indexes if idx!= lang.EOS_token])
+AttributeError: 'Lang' object has no attribute 'EOS_token'

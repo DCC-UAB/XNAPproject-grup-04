@@ -1,0 +1,34 @@
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+Traceback (most recent call last):
+  File "/home/xnmaster/XNAPproject-grup-04/Codigo2.py", line 498, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "/home/xnmaster/XNAPproject-grup-04/Codigo2.py", line 430, in train
+    train_loss, val_loss = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "/home/xnmaster/XNAPproject-grup-04/Codigo2.py", line 386, in train_epoch
+    meteor_score_val = meteor_score([target_sentence], decoded_sentence)
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/meteor_score.py", line 397, in meteor_score
+    return max(
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/meteor_score.py", line 398, in <genexpr>
+    single_meteor_score(
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/meteor_score.py", line 326, in single_meteor_score
+    enum_hypothesis, enum_reference = _generate_enums(
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/meteor_score.py", line 33, in _generate_enums
+    raise TypeError(
+TypeError: "hypothesis" expects pre-tokenized hypothesis (Iterable[str]): SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS

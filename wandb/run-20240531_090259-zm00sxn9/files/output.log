@@ -1,0 +1,67 @@
+
+0m 31s (- 25m 21s) (1 2%) Train Loss: 1.5380, Val Loss: 1.2461
+0m 59s (- 23m 46s) (2 4%) Train Loss: 1.1068, Val Loss: 1.0578
+1m 27s (- 22m 55s) (3 6%) Train Loss: 0.8883, Val Loss: 0.9506
+1m 56s (- 22m 19s) (4 8%) Train Loss: 0.7203, Val Loss: 0.8862
+2m 25s (- 21m 46s) (5 10%) Train Loss: 0.5812, Val Loss: 0.8499
+2m 53s (- 21m 15s) (6 12%) Train Loss: 0.4675, Val Loss: 0.8281
+3m 22s (- 20m 43s) (7 14%) Train Loss: 0.3739, Val Loss: 0.8174
+3m 51s (- 20m 14s) (8 16%) Train Loss: 0.2981, Val Loss: 0.8160
+4m 19s (- 19m 43s) (9 18%) Train Loss: 0.2408, Val Loss: 0.8224
+4m 48s (- 19m 14s) (10 20%) Train Loss: 0.1959, Val Loss: 0.8267
+5m 17s (- 18m 44s) (11 22%) Train Loss: 0.1609, Val Loss: 0.8386
+5m 45s (- 18m 15s) (12 24%) Train Loss: 0.1353, Val Loss: 0.8534
+6m 14s (- 17m 46s) (13 26%) Train Loss: 0.1130, Val Loss: 0.8643
+6m 43s (- 17m 16s) (14 28%) Train Loss: 0.0961, Val Loss: 0.8797
+7m 11s (- 16m 47s) (15 30%) Train Loss: 0.0834, Val Loss: 0.8912
+7m 40s (- 16m 18s) (16 32%) Train Loss: 0.0736, Val Loss: 0.9035
+8m 8s (- 15m 48s) (17 34%) Train Loss: 0.0642, Val Loss: 0.9219
+8m 37s (- 15m 19s) (18 36%) Train Loss: 0.0574, Val Loss: 0.9352
+9m 6s (- 14m 51s) (19 38%) Train Loss: 0.0519, Val Loss: 0.9505
+9m 34s (- 14m 21s) (20 40%) Train Loss: 0.0472, Val Loss: 0.9541
+10m 3s (- 13m 52s) (21 42%) Train Loss: 0.0436, Val Loss: 0.9734
+10m 31s (- 13m 23s) (22 44%) Train Loss: 0.0426, Val Loss: 0.9843
+10m 59s (- 12m 54s) (23 46%) Train Loss: 0.0388, Val Loss: 1.0001
+11m 28s (- 12m 25s) (24 48%) Train Loss: 0.0363, Val Loss: 1.0138
+11m 56s (- 11m 56s) (25 50%) Train Loss: 0.0346, Val Loss: 1.0208
+12m 25s (- 11m 27s) (26 52%) Train Loss: 0.0335, Val Loss: 1.0354
+12m 53s (- 10m 58s) (27 54%) Train Loss: 0.0313, Val Loss: 1.0431
+13m 21s (- 10m 29s) (28 56%) Train Loss: 0.0292, Val Loss: 1.0597
+13m 49s (- 10m 1s) (29 57%) Train Loss: 0.0291, Val Loss: 1.0646
+14m 18s (- 9m 32s) (30 60%) Train Loss: 0.0269, Val Loss: 1.0729
+14m 46s (- 9m 3s) (31 62%) Train Loss: 0.0276, Val Loss: 1.0840
+15m 15s (- 8m 34s) (32 64%) Train Loss: 0.0264, Val Loss: 1.0906
+15m 43s (- 8m 6s) (33 66%) Train Loss: 0.0247, Val Loss: 1.1021
+16m 11s (- 7m 37s) (34 68%) Train Loss: 0.0249, Val Loss: 1.1067
+16m 40s (- 7m 8s) (35 70%) Train Loss: 0.0248, Val Loss: 1.1154
+17m 8s (- 6m 40s) (36 72%) Train Loss: 0.0243, Val Loss: 1.1250
+17m 37s (- 6m 11s) (37 74%) Train Loss: 0.0232, Val Loss: 1.1381
+18m 5s (- 5m 42s) (38 76%) Train Loss: 0.0230, Val Loss: 1.1418
+18m 33s (- 5m 14s) (39 78%) Train Loss: 0.0232, Val Loss: 1.1487
+19m 2s (- 4m 45s) (40 80%) Train Loss: 0.0217, Val Loss: 1.1628
+19m 31s (- 4m 17s) (41 82%) Train Loss: 0.0220, Val Loss: 1.1619
+19m 59s (- 3m 48s) (42 84%) Train Loss: 0.0208, Val Loss: 1.1634
+20m 27s (- 3m 19s) (43 86%) Train Loss: 0.0215, Val Loss: 1.1688
+20m 56s (- 2m 51s) (44 88%) Train Loss: 0.0219, Val Loss: 1.1843
+21m 24s (- 2m 22s) (45 90%) Train Loss: 0.0212, Val Loss: 1.1876
+21m 52s (- 1m 54s) (46 92%) Train Loss: 0.0197, Val Loss: 1.1909
+22m 21s (- 1m 25s) (47 94%) Train Loss: 0.0209, Val Loss: 1.1978
+22m 49s (- 0m 57s) (48 96%) Train Loss: 0.0201, Val Loss: 1.2099
+23m 17s (- 0m 28s) (49 98%) Train Loss: 0.0209, Val Loss: 1.2232
+23m 45s (- 0m 0s) (50 100%) Train Loss: 0.0196, Val Loss: 1.2216
+> tom claimed to be an expert in finance
+= tom sostenia ser un experto en finanzas
+Traceback (most recent call last):
+  File "/home/xnmaster/XNAPproject-grup-04/CodigoLaura.py", line 455, in <module>
+    evaluateRandomly(encoder, decoder)
+  File "/home/xnmaster/XNAPproject-grup-04/CodigoLaura.py", line 448, in evaluateRandomly
+    output_words, _ = evaluate(encoder, decoder, pair[0], input_lang, output_lang)
+  File "/home/xnmaster/XNAPproject-grup-04/CodigoLaura.py", line 404, in evaluate
+    input_tensor = tensorFromSentence(input_lang, sentence)
+  File "/home/xnmaster/XNAPproject-grup-04/CodigoLaura.py", line 243, in tensorFromSentence
+    indexes = indexesFromSentence(lang, sentence)
+  File "/home/xnmaster/XNAPproject-grup-04/CodigoLaura.py", line 240, in indexesFromSentence
+    return [lang.word2index[word] for word in sentence.split(' ')]
+  File "/home/xnmaster/XNAPproject-grup-04/CodigoLaura.py", line 240, in <listcomp>
+    return [lang.word2index[word] for word in sentence.split(' ')]
+KeyError: 'claimed'

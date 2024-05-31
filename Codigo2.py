@@ -1,4 +1,3 @@
-
 from __future__ import unicode_literals, print_function, division
 from io import open
 import unicodedata
@@ -30,12 +29,24 @@ class Lang:
         self.name = name
         self.word2index = {}
         self.word2count = {}
-        self.index2word = {0: "SOS", 1: "EOS"}
-        self.n_words = 2  # Count SOS and EOS
+        self.index2word = {0: "SOS", 1: "EOS"}  # Asegúrate de que esto esté definido correctamente
+        self.n_words = 2  # Contando SOS y EOS
 
     def addSentence(self, sentence):
         for word in sentence.split(' '):
-            self.addWord(word)
+            if word not in self.word2index:
+                self.word2index[word] = self.n_words
+                self.word2count[word] = 1
+                self.index2word[self.n_words] = word
+                self.n_words += 1
+            else:
+                self.word2count[word] += 1
+        # Añade el token 'SOS' si aún no está presente
+        if 'SOS' not in self.word2index:
+            self.word2index['SOS'] = self.n_words
+            self.index2word[self.n_words] = 'SOS'
+            self.n_words += 1
+
 
     def addWord(self, word):
         if word not in self.word2index:
@@ -289,13 +300,24 @@ def get_dataloaders(batch_size, val_split=0.2):
     return input_lang, output_lang, train_dataloader, val_dataloader, val_pairs
 
 
+def decode_sequence(sequence, lang):
+    sequence = [lang.index2word[idx.item()] for idx in sequence if idx.item()!= lang.EOS_token]
+    return ' '.join(sequence)
+
+
+def indexes_to_sentence(indexes, lang):
+    return ' '.join([lang.index2word.get(idx.item(), '') for idx in indexes if idx.item()!= EOS_token])
+
+
 def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader):
-     
     # Modo de entrenamiento
     encoder.train()
     decoder.train()
 
     total_loss = 0
+    total_bleu = 0
+    total_meteor = 0
+
     for data in dataloader:
         input_tensor, target_tensor = data
 
@@ -315,31 +337,59 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
         decoder_optimizer.step()
 
         total_loss += loss.item()
+
+        # Decodificar y calcular métricas BLEU y METEOR
+        with torch.no_grad():
+            for i in range(input_tensor.size(0)):
+                input_sentence = indexes_to_sentence(input_tensor[i], input_lang)
+                target_sentence = indexes_to_sentence(target_tensor[i], output_lang)
+                decoded_sentence, _ = evaluate(encoder, decoder, input_sentence, input_lang, output_lang)
+                
+                # Ensure decoded_sentence is a string and split it into words
+                decoded_words = decoded_sentence.split()
+                
+                # Ensure target_sentence is a string and split it into words
+                target_words = target_sentence.split()
+                
+                bleu_score = sentence_bleu([target_words], decoded_words)
+                #print(f"Decoded Sentence: {decoded_sentence}")
+                #print(f"Target Sentence: {target_sentence}")
+                meteor_score_value = meteor_score([target_words], decoded_words)
+                total_bleu += bleu_score
+                total_meteor += meteor_score_value
+
     
     avg_train_loss = total_loss / len(dataloader)
+    avg_bleu = total_bleu / len(dataloader)
+    avg_meteor = total_meteor / len(dataloader)
 
+    # Calcular métricas en el conjunto de validación
     total_val_loss = 0
-    
- 
-    encoder.eval()  # Cambiar a modo de evaluación
-    decoder.eval()  # Cambiar a modo de evaluación
+    total_bleu_val = 0
+    total_meteor_val = 0
+
+    encoder.eval()
+    decoder.eval()
+
     with torch.no_grad():
-        for idx, data in enumerate(val_dataloader):
-            input_tensor, target_tensor = data
+        for i in range(input_tensor.size(0)):
+            input_sentence = indexes_to_sentence(input_tensor[i], input_lang)
+            target_sentence = indexes_to_sentence(target_tensor[i], output_lang)
+            decoded_sentence, _ = evaluate(encoder, decoder, input_sentence, input_lang, output_lang)
+            
+            # Use only the decoded sentence for BLEU and METEOR calculations
+            bleu_score = sentence_bleu([target_sentence.split()], decoded_sentence.split())
+            meteor_score_value = meteor_score([target_sentence], decoded_sentence.split())
+            total_bleu += bleu_score
+            total_meteor += meteor_score_value
 
-            encoder_outputs, encoder_hidden = encoder(input_tensor)
-            decoder_outputs, _, _ = decoder(encoder_outputs, encoder_hidden, target_tensor)
 
-            val_loss = criterion(
-                decoder_outputs.view(-1, decoder_outputs.size(-1)),
-                target_tensor.view(-1)
-            )
 
-            total_val_loss += val_loss.item()
-        
-        avg_val_loss = total_val_loss / len(val_dataloader)
+    avg_val_loss = total_val_loss / len(val_dataloader)
+    avg_bleu_val = total_bleu_val / len(val_dataloader)
+    avg_meteor_val = total_meteor_val / len(val_dataloader)
 
-    return avg_train_loss, avg_val_loss
+    return avg_train_loss, avg_val_loss, avg_bleu, avg_meteor, avg_bleu_val, avg_meteor_val
 
 
 import time
@@ -415,7 +465,15 @@ def evaluate(encoder, decoder, sentence, input_lang, output_lang):
                 decoded_words.append('<EOS>')
                 break
             decoded_words.append(output_lang.index2word[idx.item()])
-    return decoded_words, decoder_attn
+        
+        # Convertir la lista de palabras en una cadena de texto
+        decoded_sentence_str = ' '.join(decoded_words)
+        
+        return decoded_sentence_str, decoder_attn  # Return the decoded sentence and the attention weights
+
+    return decoded_sentence_str, decoder_attn
+
+
 
 
 hidden_size = 256
@@ -435,7 +493,7 @@ wandb.init(project="Machine Translation", config={
                                             "opti": "Adam", #"SDG",
                                             "dataset": "eng-spa",
                                             "hidden_size": hidden_size,
-                                            "batch_size": batch_size} , name="traducir", tags=["-"])
+                                            "batch_size": batch_size} , name="PRUEBA", tags=["prueba"])
 
 
 train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
