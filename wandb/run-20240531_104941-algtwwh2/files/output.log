@@ -1,0 +1,40 @@
+C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+Traceback (most recent call last):
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 499, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 431, in train
+    train_loss, val_loss = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 347, in train_epoch
+    decoded_sentence, _ = evaluate(encoder, decoder, input_sentence, input_lang, output_lang)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 459, in evaluate
+    encoder_outputs, encoder_hidden = encoder(input_tensor)
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 142, in forward
+    output, hidden = self.gru(embedded)
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\modules\rnn.py", line 1100, in forward
+    result = _VF.gru(input, hx, self._flat_weights, self.bias, self.num_layers,
+KeyboardInterrupt

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 495, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 428, in train
+    train_loss, val_loss = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 349, in train_epoch
+    meteor_score_value = meteor_score([target_sentence], decoded_sentence)
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\meteor_score.py", line 397, in meteor_score
+    return max(
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\meteor_score.py", line 398, in <genexpr>
+    single_meteor_score(
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\meteor_score.py", line 326, in single_meteor_score
+    enum_hypothesis, enum_reference = _generate_enums(
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\meteor_score.py", line 33, in _generate_enums
+    raise TypeError(
+TypeError: "hypothesis" expects pre-tokenized hypothesis (Iterable[str]): SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS
