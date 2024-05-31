@@ -4,28 +4,28 @@
         "Sentences": [
             {
                 "Idx": 2,
-                "Original": "tom is a nervous wreck .",
-                "Translation": "propias empieza"
+                "Original": "please show me the menu .",
+                "Translation": "tom que que . . ."
             },
             {
                 "Idx": 4,
-                "Original": "we did it ourselves .",
-                "Translation": "historico historico"
+                "Original": "would you like a cup of tea now ?",
+                "Translation": " que que que que ? ? ?"
             },
             {
                 "Idx": 6,
-                "Original": "tom said it was none of my business .",
-                "Translation": "conducir conducir viejito panico panico"
+                "Original": "we collect stamps from all around the world .",
+                "Translation": "tom que que que de la . ."
             },
             {
                 "Idx": 8,
-                "Original": "i ll buy one .",
-                "Translation": "acordeon empieza daran"
+                "Original": "i have just three dollars left .",
+                "Translation": "tom que que de ."
             },
             {
                 "Idx": 10,
-                "Original": "everything is much more complicated .",
-                "Translation": "ajustar comida"
+                "Original": "take her to the or .",
+                "Translation": "tom que que de ."
             }
         ]
     },
@@ -34,28 +34,28 @@
         "Sentences": [
             {
                 "Idx": 2,
-                "Original": "tom is a nervous wreck .",
-                "Translation": "propias"
+                "Original": "please show me the menu .",
+                "Translation": "el el el ."
             },
             {
                 "Idx": 4,
-                "Original": "we did it ourselves .",
-                "Translation": "conducir abaco"
+                "Original": "would you like a cup of tea now ?",
+                "Translation": " que que te de ? ?"
             },
             {
                 "Idx": 6,
-                "Original": "tom said it was none of my business .",
-                "Translation": "conducir referia"
+                "Original": "we collect stamps from all around the world .",
+                "Translation": "el es el el . ."
             },
             {
                 "Idx": 8,
-                "Original": "i ll buy one .",
-                "Translation": "ajustar"
+                "Original": "i have just three dollars left .",
+                "Translation": "el es un de ."
             },
             {
                 "Idx": 10,
-                "Original": "everything is much more complicated .",
-                "Translation": "ajustar"
+                "Original": "take her to the or .",
+                "Translation": "el el el . ."
             }
         ]
     },
@@ -64,28 +64,28 @@
         "Sentences": [
             {
                 "Idx": 2,
-                "Original": "tom is a nervous wreck .",
-                "Translation": ""
+                "Original": "please show me the menu .",
+                "Translation": "el la el . ."
             },
             {
                 "Idx": 4,
-                "Original": "we did it ourselves .",
-                "Translation": "conducir"
+                "Original": "would you like a cup of tea now ?",
+                "Translation": " que es un de de ?"
             },
             {
                 "Idx": 6,
-                "Original": "tom said it was none of my business .",
-                "Translation": "conducir"
+                "Original": "we collect stamps from all around the world .",
+                "Translation": "el es de de la el ."
             },
             {
                 "Idx": 8,
-                "Original": "i ll buy one .",
-                "Translation": "."
+                "Original": "i have just three dollars left .",
+                "Translation": "me que de a ."
             },
             {
                 "Idx": 10,
-                "Original": "everything is much more complicated .",
-                "Translation": "."
+                "Original": "take her to the or .",
+                "Translation": "el la el . ."
             }
         ]
     },
@@ -94,28 +94,28 @@
         "Sentences": [
             {
                 "Idx": 2,
-                "Original": "tom is a nervous wreck .",
-                "Translation": ""
+                "Original": "please show me the menu .",
+                "Translation": "me el la . ."
             },
             {
                 "Idx": 4,
-                "Original": "we did it ourselves .",
-                "Translation": "."
+                "Original": "would you like a cup of tea now ?",
+                "Translation": " que una de de de de ?"
             },
             {
                 "Idx": 6,
-                "Original": "tom said it was none of my business .",
-                "Translation": "."
+                "Original": "we collect stamps from all around the world .",
+                "Translation": "la el de en la el . ."
             },
             {
                 "Idx": 8,
-                "Original": "i ll buy one .",
-                "Translation": "."
+                "Original": "i have just three dollars left .",
+                "Translation": "me que en en . ."
             },
             {
                 "Idx": 10,
-                "Original": "everything is much more complicated .",
-                "Translation": "."
+                "Original": "take her to the or .",
+                "Translation": "el el la . ."
             }
         ]
     },
@@ -124,28 +124,88 @@
         "Sentences": [
             {
                 "Idx": 2,
-                "Original": "tom is a nervous wreck .",
-                "Translation": ""
+                "Original": "please show me the menu .",
+                "Translation": "yo la la la . ."
             },
             {
                 "Idx": 4,
-                "Original": "we did it ourselves .",
-                "Translation": ""
+                "Original": "would you like a cup of tea now ?",
+                "Translation": " hay un poco de ? ?"
             },
             {
                 "Idx": 6,
-                "Original": "tom said it was none of my business .",
-                "Translation": "."
+                "Original": "we collect stamps from all around the world .",
+                "Translation": "la la de de la la . ."
             },
             {
                 "Idx": 8,
-                "Original": "i ll buy one .",
-                "Translation": ""
+                "Original": "i have just three dollars left .",
+                "Translation": "me que en la . ."
             },
             {
                 "Idx": 10,
-                "Original": "everything is much more complicated .",
-                "Translation": "."
+                "Original": "take her to the or .",
+                "Translation": "la la la la . ."
+            }
+        ]
+    },
+    {
+        "Epoch": 6,
+        "Sentences": [
+            {
+                "Idx": 2,
+                "Original": "please show me the menu .",
+                "Translation": "no me el la . ."
+            },
+            {
+                "Idx": 4,
+                "Original": "would you like a cup of tea now ?",
+                "Translation": " tienes un una de de ?"
+            },
+            {
+                "Idx": 6,
+                "Original": "we collect stamps from all around the world .",
+                "Translation": "la la de de la la ."
+            },
+            {
+                "Idx": 8,
+                "Original": "i have just three dollars left .",
+                "Translation": "tengo que de de . ."
+            },
+            {
+                "Idx": 10,
+                "Original": "take her to the or .",
+                "Translation": "el el el . ."
+            }
+        ]
+    },
+    {
+        "Epoch": 7,
+        "Sentences": [
+            {
+                "Idx": 2,
+                "Original": "please show me the menu .",
+                "Translation": "me me el el . ."
+            },
+            {
+                "Idx": 4,
+                "Original": "would you like a cup of tea now ?",
+                "Translation": " te un un de de ?"
+            },
+            {
+                "Idx": 6,
+                "Original": "we collect stamps from all around the world .",
+                "Translation": "en la de de de la . ."
+            },
+            {
+                "Idx": 8,
+                "Original": "i have just three dollars left .",
+                "Translation": "tengo que de de de . ."
+            },
+            {
+                "Idx": 10,
+                "Original": "take her to the or .",
+                "Translation": "el el el a . ."
             }
         ]
     }

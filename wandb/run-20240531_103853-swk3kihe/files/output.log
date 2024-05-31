@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 479, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 416, in train
+    train_loss, val_loss = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 335, in train_epoch
+    decoded_sentence, _ = evaluate(encoder, decoder, input_sentence, input_lang, output_lang)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 442, in evaluate
+    input_tensor = tensorFromSentence(input_lang, sentence)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 243, in tensorFromSentence
+    indexes = indexesFromSentence(lang, sentence)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 240, in indexesFromSentence
+    return [lang.word2index[word] for word in sentence.split(' ')]
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 240, in <listcomp>
+    return [lang.word2index[word] for word in sentence.split(' ')]
+KeyError: 'SOS'
