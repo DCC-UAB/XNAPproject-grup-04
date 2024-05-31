@@ -435,10 +435,10 @@ wandb.init(project="Machine Translation", config={
                                             "opti": "Adam", #"SDG",
                                             "dataset": "eng-spa",
                                             "hidden_size": hidden_size,
-                                            "batch_size": batch_size} , name="frases_cortas", tags=["longitud de las frases"])
+                                            "batch_size": batch_size} , name="traducir", tags=["-"])
 
 
-#train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
 
 def evaluateRandomly(encoder, decoder, n=10):
     for i in range(n):
@@ -450,4 +450,6 @@ def evaluateRandomly(encoder, decoder, n=10):
         print('<', output_sentence)
         print('')
 
+encoder.eval()
+decoder.eval()
 evaluateRandomly(encoder, decoder)
