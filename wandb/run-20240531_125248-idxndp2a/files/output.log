@@ -21,3 +21,21 @@ Consider using lower n-gram order or use SmoothingFunction()
   warnings.warn(_msg)
 Validation Loss: 5.0218, Validation BLEU: 0.0000, Validation METEOR: 0.1177
 4m 50s (- 0m 0s) (15000 100%) 14.7426
+Epoch 2/10
+Validation Loss: 4.6717, Validation BLEU: 0.0000, Validation METEOR: 0.1429
+9m 39s (- 0m 0s) (15000 100%) 14.4164
+Epoch 3/10
+Validation Loss: 4.5946, Validation BLEU: 0.0001, Validation METEOR: 0.1601
+14m 10s (- 0m 0s) (15000 100%) 13.7827
+Epoch 4/10
+Validation Loss: 4.6781, Validation BLEU: 0.0003, Validation METEOR: 0.1714
+18m 46s (- 0m 0s) (15000 100%) 13.2562
+Epoch 5/10
+Validation Loss: 4.5329, Validation BLEU: 0.0007, Validation METEOR: 0.1888
+23m 22s (- 0m 0s) (15000 100%) 12.8031
+Epoch 6/10
+Validation Loss: 4.3686, Validation BLEU: 0.0011, Validation METEOR: 0.2021
+27m 57s (- 0m 0s) (15000 100%) 12.3377
+Epoch 7/10
+Validation Loss: 4.3491, Validation BLEU: 0.0019, Validation METEOR: 0.2188
+32m 39s (- 0m 0s) (15000 100%) 12.0063
