@@ -53,8 +53,6 @@ def tensorsFromPair(pair):
     return (input_tensor, target_tensor)
 
 def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, max_length=MAX_LENGTH):
-    encoder.train()  # Establece el modo de entrenamiento para el encoder
-    decoder.train()  # Establece el modo de entrenamiento para el decoder
     encoder_hidden = encoder.initHidden()
     encoder_optimizer.zero_grad()
     decoder_optimizer.zero_grad()
@@ -90,8 +88,8 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
     return loss.item() / target_length
 
 def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_LENGTH, criterion=nn.NLLLoss()):
-    encoder.eval()   # Establece el modo de evaluación para el encoder
-    decoder.eval()   # Establece el modo de evaluación para el decoder
+    encoder.eval()
+    decoder.eval()
     
     total_loss = 0
     total_bleu = 0
@@ -138,8 +136,7 @@ def validate(encoder, decoder, validation_pairs, selected_pairs, max_length=MAX_
                 else:
                     decoded_words.append(output_lang.index2word[topi.item()])
                 
-                #decoder_input = topi.squeeze().detach()
-                decoder_input = decoder_output.squeeze(-1).detach()
+                decoder_input = topi.squeeze().detach()
 
             total_loss += loss.item() / target_length
             
@@ -214,7 +211,7 @@ def trainIters(encoder, decoder, n_epochs, train_pairs, val_pairs, print_every=1
         translations_per_epoch.append(epoch_translations)
 
         # Guardar las traducciones en un archivo JSON
-        with open('translations_per_epoch_prueba.json', 'w') as json_file:
+        with open('translations_per_epoch.json', 'w') as json_file:
             json.dump(translations_per_epoch, json_file, ensure_ascii=False, indent=4)
 
  
