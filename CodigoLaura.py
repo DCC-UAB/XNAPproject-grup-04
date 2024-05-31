@@ -423,7 +423,7 @@ batch_size = 32
 epoch = 50
 learning_rate = 0.001
 
-input_lang, output_lang, train_dataloader, val_dataloader, val_pairs = get_dataloaders(batch_size)
+input_lang, output_lang, train_dataloader, val_dataloader, pairs = get_dataloaders(batch_size)
 
 encoder = EncoderRNN(input_lang.n_words, hidden_size).to(device)
 decoder = AttnDecoderRNN(hidden_size, output_lang.n_words).to(device)

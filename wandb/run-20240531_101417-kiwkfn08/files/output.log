@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 453, in <module>
+    evaluateRandomly(encoder, decoder)
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 445, in evaluateRandomly
+    pair = random.choice(pairs)
+                         ^^^^^
+NameError: name 'pairs' is not defined
