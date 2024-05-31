@@ -4,148 +4,28 @@
         "Sentences": [
             {
                 "Idx": 2,
-                "Original": "tom is a nervous wreck .",
-                "Translation": "propias empieza"
+                "Original": "please show me the menu .",
+                "Translation": "tom que que . . ."
             },
             {
                 "Idx": 4,
-                "Original": "we did it ourselves .",
-                "Translation": "historico historico"
+                "Original": "would you like a cup of tea now ?",
+                "Translation": " que que que que ? ? ?"
             },
             {
                 "Idx": 6,
-                "Original": "tom said it was none of my business .",
-                "Translation": "conducir conducir viejito panico panico"
+                "Original": "we collect stamps from all around the world .",
+                "Translation": "tom que que que de la . ."
             },
             {
                 "Idx": 8,
-                "Original": "i ll buy one .",
-                "Translation": "acordeon empieza daran"
+                "Original": "i have just three dollars left .",
+                "Translation": "tom que que de ."
             },
             {
                 "Idx": 10,
-                "Original": "everything is much more complicated .",
-                "Translation": "ajustar comida"
-            }
-        ]
-    },
-    {
-        "Epoch": 2,
-        "Sentences": [
-            {
-                "Idx": 2,
-                "Original": "tom is a nervous wreck .",
-                "Translation": "propias"
-            },
-            {
-                "Idx": 4,
-                "Original": "we did it ourselves .",
-                "Translation": "conducir abaco"
-            },
-            {
-                "Idx": 6,
-                "Original": "tom said it was none of my business .",
-                "Translation": "conducir referia"
-            },
-            {
-                "Idx": 8,
-                "Original": "i ll buy one .",
-                "Translation": "ajustar"
-            },
-            {
-                "Idx": 10,
-                "Original": "everything is much more complicated .",
-                "Translation": "ajustar"
-            }
-        ]
-    },
-    {
-        "Epoch": 3,
-        "Sentences": [
-            {
-                "Idx": 2,
-                "Original": "tom is a nervous wreck .",
-                "Translation": ""
-            },
-            {
-                "Idx": 4,
-                "Original": "we did it ourselves .",
-                "Translation": "conducir"
-            },
-            {
-                "Idx": 6,
-                "Original": "tom said it was none of my business .",
-                "Translation": "conducir"
-            },
-            {
-                "Idx": 8,
-                "Original": "i ll buy one .",
-                "Translation": "."
-            },
-            {
-                "Idx": 10,
-                "Original": "everything is much more complicated .",
-                "Translation": "."
-            }
-        ]
-    },
-    {
-        "Epoch": 4,
-        "Sentences": [
-            {
-                "Idx": 2,
-                "Original": "tom is a nervous wreck .",
-                "Translation": ""
-            },
-            {
-                "Idx": 4,
-                "Original": "we did it ourselves .",
-                "Translation": "."
-            },
-            {
-                "Idx": 6,
-                "Original": "tom said it was none of my business .",
-                "Translation": "."
-            },
-            {
-                "Idx": 8,
-                "Original": "i ll buy one .",
-                "Translation": "."
-            },
-            {
-                "Idx": 10,
-                "Original": "everything is much more complicated .",
-                "Translation": "."
-            }
-        ]
-    },
-    {
-        "Epoch": 5,
-        "Sentences": [
-            {
-                "Idx": 2,
-                "Original": "tom is a nervous wreck .",
-                "Translation": ""
-            },
-            {
-                "Idx": 4,
-                "Original": "we did it ourselves .",
-                "Translation": ""
-            },
-            {
-                "Idx": 6,
-                "Original": "tom said it was none of my business .",
-                "Translation": "."
-            },
-            {
-                "Idx": 8,
-                "Original": "i ll buy one .",
-                "Translation": ""
-            },
-            {
-                "Idx": 10,
-                "Original": "everything is much more complicated .",
-                "Translation": "."
+                "Original": "take her to the or .",
+                "Translation": "tom que que de ."
             }
         ]
     }

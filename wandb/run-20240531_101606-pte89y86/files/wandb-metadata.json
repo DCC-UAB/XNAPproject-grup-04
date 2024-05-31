@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.8.19",
+    "heartbeatAt": "2024-05-31T08:16:07.157584",
+    "startedAt": "2024-05-31T08:16:06.456429",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:/Users/paucl/Desktop/Uni/DL/XNAPproject-grup-04/TrainMar.py",
+    "codePathLocal": "TrainMar.py",
+    "codePath": "TrainMar.py",
+    "git": {
+        "remote": "https://github.com/DCC-UAB/XNAPproject-grup-04.git",
+        "commit": "7866aead8ced0dc57e3d60021e21136572f33d9a"
+    },
+    "email": "pau.clavera03.com",
+    "root": "C:/Users/paucl/Desktop/Uni/DL/XNAPproject-grup-04",
+    "host": "DESKTOP-PCLACO",
+    "username": "paucl",
+    "executable": "C:\\Users\\paucl\\Desktop\\Uni\\DL\\XNAPproject-grup-04\\.conda\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3801.0,
+        "min": 0.0,
+        "max": 3801.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3801.0,
+            "min": 0.0,
+            "max": 3801.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 893.6230430603027,
+            "used": 691.5670547485352
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 31.94741439819336
+    }
+}

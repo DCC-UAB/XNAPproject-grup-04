@@ -1,0 +1,23 @@
+
+Starting Training Loop...
+Epoch 1/10
+C:\Users\paucl\Desktop\Uni\DL\XNAPproject-grup-04\.conda\lib\site-packages\nltk\translate\bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+C:\Users\paucl\Desktop\Uni\DL\XNAPproject-grup-04\.conda\lib\site-packages\nltk\translate\bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+C:\Users\paucl\Desktop\Uni\DL\XNAPproject-grup-04\.conda\lib\site-packages\nltk\translate\bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+Validation Loss: 5.0218, Validation BLEU: 0.0000, Validation METEOR: 0.1177
+4m 50s (- 0m 0s) (15000 100%) 14.7426

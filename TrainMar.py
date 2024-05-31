@@ -55,6 +55,8 @@ def tensorsFromPair(pair):
     return (input_tensor, target_tensor)
 
 def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, max_length=MAX_LENGTH):
+    encoder.train()   # Establece el modo de entrenamiento para el encoder
+    decoder.train()   # Establece el modo de entrenamiento para el decoder
     encoder_hidden = encoder.initHidden()
     encoder_optimizer.zero_grad()
     decoder_optimizer.zero_grad()
@@ -246,12 +248,12 @@ def main():
         										"epochs": args.epochs, 
                                                 "learning_rate": args.lr, 
                                                 "cell_type": 'GRU', #'GRU', LSTM
-                                                "opti": "SDG",
+                                                "opti": "RMSprop",
                                                 "layers": 1,
                                                 "dataset": "eng-spa",
                                                 "hidden_size": hidden_size,
                                                 "dropout": 0.1,
-                                                "batch_size":1}, name="experiment1")
+                                                "batch_size":32}, name="experiment4: batch_size 32, opti RMSprop")
 
     trainIters(encoder1, attn_decoder1, int(args.epochs), train_pairs, val_pairs, print_every=5000, learning_rate=float(args.lr))
 
