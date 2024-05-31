@@ -344,13 +344,20 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
                 input_sentence = indexes_to_sentence(input_tensor[i], input_lang)
                 target_sentence = indexes_to_sentence(target_tensor[i], output_lang)
                 decoded_sentence, _ = evaluate(encoder, decoder, input_sentence, input_lang, output_lang)
-                bleu_score = sentence_bleu([target_sentence.split()], decoded_sentence.split())
-                # Assuming decoded_sentence is a string returned from evaluate
-                reference_sentences = [target_sentence.split()]
-                hypothesis = decoded_sentence.split()
-                meteor_score_value = meteor_score(reference_sentences, hypothesis)
+                
+                # Ensure decoded_sentence is a string and split it into words
+                decoded_words = decoded_sentence.split()
+                
+                # Ensure target_sentence is a string and split it into words
+                target_words = target_sentence.split()
+                
+                bleu_score = sentence_bleu([target_words], decoded_words)
+                #print(f"Decoded Sentence: {decoded_sentence}")
+                #print(f"Target Sentence: {target_sentence}")
+                meteor_score_value = meteor_score([target_words], decoded_words)
                 total_bleu += bleu_score
                 total_meteor += meteor_score_value
+
     
     avg_train_loss = total_loss / len(dataloader)
     avg_bleu = total_bleu / len(dataloader)
@@ -365,27 +372,18 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
     decoder.eval()
 
     with torch.no_grad():
-        for data in val_dataloader:
-            input_tensor, target_tensor = data
+        for i in range(input_tensor.size(0)):
+            input_sentence = indexes_to_sentence(input_tensor[i], input_lang)
+            target_sentence = indexes_to_sentence(target_tensor[i], output_lang)
+            decoded_sentence, _ = evaluate(encoder, decoder, input_sentence, input_lang, output_lang)
+            
+            # Use only the decoded sentence for BLEU and METEOR calculations
+            bleu_score = sentence_bleu([target_sentence.split()], decoded_sentence.split())
+            meteor_score_value = meteor_score([target_sentence], decoded_sentence.split())
+            total_bleu += bleu_score
+            total_meteor += meteor_score_value
 
-            encoder_outputs, encoder_hidden = encoder(input_tensor)
-            decoder_outputs, _, _ = decoder(encoder_outputs, encoder_hidden, target_tensor)
 
-            val_loss = criterion(
-                decoder_outputs.view(-1, decoder_outputs.size(-1)),
-                target_tensor.view(-1)
-            )
-
-            total_val_loss += val_loss.item()
-
-            for i in range(input_tensor.size(0)):
-                input_sentence = indexes_to_sentence(input_tensor[i], input_lang)
-                target_sentence = indexes_to_sentence(target_tensor[i], output_lang)
-                decoded_sentence, _ = evaluate(encoder, decoder, input_sentence, input_lang, output_lang)
-                bleu_score_val = sentence_bleu([target_sentence.split()], decoded_sentence.split())
-                meteor_score_val = meteor_score([target_sentence], decoded_sentence)
-                total_bleu_val += bleu_score_val
-                total_meteor_val += meteor_score_val
 
     avg_val_loss = total_val_loss / len(val_dataloader)
     avg_bleu_val = total_bleu_val / len(val_dataloader)
@@ -471,7 +469,10 @@ def evaluate(encoder, decoder, sentence, input_lang, output_lang):
         # Convertir la lista de palabras en una cadena de texto
         decoded_sentence_str = ' '.join(decoded_words)
         
-        return decoded_sentence_str, decoder_attn
+        return decoded_sentence_str, decoder_attn  # Return the decoded sentence and the attention weights
+
+    return decoded_sentence_str, decoder_attn
+
 
 
 
