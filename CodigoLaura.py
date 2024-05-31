@@ -235,7 +235,9 @@ class AttnDecoderRNN(nn.Module):
 
         return output, hidden, attn_weights
     
-
+def sentenceFromIndexes(lang, indexes):
+    return [ lang.index2word[ind]  for ind in indexes if (ind != SOS_token and ind != EOS_token)]
+ 
 def indexesFromSentence(lang, sentence):
     return [lang.word2index[word] for word in sentence.split(' ')]
 
