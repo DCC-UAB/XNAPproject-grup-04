@@ -421,7 +421,7 @@ def evaluate(encoder, decoder, sentence, input_lang, output_lang):
 
 
 hidden_size = 256
-batch_size = 32
+batch_size = 128
 epoch = 50
 learning_rate = 0.001
 
