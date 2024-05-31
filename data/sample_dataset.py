@@ -1,27 +1,32 @@
 import random
-import os
 
-directorio_actual = os.getcwd()
-print(directorio_actual)
-
-# Define el nombre del archivo de entrada y salida
-input_filename = r'C:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\data\spa.txt'
-
-#input_filename = 'C:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04/data/spa.txt'
-output_filename = r'C:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04/data/spa_sample100.txt'
+# Proporciona la ruta al archivo de entrada
+input_filename = 'data/spa.txt'
+output_filename = 'data/spa_sample_frases_cortas.txt'
 
 # Número de líneas a seleccionar
-num_lines_to_select = 100000
+num_lines_to_select = 20000
+
+# Función para contar palabras en una línea
+def count_words(line):
+    return len(line.split())
 
 # Lee todas las líneas del archivo
 with open(input_filename, 'r', encoding='utf-8') as file:
     lines = file.readlines()
 
-# Selecciona 20,000 líneas aleatorias
-selected_lines = random.sample(lines, num_lines_to_select)
+# Filtra las líneas que tienen menos de 6 palabras
+filtered_lines = [line for line in lines if count_words(line) < 8]
+
+# Verifica que hay suficientes líneas para seleccionar
+if len(filtered_lines) < num_lines_to_select:
+    raise ValueError("No hay suficientes líneas con menos de 6 palabras.")
+
+# Selecciona 20,000 líneas aleatorias de las líneas filtradas
+selected_lines = random.sample(filtered_lines, num_lines_to_select)
 
 # Escribe las líneas seleccionadas en un nuevo archivo
 with open(output_filename, 'w', encoding='utf-8') as file:
     file.writelines(selected_lines)
 
-print(f'{num_lines_to_select} líneas aleatorias han sido guardadas en {output_filename}')
+print(f'{num_lines_to_select} líneas con menos de 6 palabras han sido guardadas en {output_filename}')
