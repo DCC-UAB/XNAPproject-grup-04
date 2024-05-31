@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoMar.py", line 477, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=5, plot_every=5)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoMar.py", line 393, in train
+    train_loss, val_loss, avg_bleu, avg_meteor, selected_translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoMar.py", line 342, in train_epoch
+    decoded_words = [output_lang.index2word[idx] for idx in decoded_ids if idx != EOS_token]
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoMar.py", line 342, in <listcomp>
+    decoded_words = [output_lang.index2word[idx] for idx in decoded_ids if idx != EOS_token]
+TypeError: unhashable type: 'list'

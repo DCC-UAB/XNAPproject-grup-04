@@ -1,0 +1,1 @@
+{"Validation Loss": 0.8840102989196776, "Training loss": 0.45757368921041486, "Score Bleu": 0.7834408172393164, "Score Meteor": 1, "_timestamp": 1717096062.7737446, "_runtime": 508.65519165992737, "_step": 15, "_wandb": {"runtime": 508}}

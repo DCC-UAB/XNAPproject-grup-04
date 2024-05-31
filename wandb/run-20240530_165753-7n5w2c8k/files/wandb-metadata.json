@@ -1,0 +1,78 @@
+{
+    "os": "Linux-5.15.0-1064-azure-x86_64-with-glibc2.17",
+    "python": "3.8.16",
+    "heartbeatAt": "2024-05-30T16:57:54.428103",
+    "startedAt": "2024-05-30T16:57:53.970943",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoMar.py",
+    "codePathLocal": "CodigoMar.py",
+    "codePath": "CodigoMar.py",
+    "git": {
+        "remote": "https://github.com/DCC-UAB/XNAPproject-grup-04.git",
+        "commit": "edc1dce5d27150136be7e81c90060aa0bc287ecd"
+    },
+    "email": "1641111@uab.cat",
+    "root": "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04",
+    "host": "labDAGLBU",
+    "username": "xnmaster",
+    "executable": "/anaconda/envs/py38_default/bin/python",
+    "cpu_count": 6,
+    "cpu_count_logical": 6,
+    "cpu_freq": {
+        "current": 2593.991,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2593.991,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.991,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.991,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.991,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.991,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.991,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 145.1909637451172,
+            "used": 100.32823181152344
+        }
+    },
+    "gpu": "Tesla V100-PCIE-16GB",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Tesla V100-PCIE-16GB",
+            "memory_total": 16945512448
+        }
+    ],
+    "memory": {
+        "total": 110.04522705078125
+    }
+}

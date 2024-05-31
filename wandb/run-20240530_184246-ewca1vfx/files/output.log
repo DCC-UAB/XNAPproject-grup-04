@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/xnmaster/testproject/XNAPproject-grup-04/CodigoMar.py", line 487, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=5, plot_every=5)
+  File "/home/xnmaster/testproject/XNAPproject-grup-04/CodigoMar.py", line 403, in train
+    train_loss, val_loss, avg_bleu, avg_meteor, selected_translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "/home/xnmaster/testproject/XNAPproject-grup-04/CodigoMar.py", line 355, in train_epoch
+    meteor_score_value = meteor_score([' '.join(target_words)], ' '.join(decoded_words))
+  File "/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/meteor_score.py", line 397, in meteor_score
+    return max(
+  File "/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/meteor_score.py", line 398, in <genexpr>
+    single_meteor_score(
+  File "/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/meteor_score.py", line 326, in single_meteor_score
+    enum_hypothesis, enum_reference = _generate_enums(
+  File "/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/meteor_score.py", line 33, in _generate_enums
+    raise TypeError(
+TypeError: "hypothesis" expects pre-tokenized hypothesis (Iterable[str]): i is s SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS

@@ -1,0 +1,16 @@
+
+2m 20s (- 4m 41s) (5 33%) Train Loss: 1.2641, Val Loss: 1.2136
+4m 39s (- 2m 19s) (10 66%) Train Loss: 0.7375, Val Loss: 0.9646
+7m 0s (- 0m 0s) (15 100%) Train Loss: 0.4895, Val Loss: 0.9137
+Traceback (most recent call last):
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 449, in <module>
+    output_words, _ = evaluate(encoder, decoder, pair[0], input_lang, output_lang)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 404, in evaluate
+    input_tensor = tensorFromSentence(input_lang, sentence)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 243, in tensorFromSentence
+    indexes = indexesFromSentence(lang, sentence)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 240, in indexesFromSentence
+    return [lang.word2index[word] for word in sentence.split(' ')]
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 240, in <listcomp>
+    return [lang.word2index[word] for word in sentence.split(' ')]
+KeyError: 'put'
