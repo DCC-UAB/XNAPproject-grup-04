@@ -59,7 +59,7 @@ def normalizeString(s):
     s = re.sub(r"[^a-zA-Z!?]+", r" ", s)
     return s.strip()
 
-dataset = './data/spa_sample.txt'
+dataset = './data/spa_sample100.txt'
 
 def readLangs(lang1, lang2, reverse=False):
     print("Reading lines...")
@@ -436,9 +436,9 @@ def evaluate(encoder, decoder, sentence, input_lang, output_lang):
 
 
 hidden_size = 256
-batch_size = 128
+batch_size = 500
 epoch = 50
-learning_rate = 0.001
+learning_rate = 0.0001
 
 input_lang, output_lang, train_dataloader, val_dataloader = get_dataloaders(batch_size)
 
