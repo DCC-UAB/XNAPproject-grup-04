@@ -59,7 +59,7 @@ def normalizeString(s):
     s = re.sub(r"[^a-zA-Z!?]+", r" ", s)
     return s.strip()
 
-dataset = './data/spa_sample.txt'
+dataset = './data/spa100.txt'
 
 def readLangs(lang1, lang2, reverse=False):
     print("Reading lines...")
@@ -442,16 +442,3 @@ wandb.init(project="Machine Translation", config={
 
 train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
 
-def evaluateRandomly(encoder, decoder, n=10):
-    for i in range(n):
-        pair = random.choice(pairs)
-        print('>', pair[0])
-        print('=', pair[1])
-        output_words, _ = evaluate(encoder, decoder, pair[0], input_lang, output_lang)
-        output_sentence = ' '.join(output_words)
-        print('<', output_sentence)
-        print('')
-
-encoder.eval()
-decoder.eval()
-evaluateRandomly(encoder, decoder)
