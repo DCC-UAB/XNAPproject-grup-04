@@ -435,10 +435,10 @@ def evaluate(encoder, decoder, sentence, input_lang, output_lang):
     return decoded_words, decoder_attn
 
 
-hidden_size = 256
-batch_size = 128
+hidden_size = 128
+batch_size = 32
 epoch = 50
-learning_rate = 0.001
+learning_rate = 0.00001
 
 input_lang, output_lang, train_dataloader, val_dataloader = get_dataloaders(batch_size)
 
@@ -452,7 +452,7 @@ wandb.init(project="Machine Translation", config={
                                             "opti": "Adam", #"SDG",
                                             "dataset": "eng-spa",
                                             "hidden_size": hidden_size,
-                                            "batch_size": batch_size} , name="traducir", tags=["-"])
+                                            "batch_size": batch_size} , name="learning rate 0.00001", tags=["-"])
 
 
 train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
