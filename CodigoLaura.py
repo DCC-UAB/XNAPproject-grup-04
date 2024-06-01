@@ -108,6 +108,7 @@ def prepareData(lang1, lang2, reverse=False):
     print("Trimmed to %s sentence pairs" % len(pairs))
     print("Counting words...")
     for pair in pairs:
+        #print(pair)
         input_lang.addSentence(pair[0])
         output_lang.addSentence(pair[1])
     print("Counted words:")
@@ -252,7 +253,7 @@ def tensorsFromPair(pair):
     return (input_tensor, target_tensor)
 
 def get_dataloaders(batch_size, val_split=0.2):
-    input_lang, output_lang, pairs = prepareData('eng', 'fra', True)
+    input_lang, output_lang, pairs = prepareData('eng', 'spa', False)
 
     n = len(pairs)
     input_ids = np.zeros((n, MAX_LENGTH), dtype=np.int32)
@@ -286,9 +287,7 @@ def get_dataloaders(batch_size, val_split=0.2):
     train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     val_dataloader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
 
-    val_pairs = [(pairs[i][1], pairs[i][0]) for i in val_indices]
-
-    return input_lang, output_lang, train_dataloader, val_dataloader, val_pairs
+    return input_lang, output_lang, train_dataloader, val_dataloader
 
 
 def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader):
@@ -321,12 +320,13 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
     avg_train_loss = total_loss / len(dataloader)
 
     total_val_loss = 0
+    bleu_scores = []
     
- 
     encoder.eval()  # Cambiar a modo de evaluación
     decoder.eval()  # Cambiar a modo de evaluación
     with torch.no_grad():
         for idx, data in enumerate(val_dataloader):
+            #print(idx)
             input_tensor, target_tensor = data
 
             encoder_outputs, encoder_hidden = encoder(input_tensor)
@@ -338,10 +338,27 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
             )
 
             total_val_loss += val_loss.item()
-        
-        avg_val_loss = total_val_loss / len(val_dataloader)
 
-    return avg_train_loss, avg_val_loss
+            #print(target_tensor.size(0))
+            for i in range(target_tensor.size(0)):  # Iterar sobre las secuencias en el batch
+                input_sentence = sentenceFromIndexes(input_lang, input_tensor[i].tolist())
+                target_sentence = sentenceFromIndexes(output_lang, target_tensor[i].tolist())
+                #print(input_sentence, target_sentence)
+                predicted_indexes = torch.argmax(decoder_outputs[i], dim=1).tolist()
+                predicted_sentence = sentenceFromIndexes(output_lang, predicted_indexes)
+                #print("Predictet sentences: ",predicted_sentence)
+                    
+                # Calcular BLEU y METEOR para cada frase
+                bleu = sentence_bleu([target_sentence], predicted_sentence)
+                bleu_scores.append(bleu)
+                if i < 10:
+                    wandb.log({"Input Sentence": input_sentence, "Target Sentence": target_sentence, "Predicted Sentence": predicted_sentence, "Bleu Score": bleu})
+                
+        avg_val_loss = total_val_loss / len(val_dataloader)
+        avg_bleu_score = sum(bleu_scores) / len(bleu_scores)
+
+
+    return avg_train_loss, avg_val_loss, avg_bleu_score
 
 
 import time
@@ -377,7 +394,7 @@ def train(train_dataloader, val_dataloader , encoder, decoder, n_epochs, learnin
     translations_per_epoch = []
 
     for epoch in range(1, n_epochs + 1):
-        train_loss, val_loss = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+        train_loss, val_loss, avg_bleu_score = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
         print_loss_total += train_loss
         print_val_loss_total += val_loss
 
@@ -387,7 +404,7 @@ def train(train_dataloader, val_dataloader , encoder, decoder, n_epochs, learnin
         
             print_val_loss_avg = print_val_loss_total / print_every
             print_val_loss_total = 0
-            wandb.log({"Validation Loss": print_val_loss_avg,"Training loss": print_loss_avg}, step = epoch)
+            wandb.log({"Validation Loss": print_val_loss_avg,"Training loss": print_loss_avg, "Bleu Score": avg_bleu_score}, step = epoch)
             print('%s (%d %d%%) Train Loss: %.4f, Val Loss: %.4f' % (timeSince(start, epoch / n_epochs),
                                                                          epoch, epoch / n_epochs * 100, print_loss_avg, print_val_loss_avg))
   
@@ -425,7 +442,7 @@ batch_size = 128
 epoch = 50
 learning_rate = 0.001
 
-input_lang, output_lang, train_dataloader, val_dataloader, pairs = get_dataloaders(batch_size)
+input_lang, output_lang, train_dataloader, val_dataloader = get_dataloaders(batch_size)
 
 encoder = EncoderRNN(input_lang.n_words, hidden_size).to(device)
 decoder = AttnDecoderRNN(hidden_size, output_lang.n_words).to(device)
