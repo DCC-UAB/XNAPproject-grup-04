@@ -1,0 +1,1 @@
+{"Input Sentence": ["i", "feel", "lonely"], "Target Sentence": ["me", "siento", "sola"], "Predicted Sentence": ["yo", "siento", "mucho"], "Bleu Score": 1.384292958842266e-231, "_timestamp": 1717234360.139453, "_runtime": 279.0608718395233, "_step": 9599, "_wandb": {"runtime": 282}}

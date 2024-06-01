@@ -1,0 +1,62 @@
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+0m 13s (- 11m 3s) (1 2%) Train Loss: 1.9941, Val Loss: 1.6081
+0m 21s (- 8m 45s) (2 4%) Train Loss: 1.5143, Val Loss: 1.4507
+0m 30s (- 7m 55s) (3 6%) Train Loss: 1.3388, Val Loss: 1.3377
+0m 38s (- 7m 27s) (4 8%) Train Loss: 1.2031, Val Loss: 1.2520
+0m 47s (- 7m 5s) (5 10%) Train Loss: 1.0908, Val Loss: 1.1947
+0m 55s (- 6m 49s) (6 12%) Train Loss: 0.9900, Val Loss: 1.1445
+1m 4s (- 6m 35s) (7 14%) Train Loss: 0.8969, Val Loss: 1.1017
+1m 12s (- 6m 22s) (8 16%) Train Loss: 0.8104, Val Loss: 1.0669
+1m 21s (- 6m 10s) (9 18%) Train Loss: 0.7298, Val Loss: 1.0380
+1m 29s (- 5m 59s) (10 20%) Train Loss: 0.6562, Val Loss: 1.0197
+1m 38s (- 5m 48s) (11 22%) Train Loss: 0.5874, Val Loss: 1.0032
+1m 46s (- 5m 38s) (12 24%) Train Loss: 0.5240, Val Loss: 0.9877
+1m 55s (- 5m 28s) (13 26%) Train Loss: 0.4677, Val Loss: 0.9802
+2m 3s (- 5m 18s) (14 28%) Train Loss: 0.4147, Val Loss: 0.9709
+2m 12s (- 5m 8s) (15 30%) Train Loss: 0.3668, Val Loss: 0.9649
+2m 20s (- 4m 59s) (16 32%) Train Loss: 0.3261, Val Loss: 0.9607
+2m 29s (- 4m 50s) (17 34%) Train Loss: 0.2895, Val Loss: 0.9563
+2m 37s (- 4m 40s) (18 36%) Train Loss: 0.2558, Val Loss: 0.9591
+2m 46s (- 4m 31s) (19 38%) Train Loss: 0.2266, Val Loss: 0.9575
+2m 55s (- 4m 22s) (20 40%) Train Loss: 0.2011, Val Loss: 0.9617
+3m 3s (- 4m 13s) (21 42%) Train Loss: 0.1800, Val Loss: 0.9680
+3m 12s (- 4m 4s) (22 44%) Train Loss: 0.1601, Val Loss: 0.9693
+3m 21s (- 3m 56s) (23 46%) Train Loss: 0.1435, Val Loss: 0.9733
+3m 29s (- 3m 47s) (24 48%) Train Loss: 0.1287, Val Loss: 0.9813
+3m 38s (- 3m 38s) (25 50%) Train Loss: 0.1157, Val Loss: 0.9882
+3m 46s (- 3m 29s) (26 52%) Train Loss: 0.1035, Val Loss: 0.9902
+3m 55s (- 3m 20s) (27 54%) Train Loss: 0.0943, Val Loss: 0.9976
+4m 4s (- 3m 11s) (28 56%) Train Loss: 0.0857, Val Loss: 1.0032
+4m 12s (- 3m 3s) (29 57%) Train Loss: 0.0775, Val Loss: 1.0083
+4m 21s (- 2m 54s) (30 60%) Train Loss: 0.0706, Val Loss: 1.0176
+Traceback (most recent call last):
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 460, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 397, in train
+    train_loss, val_loss, avg_bleu_score = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 307, in train_epoch
+    decoder_outputs, _, _ = decoder(encoder_outputs, encoder_hidden, target_tensor)
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 206, in forward
+    decoder_output, decoder_hidden, attn_weights = self.forward_step(
+  File "/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoLaura.py", line 230, in forward_step
+    query = hidden.permute(1, 0, 2)
+KeyboardInterrupt
