@@ -357,7 +357,7 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
                     target_sentence = ' '.join(target_sentence)
                     predicted_sentence = ' '.join(predicted_sentence)
                     dic = {"Input Sentence": input_sentence, "Target Sentence" : target_sentence, "Predicted Sentence": predicted_sentence, "Bleu Score": bleu}
-                    print(dic)
+                    #print(dic)
                     selected_translations.append(dic)
                 
         avg_val_loss = total_val_loss / len(val_dataloader)
@@ -421,7 +421,7 @@ def train(train_dataloader, val_dataloader , encoder, decoder, n_epochs, learnin
             translations_per_epoch.append(epoch_translations)
 
             # Guardar las traducciones en un archivo JSON
-            with open('translations_per_epoch_DEFI.json', 'w') as json_file:
+            with open('translations_hidden.json', 'w') as json_file:
                 json.dump(translations_per_epoch, json_file, ensure_ascii=False, indent=4)
   
         if epoch % plot_every == 0:
@@ -453,7 +453,7 @@ def evaluate(encoder, decoder, sentence, input_lang, output_lang):
     return decoded_words, decoder_attn
 
 
-hidden_size = 128
+hidden_size = 64
 batch_size = 500
 epoch = 50
 learning_rate = 0.0001
@@ -470,7 +470,7 @@ wandb.init(project="Machine Translation", config={
                                             "opti": "Adam", #"SDG",
                                             "dataset": "eng-spa",
                                             "hidden_size": hidden_size,
-                                            "batch_size": batch_size} , name="hidden size 128", tags=["hidden size"])
+                                            "batch_size": batch_size} , name="hidden size", tags=["hidden size"])
 
 
 train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
