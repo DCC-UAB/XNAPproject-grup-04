@@ -1,0 +1,170 @@
+2024-06-01 10:32:33,713 INFO    StreamThr :57718 [internal.py:wandb_internal():85] W&B internal server running at pid: 57718, started at: 2024-06-01 10:32:33.712583
+2024-06-01 10:32:33,714 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status
+2024-06-01 10:32:33,716 INFO    WriterThread:57718 [datastore.py:open_for_write():87] open: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/run-m4ls4grm.wandb
+2024-06-01 10:32:33,718 DEBUG   SenderThread:57718 [sender.py:send():378] send: header
+2024-06-01 10:32:33,758 DEBUG   SenderThread:57718 [sender.py:send():378] send: run
+2024-06-01 10:32:34,100 INFO    SenderThread:57718 [dir_watcher.py:__init__():211] watching files in: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files
+2024-06-01 10:32:34,100 INFO    SenderThread:57718 [sender.py:_start_run_threads():1123] run started: m4ls4grm with start time 1717237953.712655
+2024-06-01 10:32:34,176 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: check_version
+2024-06-01 10:32:34,176 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: check_version
+2024-06-01 10:32:34,254 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: run_start
+2024-06-01 10:32:34,257 DEBUG   HandlerThread:57718 [system_info.py:__init__():26] System info init
+2024-06-01 10:32:34,257 DEBUG   HandlerThread:57718 [system_info.py:__init__():41] System info init done
+2024-06-01 10:32:34,257 INFO    HandlerThread:57718 [system_monitor.py:start():194] Starting system monitor
+2024-06-01 10:32:34,257 INFO    SystemMonitor:57718 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-01 10:32:34,257 INFO    HandlerThread:57718 [system_monitor.py:probe():214] Collecting system info
+2024-06-01 10:32:34,258 INFO    SystemMonitor:57718 [interfaces.py:start():188] Started cpu monitoring
+2024-06-01 10:32:34,259 INFO    SystemMonitor:57718 [interfaces.py:start():188] Started disk monitoring
+2024-06-01 10:32:34,259 INFO    SystemMonitor:57718 [interfaces.py:start():188] Started gpu monitoring
+2024-06-01 10:32:34,260 INFO    SystemMonitor:57718 [interfaces.py:start():188] Started memory monitoring
+2024-06-01 10:32:34,261 INFO    SystemMonitor:57718 [interfaces.py:start():188] Started network monitoring
+2024-06-01 10:32:34,267 DEBUG   HandlerThread:57718 [system_info.py:probe():150] Probing system
+2024-06-01 10:32:34,272 DEBUG   HandlerThread:57718 [system_info.py:_probe_git():135] Probing git
+2024-06-01 10:32:34,284 DEBUG   HandlerThread:57718 [system_info.py:_probe_git():143] Probing git done
+2024-06-01 10:32:34,284 DEBUG   HandlerThread:57718 [system_info.py:probe():198] Probing system done
+2024-06-01 10:32:34,284 DEBUG   HandlerThread:57718 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-1064-azure-x86_64-with-glibc2.17', 'python': '3.8.16', 'heartbeatAt': '2024-06-01T10:32:34.267561', 'startedAt': '2024-06-01T10:32:33.707613', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/DefinitiveCode.py', 'codePathLocal': 'DefinitiveCode.py', 'codePath': 'DefinitiveCode.py', 'git': {'remote': 'https://github.com/DCC-UAB/XNAPproject-grup-04.git', 'commit': '7f66c19fad9b602448a36bb854589737c361cf06'}, 'email': '1641111@uab.cat', 'root': '/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04', 'host': 'labDAGLBU', 'username': 'xnmaster', 'executable': '/anaconda/envs/py38_default/bin/python', 'cpu_count': 6, 'cpu_count_logical': 6, 'cpu_freq': {'current': 2593.993, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2593.993, 'min': 0.0, 'max': 0.0}, {'current': 2593.993, 'min': 0.0, 'max': 0.0}, {'current': 2593.993, 'min': 0.0, 'max': 0.0}, {'current': 2593.993, 'min': 0.0, 'max': 0.0}, {'current': 2593.993, 'min': 0.0, 'max': 0.0}, {'current': 2593.993, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 145.1909637451172, 'used': 100.31415176391602}}, 'gpu': 'Tesla V100-PCIE-16GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'Tesla V100-PCIE-16GB', 'memory_total': 16945512448}], 'memory': {'total': 110.04522705078125}}
+2024-06-01 10:32:34,284 INFO    HandlerThread:57718 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-01 10:32:34,284 INFO    HandlerThread:57718 [system_monitor.py:probe():227] Publishing system info
+2024-06-01 10:32:34,284 DEBUG   HandlerThread:57718 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-06-01 10:32:35,102 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_created():271] file/dir created: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/conda-environment.yaml
+2024-06-01 10:32:47,977 DEBUG   HandlerThread:57718 [system_info.py:_save_conda():222] Saving conda packages done
+2024-06-01 10:32:47,978 INFO    HandlerThread:57718 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-01 10:32:47,984 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:32:47,984 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-01 10:32:47,985 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:32:47,985 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-01 10:32:47,985 DEBUG   SenderThread:57718 [sender.py:send():378] send: files
+2024-06-01 10:32:47,985 INFO    SenderThread:57718 [sender.py:_save_file():1389] saving file wandb-metadata.json with policy now
+2024-06-01 10:32:48,105 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/conda-environment.yaml
+2024-06-01 10:32:48,105 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_created():271] file/dir created: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/wandb-metadata.json
+2024-06-01 10:32:48,290 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: python_packages
+2024-06-01 10:32:48,291 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: python_packages
+2024-06-01 10:32:48,292 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:32:48,292 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:32:48,447 DEBUG   SenderThread:57718 [sender.py:send():378] send: telemetry
+2024-06-01 10:32:48,506 INFO    wandb-upload_0:57718 [upload_job.py:push():130] Uploaded file /tmp/tmpwby7uhgqwandb/tg7oqamx-wandb-metadata.json
+2024-06-01 10:32:49,105 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_created():271] file/dir created: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/requirements.txt
+2024-06-01 10:32:49,447 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:32:54,448 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:32:59,449 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:33:03,291 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:33:03,292 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:33:05,459 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:33:06,110 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/config.yaml
+2024-06-01 10:33:10,588 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:33:13,114 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_created():271] file/dir created: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:33:15,305 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:33:15,603 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:33:16,083 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 10:33:16,083 DEBUG   SenderThread:57718 [sender.py:send():378] send: telemetry
+2024-06-01 10:33:18,291 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:33:18,292 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:33:18,317 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:33:21,466 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:33:26,467 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:33:31,468 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:33:33,291 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:33:33,292 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:33:34,261 DEBUG   SystemMonitor:57718 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-01 10:33:34,262 DEBUG   SenderThread:57718 [sender.py:send():378] send: stats
+2024-06-01 10:33:37,267 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:33:38,323 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/config.yaml
+2024-06-01 10:33:42,324 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:33:42,490 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:33:43,739 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 10:33:43,803 DEBUG   SenderThread:57718 [sender.py:send():378] send: history
+2024-06-01 10:33:43,809 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 10:33:43,829 INFO    SenderThread:57718 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 10:33:44,324 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:33:44,325 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_created():271] file/dir created: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/wandb-summary.json
+2024-06-01 10:33:46,325 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:33:47,830 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:33:48,291 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:33:48,292 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:33:53,460 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:33:58,461 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:34:03,291 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:34:03,292 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:34:03,524 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:34:04,263 DEBUG   SenderThread:57718 [sender.py:send():378] send: stats
+2024-06-01 10:34:08,524 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:34:10,457 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:34:10,950 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 10:34:10,951 DEBUG   SenderThread:57718 [sender.py:send():378] send: history
+2024-06-01 10:34:10,951 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 10:34:10,951 INFO    SenderThread:57718 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 10:34:11,457 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/wandb-summary.json
+2024-06-01 10:34:12,457 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:34:13,952 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:34:18,292 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:34:18,292 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:34:19,510 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:34:24,510 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:34:29,511 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:34:33,292 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:34:33,292 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:34:34,264 DEBUG   SenderThread:57718 [sender.py:send():378] send: stats
+2024-06-01 10:34:35,264 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:34:36,464 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:34:38,488 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:34:40,108 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 10:34:40,109 DEBUG   SenderThread:57718 [sender.py:send():378] send: history
+2024-06-01 10:34:40,109 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 10:34:40,110 INFO    SenderThread:57718 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 10:34:40,489 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:34:40,490 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/wandb-summary.json
+2024-06-01 10:34:41,110 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:34:46,111 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:34:48,292 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:34:48,292 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:34:51,439 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:34:56,440 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:35:01,441 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:35:03,292 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:35:03,292 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:35:04,264 DEBUG   SenderThread:57718 [sender.py:send():378] send: stats
+2024-06-01 10:35:06,496 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:35:06,666 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:35:11,666 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:35:16,667 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:35:18,292 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:35:18,293 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:35:22,484 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:35:27,485 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:35:32,486 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:35:33,292 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:35:33,293 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:35:34,265 DEBUG   SenderThread:57718 [sender.py:send():378] send: stats
+2024-06-01 10:35:38,266 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:35:40,600 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:35:43,423 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:35:44,705 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:35:45,009 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 10:35:45,011 DEBUG   SenderThread:57718 [sender.py:send():378] send: history
+2024-06-01 10:35:45,011 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 10:35:45,012 INFO    SenderThread:57718 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 10:35:45,705 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/wandb-summary.json
+2024-06-01 10:35:46,742 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:35:48,292 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:35:48,293 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:35:48,506 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:35:53,507 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:35:58,507 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:36:03,292 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:36:03,293 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:36:04,266 DEBUG   SenderThread:57718 [sender.py:send():378] send: stats
+2024-06-01 10:36:04,266 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:36:09,267 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:36:11,750 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:36:12,748 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 10:36:12,749 DEBUG   SenderThread:57718 [sender.py:send():378] send: history
+2024-06-01 10:36:12,750 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 10:36:12,750 INFO    SenderThread:57718 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 10:36:12,750 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/wandb-summary.json
+2024-06-01 10:36:13,751 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:36:14,751 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:36:15,751 INFO    Thread-12 :57718 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240601_103233-m4ls4grm/files/output.log
+2024-06-01 10:36:18,292 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 10:36:18,293 DEBUG   SenderThread:57718 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 10:36:20,470 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 10:36:25,471 DEBUG   HandlerThread:57718 [handler.py:handle_request():158] handle_request: status_report

@@ -1,0 +1,604 @@
+2024-06-01 17:18:11,263 INFO    StreamThr :23702 [internal.py:wandb_internal():85] W&B internal server running at pid: 23702, started at: 2024-06-01 17:18:11.262735
+2024-06-01 17:18:11,265 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status
+2024-06-01 17:18:11,267 INFO    WriterThread:23702 [datastore.py:open_for_write():87] open: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/run-bqllon0w.wandb
+2024-06-01 17:18:11,268 DEBUG   SenderThread:23702 [sender.py:send():378] send: header
+2024-06-01 17:18:11,307 DEBUG   SenderThread:23702 [sender.py:send():378] send: run
+2024-06-01 17:18:11,668 INFO    SenderThread:23702 [dir_watcher.py:__init__():211] watching files in: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files
+2024-06-01 17:18:11,668 INFO    SenderThread:23702 [sender.py:_start_run_threads():1123] run started: bqllon0w with start time 1717262291.262998
+2024-06-01 17:18:11,678 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: check_version
+2024-06-01 17:18:11,678 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: check_version
+2024-06-01 17:18:11,759 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: run_start
+2024-06-01 17:18:11,763 DEBUG   HandlerThread:23702 [system_info.py:__init__():26] System info init
+2024-06-01 17:18:11,763 DEBUG   HandlerThread:23702 [system_info.py:__init__():41] System info init done
+2024-06-01 17:18:11,763 INFO    HandlerThread:23702 [system_monitor.py:start():194] Starting system monitor
+2024-06-01 17:18:11,763 INFO    SystemMonitor:23702 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-01 17:18:11,763 INFO    HandlerThread:23702 [system_monitor.py:probe():214] Collecting system info
+2024-06-01 17:18:11,763 INFO    SystemMonitor:23702 [interfaces.py:start():188] Started cpu monitoring
+2024-06-01 17:18:11,764 INFO    SystemMonitor:23702 [interfaces.py:start():188] Started disk monitoring
+2024-06-01 17:18:11,765 INFO    SystemMonitor:23702 [interfaces.py:start():188] Started gpu monitoring
+2024-06-01 17:18:11,767 INFO    SystemMonitor:23702 [interfaces.py:start():188] Started memory monitoring
+2024-06-01 17:18:11,767 INFO    SystemMonitor:23702 [interfaces.py:start():188] Started network monitoring
+2024-06-01 17:18:11,777 DEBUG   HandlerThread:23702 [system_info.py:probe():150] Probing system
+2024-06-01 17:18:11,783 DEBUG   HandlerThread:23702 [system_info.py:_probe_git():135] Probing git
+2024-06-01 17:18:11,795 DEBUG   HandlerThread:23702 [system_info.py:_probe_git():143] Probing git done
+2024-06-01 17:18:11,796 DEBUG   HandlerThread:23702 [system_info.py:probe():198] Probing system done
+2024-06-01 17:18:11,797 DEBUG   HandlerThread:23702 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-1064-azure-x86_64-with-glibc2.10', 'python': '3.8.5', 'heartbeatAt': '2024-06-01T17:18:11.777599', 'startedAt': '2024-06-01T17:18:11.256980', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/xnmaster/testproject/XNAPproject-grup-04/Cod-SoloBleu.py', 'codePathLocal': 'Cod-SoloBleu.py', 'codePath': 'Cod-SoloBleu.py', 'git': {'remote': 'https://github.com/DCC-UAB/XNAPproject-grup-04.git', 'commit': 'd30748b970c1d4dcb7664bccce7e129f7523d458'}, 'email': '1566320@uab.cat', 'root': '/home/xnmaster/testproject/XNAPproject-grup-04', 'host': 'labDAGLBU', 'username': 'xnmaster', 'executable': '/anaconda/envs/azureml_py38_PT_and_TF/bin/python', 'cpu_count': 6, 'cpu_count_logical': 6, 'cpu_freq': {'current': 2593.993, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2593.993, 'min': 0.0, 'max': 0.0}, {'current': 2593.993, 'min': 0.0, 'max': 0.0}, {'current': 2593.993, 'min': 0.0, 'max': 0.0}, {'current': 2593.993, 'min': 0.0, 'max': 0.0}, {'current': 2593.993, 'min': 0.0, 'max': 0.0}, {'current': 2593.993, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 145.1909637451172, 'used': 90.99345779418945}}, 'gpu': 'Tesla V100-PCIE-16GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'Tesla V100-PCIE-16GB', 'memory_total': 16945512448}], 'memory': {'total': 110.04522323608398}}
+2024-06-01 17:18:11,797 INFO    HandlerThread:23702 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-01 17:18:11,797 INFO    HandlerThread:23702 [system_monitor.py:probe():227] Publishing system info
+2024-06-01 17:18:11,797 DEBUG   HandlerThread:23702 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-06-01 17:18:12,669 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_created():271] file/dir created: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/conda-environment.yaml
+2024-06-01 17:18:25,588 DEBUG   HandlerThread:23702 [system_info.py:_save_conda():222] Saving conda packages done
+2024-06-01 17:18:25,589 INFO    HandlerThread:23702 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-01 17:18:25,671 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/conda-environment.yaml
+2024-06-01 17:18:25,672 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_created():271] file/dir created: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-metadata.json
+2024-06-01 17:18:25,984 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:18:25,984 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-01 17:18:25,984 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:18:25,984 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-01 17:18:25,985 DEBUG   SenderThread:23702 [sender.py:send():378] send: files
+2024-06-01 17:18:25,985 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-metadata.json with policy now
+2024-06-01 17:18:26,418 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: python_packages
+2024-06-01 17:18:26,418 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: python_packages
+2024-06-01 17:18:26,420 DEBUG   SenderThread:23702 [sender.py:send():378] send: telemetry
+2024-06-01 17:18:26,420 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:18:26,421 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:18:26,487 INFO    wandb-upload_0:23702 [upload_job.py:push():130] Uploaded file /tmp/tmp4tuhddqiwandb/9gb7glu3-wandb-metadata.json
+2024-06-01 17:18:26,672 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_created():271] file/dir created: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/requirements.txt
+2024-06-01 17:18:27,585 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:18:30,673 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_created():271] file/dir created: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:18:31,618 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:18:31,619 DEBUG   SenderThread:23702 [sender.py:send():378] send: telemetry
+2024-06-01 17:18:32,620 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:18:32,673 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:18:36,345 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:18:36,347 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:18:36,347 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:18:36,349 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:18:36,675 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:18:36,675 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_created():271] file/dir created: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:18:38,350 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:18:38,675 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:18:40,676 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:18:41,006 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:18:41,007 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:18:41,008 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:18:41,008 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:18:41,418 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:18:41,419 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:18:41,676 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:18:42,676 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:18:43,667 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:18:44,677 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/config.yaml
+2024-06-01 17:18:45,613 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:18:45,614 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:18:45,614 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:18:45,616 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:18:45,677 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:18:46,678 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:18:49,070 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:18:50,177 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:18:50,178 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:18:50,178 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:18:50,179 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:18:50,679 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:18:50,679 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:18:54,093 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:18:54,680 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:18:54,790 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:18:54,791 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:18:54,791 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:18:54,791 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:18:55,680 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:18:56,419 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:18:56,419 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:18:56,681 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:18:58,681 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:18:59,138 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:18:59,397 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:18:59,398 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:18:59,399 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:18:59,399 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:18:59,682 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:19:00,692 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:03,995 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:19:03,996 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:19:03,997 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:19:03,999 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:19:04,693 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:19:04,999 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:19:05,694 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:08,598 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:19:08,599 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:19:08,599 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:19:08,600 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:19:08,700 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:19:09,701 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:10,600 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:19:11,419 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:19:11,419 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:19:11,767 DEBUG   SystemMonitor:23702 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-01 17:19:11,769 DEBUG   SenderThread:23702 [sender.py:send():378] send: stats
+2024-06-01 17:19:13,283 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:19:13,284 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:19:13,284 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:19:13,285 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:19:13,702 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:13,702 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:19:15,702 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:16,285 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:19:17,703 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:17,901 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:19:17,902 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:19:17,902 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:19:17,902 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:19:18,704 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:19:19,704 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:21,440 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:19:22,575 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:19:22,577 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:19:22,577 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:19:22,577 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:19:22,705 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:19:23,705 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:25,706 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:26,419 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:19:26,420 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:19:26,581 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:19:27,227 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:19:27,228 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:19:27,229 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:19:27,229 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:19:27,706 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:27,707 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:19:29,707 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:31,881 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:19:31,949 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:19:31,956 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:19:31,956 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:19:31,985 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:19:32,708 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:19:33,708 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:36,607 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:19:36,608 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:19:36,609 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:19:36,609 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:19:36,709 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:19:37,610 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:19:37,710 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:41,244 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:19:41,245 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:19:41,245 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:19:41,245 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:19:41,419 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:19:41,419 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:19:41,711 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:41,711 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:19:41,769 DEBUG   SenderThread:23702 [sender.py:send():378] send: stats
+2024-06-01 17:19:42,770 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:19:43,712 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:45,712 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:45,860 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:19:45,861 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:19:45,861 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:19:45,861 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:19:46,712 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:19:47,713 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:47,862 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:19:50,531 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:19:50,536 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:19:50,536 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:19:50,536 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:19:50,714 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:19:51,714 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:53,537 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:19:55,179 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:19:55,180 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:19:55,181 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:19:55,181 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:19:55,715 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:55,716 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:19:56,419 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:19:56,419 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:19:57,716 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:58,614 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:19:59,717 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:19:59,808 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:19:59,809 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:19:59,810 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:19:59,810 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:20:00,717 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:20:01,717 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:03,664 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:20:04,423 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:20:04,424 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:20:04,424 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:20:04,431 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:20:04,739 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:20:05,739 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:08,710 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:20:09,032 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:20:09,033 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:20:09,033 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:20:09,034 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:20:09,741 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:09,741 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:20:11,425 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:20:11,426 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:20:11,741 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:11,770 DEBUG   SenderThread:23702 [sender.py:send():378] send: stats
+2024-06-01 17:20:13,611 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:20:13,613 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:20:13,613 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:20:13,613 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:20:13,742 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:13,742 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:20:14,614 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:20:15,742 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:18,221 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:20:18,222 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:20:18,222 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:20:18,223 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:20:18,744 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:20:19,744 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:20,223 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:20:22,812 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:20:22,813 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:20:22,813 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:20:22,816 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:20:23,745 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:23,746 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:20:25,817 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:20:26,420 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:20:26,420 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:20:27,453 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:20:27,454 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:20:27,454 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:20:27,454 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:20:27,746 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:27,747 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:20:29,747 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:31,076 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:20:31,748 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:32,221 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:20:32,222 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:20:32,223 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:20:32,223 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:20:32,748 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:20:33,748 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:36,077 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:20:36,820 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:20:36,822 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:20:36,822 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:20:36,822 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:20:37,750 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:37,750 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:20:41,295 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:20:41,420 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:20:41,421 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:20:41,547 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:20:41,564 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:20:41,564 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:20:41,585 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:20:41,760 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:41,761 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:20:41,771 DEBUG   SenderThread:23702 [sender.py:send():378] send: stats
+2024-06-01 17:20:44,761 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:46,213 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:20:46,215 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:20:46,215 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:20:46,215 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:20:46,762 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:46,762 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:20:47,216 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:20:48,762 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:50,861 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:20:50,862 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:20:50,862 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:20:50,863 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:20:51,763 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:20:52,764 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:52,863 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:20:55,529 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:20:55,530 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:20:55,531 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:20:55,533 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:20:55,765 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:20:56,420 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:20:56,420 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:20:56,765 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:20:58,615 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:21:00,191 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:21:00,192 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:21:00,192 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:21:00,193 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:21:00,766 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:00,767 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:21:02,767 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:03,744 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:21:04,768 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:04,857 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:21:04,858 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:21:04,858 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:21:04,858 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:21:05,768 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:21:06,768 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:08,744 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:21:09,513 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:21:09,514 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:21:09,514 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:21:09,514 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:21:09,769 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:21:10,770 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:11,420 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:21:11,421 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:21:11,772 DEBUG   SenderThread:23702 [sender.py:send():378] send: stats
+2024-06-01 17:21:13,796 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:21:14,201 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:21:14,202 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:21:14,202 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:21:14,233 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:21:14,771 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:14,771 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:21:16,772 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:18,811 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:21:19,077 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:21:19,078 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:21:19,078 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:21:19,079 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:21:19,773 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:21:20,773 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:23,716 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:21:23,717 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:21:23,718 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:21:23,718 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:21:23,774 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:21:24,719 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:21:24,774 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:26,420 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:21:26,421 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:21:28,316 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:21:28,317 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:21:28,317 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:21:28,317 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:21:28,776 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:28,776 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:21:30,318 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:21:30,776 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:32,777 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:32,995 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:21:32,996 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:21:32,996 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:21:33,731 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:21:33,777 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:21:34,778 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:35,732 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:21:38,343 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:21:38,344 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:21:38,345 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:21:38,345 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:21:38,779 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:38,779 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:21:40,780 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:41,352 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:21:41,420 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:21:41,421 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:21:41,772 DEBUG   SenderThread:23702 [sender.py:send():378] send: stats
+2024-06-01 17:21:42,781 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:42,978 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:21:42,979 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:21:42,980 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:21:42,980 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:21:43,781 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:21:44,781 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:46,529 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:21:47,642 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:21:47,643 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:21:47,644 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:21:47,676 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:21:47,783 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:21:48,783 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:51,546 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:21:52,299 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:21:52,301 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:21:52,301 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:21:52,301 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:21:52,805 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:52,805 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:21:56,432 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:21:56,448 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:21:56,679 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:21:56,806 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:21:57,067 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:21:57,068 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:21:57,068 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:21:57,069 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:21:57,806 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:21:58,807 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:22:01,695 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:22:01,744 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:22:01,745 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:22:01,746 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:22:01,746 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:22:01,808 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:22:02,808 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:22:06,495 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:22:06,505 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:22:06,505 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:22:06,505 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:22:06,809 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:22:06,810 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:22:07,506 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:22:08,810 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:22:10,811 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:22:11,199 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:22:11,200 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:22:11,200 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:22:11,200 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:22:11,421 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-01 17:22:11,422 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: stop_status
+2024-06-01 17:22:11,773 DEBUG   SenderThread:23702 [sender.py:send():378] send: stats
+2024-06-01 17:22:11,811 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:22:12,773 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:22:12,811 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:22:15,873 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:22:15,874 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:22:15,874 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:22:15,875 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:22:16,812 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:22:16,813 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:22:17,876 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:22:20,571 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-01 17:22:20,814 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:22:21,733 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:22:21,733 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:22:21,814 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:22:21,828 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-01 17:22:22,177 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:22:22,178 DEBUG   SenderThread:23702 [sender.py:send():378] send: exit
+2024-06-01 17:22:22,178 INFO    SenderThread:23702 [sender.py:send_exit():585] handling exit code: 0
+2024-06-01 17:22:22,178 INFO    SenderThread:23702 [sender.py:send_exit():587] handling runtime: 249
+2024-06-01 17:22:22,179 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:22:22,179 INFO    SenderThread:23702 [sender.py:send_exit():593] send defer
+2024-06-01 17:22:22,179 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: poll_exit
+2024-06-01 17:22:22,179 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:22,179 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 0
+2024-06-01 17:22:22,180 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:22,180 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-06-01 17:22:22,180 INFO    SenderThread:23702 [sender.py:transition_state():613] send defer: 1
+2024-06-01 17:22:22,180 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:22,180 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 1
+2024-06-01 17:22:22,181 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:22,181 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-06-01 17:22:22,181 INFO    SenderThread:23702 [sender.py:transition_state():613] send defer: 2
+2024-06-01 17:22:22,181 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:22,181 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 2
+2024-06-01 17:22:22,181 INFO    HandlerThread:23702 [system_monitor.py:finish():203] Stopping system monitor
+2024-06-01 17:22:22,181 DEBUG   SystemMonitor:23702 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-01 17:22:22,181 INFO    HandlerThread:23702 [interfaces.py:finish():200] Joined cpu monitor
+2024-06-01 17:22:22,181 DEBUG   SystemMonitor:23702 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-01 17:22:22,182 INFO    HandlerThread:23702 [interfaces.py:finish():200] Joined disk monitor
+2024-06-01 17:22:22,226 INFO    HandlerThread:23702 [interfaces.py:finish():200] Joined gpu monitor
+2024-06-01 17:22:22,227 INFO    HandlerThread:23702 [interfaces.py:finish():200] Joined memory monitor
+2024-06-01 17:22:22,227 INFO    HandlerThread:23702 [interfaces.py:finish():200] Joined network monitor
+2024-06-01 17:22:22,227 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:22,227 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-06-01 17:22:22,227 INFO    SenderThread:23702 [sender.py:transition_state():613] send defer: 3
+2024-06-01 17:22:22,227 DEBUG   SenderThread:23702 [sender.py:send():378] send: stats
+2024-06-01 17:22:22,228 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:22,228 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 3
+2024-06-01 17:22:22,229 DEBUG   SenderThread:23702 [sender.py:send():378] send: history
+2024-06-01 17:22:22,229 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: summary_record
+2024-06-01 17:22:22,628 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:22:22,628 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:22,629 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-06-01 17:22:22,629 INFO    SenderThread:23702 [sender.py:transition_state():613] send defer: 4
+2024-06-01 17:22:22,629 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:22,629 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 4
+2024-06-01 17:22:22,629 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:22,629 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-06-01 17:22:22,629 INFO    SenderThread:23702 [sender.py:transition_state():613] send defer: 5
+2024-06-01 17:22:22,629 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:22,629 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 5
+2024-06-01 17:22:22,630 DEBUG   SenderThread:23702 [sender.py:send():378] send: summary
+2024-06-01 17:22:22,630 INFO    SenderThread:23702 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-01 17:22:22,630 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:22,631 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-06-01 17:22:22,631 INFO    SenderThread:23702 [sender.py:transition_state():613] send defer: 6
+2024-06-01 17:22:22,631 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:22,631 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 6
+2024-06-01 17:22:22,631 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:22,631 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-06-01 17:22:22,631 INFO    SenderThread:23702 [sender.py:transition_state():613] send defer: 7
+2024-06-01 17:22:22,631 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: status_report
+2024-06-01 17:22:22,631 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:22,632 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 7
+2024-06-01 17:22:22,632 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:22,632 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-06-01 17:22:22,814 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:22:22,831 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-01 17:22:23,815 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:22:24,622 INFO    SenderThread:23702 [sender.py:transition_state():613] send defer: 8
+2024-06-01 17:22:24,622 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: poll_exit
+2024-06-01 17:22:24,622 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:24,623 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 8
+2024-06-01 17:22:24,623 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:24,623 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-06-01 17:22:24,623 INFO    SenderThread:23702 [job_builder.py:build():432] Attempting to build job artifact
+2024-06-01 17:22:24,624 INFO    SenderThread:23702 [job_builder.py:_get_source_type():565] is repo sourced job
+2024-06-01 17:22:24,659 INFO    SenderThread:23702 [job_builder.py:build():541] adding wandb-job metadata file
+2024-06-01 17:22:24,669 INFO    SenderThread:23702 [sender.py:transition_state():613] send defer: 9
+2024-06-01 17:22:24,670 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:24,670 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 9
+2024-06-01 17:22:24,671 DEBUG   SenderThread:23702 [sender.py:send():378] send: artifact
+2024-06-01 17:22:24,815 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:22:24,833 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-01 17:22:25,317 INFO    SenderThread:23702 [sender.py:send_artifact():1467] sent artifact job-https___github.com_DCC-UAB_XNAPproject-grup-04.git_Cod-SoloBleu.py - {'id': 'QXJ0aWZhY3Q6ODU3MTc4MDU3', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE4MTM1ODkzMQ==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODU3MTc4MDU3', 'versionIndex': 0}}}
+2024-06-01 17:22:25,317 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:25,317 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-06-01 17:22:25,317 INFO    SenderThread:23702 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-01 17:22:25,816 INFO    SenderThread:23702 [dir_watcher.py:finish():388] scan: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files
+2024-06-01 17:22:25,816 INFO    SenderThread:23702 [dir_watcher.py:finish():402] scan save: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/conda-environment.yaml conda-environment.yaml
+2024-06-01 17:22:25,816 INFO    SenderThread:23702 [dir_watcher.py:finish():402] scan save: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-metadata.json wandb-metadata.json
+2024-06-01 17:22:25,816 INFO    SenderThread:23702 [dir_watcher.py:finish():402] scan save: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/requirements.txt requirements.txt
+2024-06-01 17:22:25,819 INFO    SenderThread:23702 [dir_watcher.py:finish():402] scan save: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log output.log
+2024-06-01 17:22:25,820 INFO    SenderThread:23702 [dir_watcher.py:finish():402] scan save: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json wandb-summary.json
+2024-06-01 17:22:25,825 INFO    SenderThread:23702 [dir_watcher.py:finish():402] scan save: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/config.yaml config.yaml
+2024-06-01 17:22:25,828 INFO    SenderThread:23702 [sender.py:transition_state():613] send defer: 10
+2024-06-01 17:22:25,828 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: poll_exit
+2024-06-01 17:22:25,828 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:25,831 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 10
+2024-06-01 17:22:25,832 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:25,832 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-06-01 17:22:25,832 INFO    SenderThread:23702 [file_pusher.py:finish():169] shutting down file pusher
+2024-06-01 17:22:25,833 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-01 17:22:25,834 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: poll_exit
+2024-06-01 17:22:26,228 INFO    wandb-upload_4:23702 [upload_job.py:push():130] Uploaded file /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/config.yaml
+2024-06-01 17:22:26,252 INFO    wandb-upload_3:23702 [upload_job.py:push():130] Uploaded file /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/wandb-summary.json
+2024-06-01 17:22:26,256 INFO    wandb-upload_1:23702 [upload_job.py:push():130] Uploaded file /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/requirements.txt
+2024-06-01 17:22:26,396 INFO    wandb-upload_0:23702 [upload_job.py:push():130] Uploaded file /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/conda-environment.yaml
+2024-06-01 17:22:26,834 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-01 17:22:26,835 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: poll_exit
+2024-06-01 17:22:26,869 INFO    wandb-upload_2:23702 [upload_job.py:push():130] Uploaded file /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/files/output.log
+2024-06-01 17:22:27,070 INFO    Thread-11 :23702 [sender.py:transition_state():613] send defer: 11
+2024-06-01 17:22:27,070 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:27,070 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 11
+2024-06-01 17:22:27,071 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:27,071 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-06-01 17:22:27,071 INFO    SenderThread:23702 [file_pusher.py:join():175] waiting for file pusher
+2024-06-01 17:22:27,071 INFO    SenderThread:23702 [sender.py:transition_state():613] send defer: 12
+2024-06-01 17:22:27,071 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:27,071 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 12
+2024-06-01 17:22:27,072 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:27,072 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-06-01 17:22:27,072 INFO    SenderThread:23702 [file_stream.py:finish():601] file stream finish called
+2024-06-01 17:22:27,479 INFO    SenderThread:23702 [file_stream.py:finish():605] file stream finish is done
+2024-06-01 17:22:27,479 INFO    SenderThread:23702 [sender.py:transition_state():613] send defer: 13
+2024-06-01 17:22:27,479 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:27,479 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 13
+2024-06-01 17:22:27,480 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:27,480 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-06-01 17:22:27,480 INFO    SenderThread:23702 [sender.py:transition_state():613] send defer: 14
+2024-06-01 17:22:27,480 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: defer
+2024-06-01 17:22:27,480 DEBUG   SenderThread:23702 [sender.py:send():378] send: final
+2024-06-01 17:22:27,480 INFO    HandlerThread:23702 [handler.py:handle_request_defer():184] handle defer: 14
+2024-06-01 17:22:27,480 DEBUG   SenderThread:23702 [sender.py:send():378] send: footer
+2024-06-01 17:22:27,481 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: defer
+2024-06-01 17:22:27,481 INFO    SenderThread:23702 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-06-01 17:22:27,481 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-01 17:22:27,482 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: poll_exit
+2024-06-01 17:22:27,482 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-01 17:22:27,482 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: poll_exit
+2024-06-01 17:22:27,483 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: server_info
+2024-06-01 17:22:27,483 DEBUG   SenderThread:23702 [sender.py:send_request():405] send_request: server_info
+2024-06-01 17:22:27,486 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: get_summary
+2024-06-01 17:22:27,486 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: sampled_history
+2024-06-01 17:22:27,487 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-01 17:22:27,601 INFO    MainThread:23702 [wandb_run.py:_footer_history_summary_info():3994] rendering history
+2024-06-01 17:22:27,602 INFO    MainThread:23702 [wandb_run.py:_footer_history_summary_info():4026] rendering summary
+2024-06-01 17:22:27,602 INFO    MainThread:23702 [wandb_run.py:_footer_sync_info():3953] logging synced files
+2024-06-01 17:22:27,603 DEBUG   HandlerThread:23702 [handler.py:handle_request():158] handle_request: shutdown
+2024-06-01 17:22:27,603 INFO    HandlerThread:23702 [handler.py:finish():882] shutting down handler
+2024-06-01 17:22:28,483 INFO    WriterThread:23702 [datastore.py:close():296] close: /home/xnmaster/testproject/XNAPproject-grup-04/wandb/run-20240601_171811-bqllon0w/run-bqllon0w.wandb
+2024-06-01 17:22:28,602 INFO    SenderThread:23702 [sender.py:finish():1545] shutting down sender
+2024-06-01 17:22:28,602 INFO    SenderThread:23702 [file_pusher.py:finish():169] shutting down file pusher
+2024-06-01 17:22:28,602 INFO    SenderThread:23702 [file_pusher.py:join():175] waiting for file pusher
