@@ -321,7 +321,7 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
 
     total_val_loss = 0
     bleu_scores = []
-    
+    selected_translations = []
     encoder.eval()  # Cambiar a modo de evaluación
     decoder.eval()  # Cambiar a modo de evaluación
     with torch.no_grad():
@@ -351,12 +351,20 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
                 # Calcular BLEU y METEOR para cada frase
                 bleu = sentence_bleu([target_sentence], predicted_sentence)
                 bleu_scores.append(bleu)
+
+                if i <= 10:
+                    input_sentence = ' '.join(input_sentence)
+                    target_sentence = ' '.join(target_sentence)
+                    predicted_sentence = ' '.join(predicted_sentence)
+                    dic = {"Input Sentence": input_sentence, "Target Sentence" : target_sentence, "Predicted Sentence": predicted_sentence, "Bleu Score": bleu}
+                    print(dic)
+                    selected_translations.append(dic)
                 
         avg_val_loss = total_val_loss / len(val_dataloader)
         avg_bleu_score = sum(bleu_scores) / len(bleu_scores)
 
 
-    return avg_train_loss, avg_val_loss, avg_bleu_score
+    return avg_train_loss, avg_val_loss, avg_bleu_score, selected_translations
 
 
 import time
@@ -392,7 +400,7 @@ def train(train_dataloader, val_dataloader , encoder, decoder, n_epochs, learnin
     translations_per_epoch = []
 
     for epoch in range(1, n_epochs + 1):
-        train_loss, val_loss, avg_bleu_score = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+        train_loss, val_loss, avg_bleu_score, translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
         print_loss_total += train_loss
         print_val_loss_total += val_loss
 
@@ -405,6 +413,16 @@ def train(train_dataloader, val_dataloader , encoder, decoder, n_epochs, learnin
             wandb.log({"Validation Loss": print_val_loss_avg,"Training loss": print_loss_avg, "Bleu Score": avg_bleu_score}, step = epoch)
             print('%s (%d %d%%) Train Loss: %.4f, Val Loss: %.4f' % (timeSince(start, epoch / n_epochs),
                                                                          epoch, epoch / n_epochs * 100, print_loss_avg, print_val_loss_avg))
+            
+            epoch_translations = {
+                "Epoch": epoch,
+                "Sentences": translations
+            }
+            translations_per_epoch.append(epoch_translations)
+
+            # Guardar las traducciones en un archivo JSON
+            with open('translations_per_epoch_DEFI.json', 'w') as json_file:
+                json.dump(translations_per_epoch, json_file, ensure_ascii=False, indent=4)
   
         if epoch % plot_every == 0:
             plot_loss_avg = plot_loss_total / plot_every
