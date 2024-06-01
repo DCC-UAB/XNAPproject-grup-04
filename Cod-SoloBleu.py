@@ -1,3 +1,4 @@
+
 from __future__ import unicode_literals, print_function, division
 from io import open
 import unicodedata
@@ -8,9 +9,6 @@ import torch
 import torch.nn as nn
 from torch import optim
 import torch.nn.functional as F
-from nltk.translate.bleu_score import sentence_bleu
-from nltk.translate.meteor_score import meteor_score
-
 
 import numpy as np
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler
@@ -18,6 +16,8 @@ from torch.utils.data import TensorDataset, DataLoader, RandomSampler
 import wandb
 from torch.utils.data import Subset
 
+from nltk.translate.bleu_score import sentence_bleu
+from nltk.translate.meteor_score import meteor_score
 import json
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -59,7 +59,7 @@ def normalizeString(s):
     s = re.sub(r"[^a-zA-Z!?]+", r" ", s)
     return s.strip()
 
-dataset = './data/spa_sample.txt'
+dataset = './data/spa_sample100.txt'
 
 def readLangs(lang1, lang2, reverse=False):
     print("Reading lines...")
@@ -108,6 +108,7 @@ def prepareData(lang1, lang2, reverse=False):
     print("Trimmed to %s sentence pairs" % len(pairs))
     print("Counting words...")
     for pair in pairs:
+        #print(pair)
         input_lang.addSentence(pair[0])
         output_lang.addSentence(pair[1])
     print("Counted words:")
@@ -235,7 +236,9 @@ class AttnDecoderRNN(nn.Module):
 
         return output, hidden, attn_weights
     
-
+def sentenceFromIndexes(lang, indexes):
+    return [ lang.index2word[ind]  for ind in indexes if (ind != SOS_token and ind != EOS_token)]
+ 
 def indexesFromSentence(lang, sentence):
     return [lang.word2index[word] for word in sentence.split(' ')]
 
@@ -250,7 +253,7 @@ def tensorsFromPair(pair):
     return (input_tensor, target_tensor)
 
 def get_dataloaders(batch_size, val_split=0.2):
-    input_lang, output_lang, pairs = prepareData('eng', 'fra', True)
+    input_lang, output_lang, pairs = prepareData('eng', 'spa', False)
 
     n = len(pairs)
     input_ids = np.zeros((n, MAX_LENGTH), dtype=np.int32)
@@ -286,12 +289,15 @@ def get_dataloaders(batch_size, val_split=0.2):
 
     return input_lang, output_lang, train_dataloader, val_dataloader
 
-def train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader):
+
+def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader):
+     
+    # Modo de entrenamiento
     encoder.train()
     decoder.train()
 
     total_loss = 0
-    for data in train_dataloader:
+    for data in dataloader:
         input_tensor, target_tensor = data
 
         encoder_optimizer.zero_grad()
@@ -311,19 +317,16 @@ def train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_o
 
         total_loss += loss.item()
     
-    avg_train_loss = total_loss / len(train_dataloader)
+    avg_train_loss = total_loss / len(dataloader)
 
     total_val_loss = 0
-    total_bleu = 0
-    total_meteor = 0
-
+    bleu_scores = []
     selected_translations = []
-    selected_indices = [2, 4, 6, 8, 10]
-
-    encoder.eval()
-    decoder.eval()
+    encoder.eval()  # Cambiar a modo de evaluación
+    decoder.eval()  # Cambiar a modo de evaluación
     with torch.no_grad():
         for idx, data in enumerate(val_dataloader):
+            #print(idx)
             input_tensor, target_tensor = data
 
             encoder_outputs, encoder_hidden = encoder(input_tensor)
@@ -333,43 +336,40 @@ def train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_o
                 decoder_outputs.view(-1, decoder_outputs.size(-1)),
                 target_tensor.view(-1)
             )
+
             total_val_loss += val_loss.item()
 
-            # Convertir índices a palabras para BLEU y METEOR
-            decoded_words_batch = []
-            target_words_batch = []
-            for t in decoder_outputs.argmax(2):
-                decoded_words_batch.append([output_lang.index2word[token.item()] for token in t if token.item() != EOS_token])
-            for t in target_tensor:
-                target_words_batch.append([output_lang.index2word[token.item()] for token in t if token.item() != EOS_token])
+            #print(target_tensor.size(0))
+            for i in range(target_tensor.size(0)):  # Iterar sobre las secuencias en el batch
+                input_sentence = sentenceFromIndexes(input_lang, input_tensor[i].tolist())
+                target_sentence = sentenceFromIndexes(output_lang, target_tensor[i].tolist())
+                #print(input_sentence, target_sentence)
+                predicted_indexes = torch.argmax(decoder_outputs[i], dim=1).tolist()
+                predicted_sentence = sentenceFromIndexes(output_lang, predicted_indexes)
+                #print("Predictet sentences: ",predicted_sentence)
+                    
+                # Calcular BLEU y METEOR para cada frase
+                bleu = sentence_bleu([target_sentence], predicted_sentence)
+                bleu_scores.append(bleu)
 
-            # Calcular BLEU y METEOR
-            for decoded_words, target_words in zip(decoded_words_batch, target_words_batch):
-                # Convertir listas de palabras a cadenas
-                decoded_sentence = ' '.join(decoded_words)
-                target_sentence = ' '.join(target_words)
+                if i <= 10:
+                    input_sentence = ' '.join(input_sentence)
+                    target_sentence = ' '.join(target_sentence)
+                    predicted_sentence = ' '.join(predicted_sentence)
+                    dic = {"Input Sentence": input_sentence, "Target Sentence" : target_sentence, "Predicted Sentence": predicted_sentence, "Bleu Score": bleu}
+                    print(dic)
+                    selected_translations.append(dic)
+                
+        avg_val_loss = total_val_loss / len(val_dataloader)
+        avg_bleu_score = sum(bleu_scores) / len(bleu_scores)
 
-                # Calcular BLEU
-                bleu_score_value = sentence_bleu([target_words], decoded_words)
 
-                # Calcular METEOR
-                #meteor_score_value = meteor_score([target_sentence], decoded_sentence)
+    return avg_train_loss, avg_val_loss, avg_bleu_score, selected_translations
 
-                total_bleu += bleu_score_value
-                #total_meteor += meteor_score_value
-
-            if idx in selected_indices:
-                selected_translations.append((decoded_words_batch, target_words_batch))
-
-    avg_val_loss = total_val_loss / len(val_dataloader)
-    avg_bleu = total_bleu / len(val_dataloader.dataset)
-    #avg_meteor = total_meteor / len(val_dataloader.dataset)
-    avg_meteor = 1
-
-    return avg_train_loss, avg_val_loss, avg_bleu, avg_meteor, selected_translations
 
 import time
 import math
+
 def asMinutes(s):
     m = math.floor(s / 60)
     s -= m * 60
@@ -383,7 +383,7 @@ def timeSince(since, percent):
     return '%s (- %s)' % (asMinutes(s), asMinutes(rs))
 
 
-def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning_rate=0.001, print_every=100, plot_every=100):
+def train(train_dataloader, val_dataloader , encoder, decoder, n_epochs, learning_rate=0.001, print_every=100, plot_every=100):
     start = time.time()
     plot_losses = []
     plot_val_losses = []
@@ -400,7 +400,7 @@ def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning
     translations_per_epoch = []
 
     for epoch in range(1, n_epochs + 1):
-        train_loss, val_loss, avg_bleu, avg_meteor, selected_translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+        train_loss, val_loss, avg_bleu_score, translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
         print_loss_total += train_loss
         print_val_loss_total += val_loss
 
@@ -410,31 +410,20 @@ def train(train_dataloader, val_dataloader, encoder, decoder, n_epochs, learning
         
             print_val_loss_avg = print_val_loss_total / print_every
             print_val_loss_total = 0
-            wandb.log({"Validation Loss": print_val_loss_avg,"Training loss": print_loss_avg, "Score Bleu": avg_bleu, "Score Meteor": avg_meteor}, step = epoch)
+            wandb.log({"Validation Loss": print_val_loss_avg,"Training loss": print_loss_avg, "Bleu Score": avg_bleu_score}, step = epoch)
             print('%s (%d %d%%) Train Loss: %.4f, Val Loss: %.4f' % (timeSince(start, epoch / n_epochs),
                                                                          epoch, epoch / n_epochs * 100, print_loss_avg, print_val_loss_avg))
-            # Guardar las traducciones en el diccionario
+            
             epoch_translations = {
                 "Epoch": epoch,
-                "Sentences": []
+                "Sentences": translations
             }
-            
-            for idx, (input_sentence, translation) in zip(selected_indices, selected_translations):
-                epoch_translations["Sentences"].append({
-                    "Idx": idx,
-                    "Original": input_sentence,
-                    "Translation": translation,
-                    "Score Bleu": avg_bleu, 
-                    "Score Meteor": avg_meteor
-                })
-
             translations_per_epoch.append(epoch_translations)
 
             # Guardar las traducciones en un archivo JSON
-            with open('translations_per_epoch_exp1.json', 'w') as json_file:
+            with open('translations_per_epoch_DEFI.json', 'w') as json_file:
                 json.dump(translations_per_epoch, json_file, ensure_ascii=False, indent=4)
-
-
+  
         if epoch % plot_every == 0:
             plot_loss_avg = plot_loss_total / plot_every
             plot_losses.append(plot_loss_avg)
@@ -465,9 +454,9 @@ def evaluate(encoder, decoder, sentence, input_lang, output_lang):
 
 
 hidden_size = 128
-batch_size = 32
-epoch = 15
-learning_rate = 0.001
+batch_size = 500
+epoch = 50
+learning_rate = 0.00001
 
 input_lang, output_lang, train_dataloader, val_dataloader = get_dataloaders(batch_size)
 
@@ -481,7 +470,8 @@ wandb.init(project="Machine Translation", config={
                                             "opti": "Adam", #"SDG",
                                             "dataset": "eng-spa",
                                             "hidden_size": hidden_size,
-                                            "batch_size": batch_size} , name="experiment3")
+                                            "batch_size": batch_size} , name="learning rate 0.00001", tags=["-"])
 
 
-train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=5, plot_every=5)
+train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+
