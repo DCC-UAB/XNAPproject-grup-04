@@ -59,7 +59,7 @@ def normalizeString(s):
     s = re.sub(r"[^a-zA-Z!?]+", r" ", s)
     return s.strip()
 
-dataset = './data/cat.txt'
+dataset = './data/spa_sample100.txt'
 
 def readLangs(lang1, lang2, reverse=False):
     print("Reading lines...")
@@ -244,7 +244,7 @@ def tensorsFromPair(pair):
     return (input_tensor, target_tensor)
 
 def get_dataloaders(batch_size, val_split=0.2):
-    input_lang, output_lang, pairs = prepareData('eng', 'spa', True)
+    input_lang, output_lang, pairs = prepareData('eng', 'spa', False)
 
     n = len(pairs)
     input_ids = np.zeros((n, MAX_LENGTH), dtype=np.int32)
@@ -412,7 +412,7 @@ def train(train_dataloader, val_dataloader , encoder, decoder, n_epochs, learnin
             translations_per_epoch.append(epoch_translations)
 
             # Guardar las traducciones en un archivo JSON
-            with open('translations_cat.json', 'w') as json_file:
+            with open('translations.json', 'w') as json_file:
                 json.dump(translations_per_epoch, json_file, ensure_ascii=False, indent=4)
   
         if epoch % plot_every == 0:
@@ -461,7 +461,7 @@ wandb.init(project="Machine Translation", config={
                                             "opti": "RMSprop", #"SDG",
                                             "dataset": "eng-spa",
                                             "hidden_size": hidden_size,
-                                            "batch_size": batch_size} , name="eng-cat", tags=["eng-cat"])
+                                            "batch_size": batch_size} , name="eng-spa", tags=["eng-"])
 
 
 train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)

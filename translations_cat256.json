@@ -1,0 +1,3552 @@
+[
+    {
+        "Epoch": 1,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            }
+        ]
+    },
+    {
+        "Epoch": 2,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            }
+        ]
+    },
+    {
+        "Epoch": 3,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            }
+        ]
+    },
+    {
+        "Epoch": 4,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            }
+        ]
+    },
+    {
+        "Epoch": 5,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            }
+        ]
+    },
+    {
+        "Epoch": 6,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            }
+        ]
+    },
+    {
+        "Epoch": 7,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            }
+        ]
+    },
+    {
+        "Epoch": 8,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            }
+        ]
+    },
+    {
+        "Epoch": 9,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            }
+        ]
+    },
+    {
+        "Epoch": 10,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "",
+                "Bleu Score": 0
+            }
+        ]
+    },
+    {
+        "Epoch": 11,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i",
+                "Bleu Score": 4.515870009358044e-234
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i",
+                "Bleu Score": 3.042769277781409e-236
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i",
+                "Bleu Score": 9.070367381327683e-233
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i",
+                "Bleu Score": 1.2275407386121148e-233
+            }
+        ]
+    },
+    {
+        "Epoch": 12,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i",
+                "Bleu Score": 4.515870009358044e-234
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i",
+                "Bleu Score": 3.042769277781409e-236
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i",
+                "Bleu Score": 9.070367381327683e-233
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i",
+                "Bleu Score": 1.2275407386121148e-233
+            }
+        ]
+    },
+    {
+        "Epoch": 13,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i",
+                "Bleu Score": 4.515870009358044e-234
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i",
+                "Bleu Score": 3.042769277781409e-236
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i",
+                "Bleu Score": 9.070367381327683e-233
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i",
+                "Bleu Score": 1.2275407386121148e-233
+            }
+        ]
+    },
+    {
+        "Epoch": 14,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i",
+                "Bleu Score": 4.515870009358044e-234
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i",
+                "Bleu Score": 3.042769277781409e-236
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i",
+                "Bleu Score": 9.070367381327683e-233
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i",
+                "Bleu Score": 1.2275407386121148e-233
+            }
+        ]
+    },
+    {
+        "Epoch": 15,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i",
+                "Bleu Score": 4.515870009358044e-234
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i",
+                "Bleu Score": 3.042769277781409e-236
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i",
+                "Bleu Score": 9.070367381327683e-233
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i",
+                "Bleu Score": 1.2275407386121148e-233
+            }
+        ]
+    },
+    {
+        "Epoch": 16,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i",
+                "Bleu Score": 4.515870009358044e-234
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i",
+                "Bleu Score": 3.042769277781409e-236
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i",
+                "Bleu Score": 9.070367381327683e-233
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i",
+                "Bleu Score": 1.2275407386121148e-233
+            }
+        ]
+    },
+    {
+        "Epoch": 17,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i",
+                "Bleu Score": 4.515870009358044e-234
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i",
+                "Bleu Score": 3.042769277781409e-236
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i",
+                "Bleu Score": 9.070367381327683e-233
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i",
+                "Bleu Score": 1.2275407386121148e-233
+            }
+        ]
+    },
+    {
+        "Epoch": 18,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i",
+                "Bleu Score": 4.515870009358044e-234
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i",
+                "Bleu Score": 3.042769277781409e-236
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i",
+                "Bleu Score": 9.070367381327683e-233
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i",
+                "Bleu Score": 1.2275407386121148e-233
+            }
+        ]
+    },
+    {
+        "Epoch": 19,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i",
+                "Bleu Score": 4.515870009358044e-234
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i",
+                "Bleu Score": 3.042769277781409e-236
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i",
+                "Bleu Score": 9.070367381327683e-233
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i",
+                "Bleu Score": 1.2275407386121148e-233
+            }
+        ]
+    },
+    {
+        "Epoch": 20,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i",
+                "Bleu Score": 4.515870009358044e-234
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i",
+                "Bleu Score": 3.042769277781409e-236
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i",
+                "Bleu Score": 9.070367381327683e-233
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i",
+                "Bleu Score": 1.2275407386121148e-233
+            }
+        ]
+    },
+    {
+        "Epoch": 21,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i",
+                "Bleu Score": 4.515870009358044e-234
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i",
+                "Bleu Score": 3.042769277781409e-236
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i",
+                "Bleu Score": 9.070367381327683e-233
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i",
+                "Bleu Score": 1.2275407386121148e-233
+            }
+        ]
+    },
+    {
+        "Epoch": 22,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i",
+                "Bleu Score": 4.515870009358044e-234
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i",
+                "Bleu Score": 3.042769277781409e-236
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i",
+                "Bleu Score": 9.070367381327683e-233
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i",
+                "Bleu Score": 1.2275407386121148e-233
+            }
+        ]
+    },
+    {
+        "Epoch": 23,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.495450763465957e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.2275407386121148e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 5.635809992474887e-232
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 2.0732986305800918e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 24,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.495450763465957e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.2275407386121148e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 5.635809992474887e-232
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 2.0732986305800918e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 25,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.495450763465957e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.2275407386121148e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.2575191861870427e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 5.635809992474887e-232
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 26,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.495450763465957e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.2275407386121148e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.2575191861870427e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 5.635809992474887e-232
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 27,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.495450763465957e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.2275407386121148e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.2575191861870427e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 5.635809992474887e-232
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 28,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.495450763465957e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.2275407386121148e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.2575191861870427e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 7.6272394159932085e-233
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 5.635809992474887e-232
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 29,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m",
+                "Bleu Score": 1.0322346066768973e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.2575191861870427e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m",
+                "Bleu Score": 5.487540440520353e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 30,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m",
+                "Bleu Score": 1.0322346066768973e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.2575191861870427e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m",
+                "Bleu Score": 5.487540440520353e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 31,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m",
+                "Bleu Score": 1.0322346066768973e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.2575191861870427e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m",
+                "Bleu Score": 5.487540440520353e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 32,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m",
+                "Bleu Score": 1.0322346066768973e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i you t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 33,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m",
+                "Bleu Score": 1.0322346066768973e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 1.2575191861870427e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 7.6272394159932085e-233
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i you t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 34,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m",
+                "Bleu Score": 1.0322346066768973e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 7.6272394159932085e-233
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 35,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m",
+                "Bleu Score": 1.0322346066768973e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 7.6272394159932085e-233
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i you t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 36,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.196002139245783e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 7.6272394159932085e-233
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 37,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.196002139245783e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 7.6272394159932085e-233
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 38,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m",
+                "Bleu Score": 1.0322346066768973e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 7.6272394159932085e-233
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 39,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.196002139245783e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 7.6272394159932085e-233
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 40,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.196002139245783e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 7.6272394159932085e-233
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 41,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.196002139245783e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 7.6272394159932085e-233
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 42,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.196002139245783e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 7.6272394159932085e-233
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 43,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.196002139245783e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is you",
+                "Bleu Score": 2.614591671051252e-232
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 44,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.196002139245783e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 7.6272394159932085e-233
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 45,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.196002139245783e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 7.6272394159932085e-233
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i is you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 46,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m t",
+                "Bleu Score": 8.196002139245783e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is",
+                "Bleu Score": 7.6272394159932085e-233
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 47,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m t",
+                "Bleu Score": 8.196002139245783e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is you",
+                "Bleu Score": 2.614591671051252e-232
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 48,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m t",
+                "Bleu Score": 8.196002139245783e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is you",
+                "Bleu Score": 2.614591671051252e-232
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 49,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m t",
+                "Bleu Score": 8.196002139245783e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is you",
+                "Bleu Score": 2.614591671051252e-232
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    },
+    {
+        "Epoch": 50,
+        "Sentences": [
+            {
+                "Input Sentence": "aquesta botiga ven llibres vells",
+                "Target Sentence": "this store sells old books",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "em posare en contacte amb tu",
+                "Target Sentence": "i will get in touch with you",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "em fan por els ratpenats",
+                "Target Sentence": "bats scare me",
+                "Predicted Sentence": "i you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no tinc valor per demanar te un prestec",
+                "Target Sentence": "i haven t got the nerve to ask you for a loan",
+                "Predicted Sentence": "i m t",
+                "Bleu Score": 8.196002139245783e-233
+            },
+            {
+                "Input Sentence": "t has perdut no es aixi ?",
+                "Target Sentence": "you are lost aren t you ?",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 4.339365177986787e-232
+            },
+            {
+                "Input Sentence": "massa tard",
+                "Target Sentence": "too late",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "la terra es molt mes gran que la lluna",
+                "Target Sentence": "the earth is much larger than the moon",
+                "Predicted Sentence": "i is you",
+                "Bleu Score": 2.614591671051252e-232
+            },
+            {
+                "Input Sentence": "son paraules buides",
+                "Target Sentence": "those are empty words",
+                "Predicted Sentence": "i you you",
+                "Bleu Score": 0
+            },
+            {
+                "Input Sentence": "no semblen felicos",
+                "Target Sentence": "they don t seem happy",
+                "Predicted Sentence": "i is t",
+                "Bleu Score": 7.107197028258987e-232
+            },
+            {
+                "Input Sentence": "soc venedor",
+                "Target Sentence": "i m a salesperson",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 8.121328445417258e-155
+            },
+            {
+                "Input Sentence": "crec que mai no tornara",
+                "Target Sentence": "i think he ll never return",
+                "Predicted Sentence": "i m you",
+                "Bleu Score": 5.092529201164552e-232
+            }
+        ]
+    }
+]
