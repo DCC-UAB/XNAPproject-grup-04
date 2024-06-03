@@ -1,0 +1,66 @@
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+0m 46s (- 38m 14s) (1 2%) Train Loss: 2.5529, Val Loss: 1.7242
+1m 30s (- 36m 8s) (2 4%) Train Loss: 1.6900, Val Loss: 1.6468
+2m 14s (- 35m 1s) (3 6%) Train Loss: 1.6195, Val Loss: 1.5783
+2m 58s (- 34m 9s) (4 8%) Train Loss: 1.5394, Val Loss: 1.4993
+3m 42s (- 33m 22s) (5 10%) Train Loss: 1.4682, Val Loss: 1.4450
+4m 27s (- 32m 38s) (6 12%) Train Loss: 1.4147, Val Loss: 1.4005
+5m 11s (- 31m 51s) (7 14%) Train Loss: 1.3697, Val Loss: 1.3620
+5m 55s (- 31m 6s) (8 16%) Train Loss: 1.3274, Val Loss: 1.3316
+6m 39s (- 30m 20s) (9 18%) Train Loss: 1.2854, Val Loss: 1.2922
+7m 24s (- 29m 37s) (10 20%) Train Loss: 1.2456, Val Loss: 1.2548
+8m 8s (- 28m 52s) (11 22%) Train Loss: 1.2088, Val Loss: 1.2247
+8m 52s (- 28m 6s) (12 24%) Train Loss: 1.1750, Val Loss: 1.1973
+9m 36s (- 27m 22s) (13 26%) Train Loss: 1.1445, Val Loss: 1.1729
+10m 21s (- 26m 37s) (14 28%) Train Loss: 1.1149, Val Loss: 1.1511
+11m 5s (- 25m 52s) (15 30%) Train Loss: 1.0873, Val Loss: 1.1285
+11m 49s (- 25m 7s) (16 32%) Train Loss: 1.0609, Val Loss: 1.1098
+12m 33s (- 24m 23s) (17 34%) Train Loss: 1.0351, Val Loss: 1.0881
+13m 18s (- 23m 39s) (18 36%) Train Loss: 1.0100, Val Loss: 1.0680
+14m 2s (- 22m 54s) (19 38%) Train Loss: 0.9843, Val Loss: 1.0471
+14m 47s (- 22m 10s) (20 40%) Train Loss: 0.9582, Val Loss: 1.0263
+15m 31s (- 21m 26s) (21 42%) Train Loss: 0.9321, Val Loss: 1.0052
+16m 15s (- 20m 41s) (22 44%) Train Loss: 0.9057, Val Loss: 0.9839
+17m 0s (- 19m 57s) (23 46%) Train Loss: 0.8799, Val Loss: 0.9639
+17m 44s (- 19m 13s) (24 48%) Train Loss: 0.8545, Val Loss: 0.9441
+18m 28s (- 18m 28s) (25 50%) Train Loss: 0.8296, Val Loss: 0.9243
+19m 13s (- 17m 44s) (26 52%) Train Loss: 0.8050, Val Loss: 0.9056
+19m 57s (- 17m 0s) (27 54%) Train Loss: 0.7815, Val Loss: 0.8888
+20m 41s (- 16m 15s) (28 56%) Train Loss: 0.7590, Val Loss: 0.8719
+21m 26s (- 15m 31s) (29 57%) Train Loss: 0.7367, Val Loss: 0.8554
+22m 10s (- 14m 47s) (30 60%) Train Loss: 0.7155, Val Loss: 0.8393
+22m 55s (- 14m 2s) (31 62%) Train Loss: 0.6947, Val Loss: 0.8251
+23m 39s (- 13m 18s) (32 64%) Train Loss: 0.6746, Val Loss: 0.8118
+24m 23s (- 12m 34s) (33 66%) Train Loss: 0.6554, Val Loss: 0.7987
+25m 8s (- 11m 49s) (34 68%) Train Loss: 0.6366, Val Loss: 0.7863
+25m 52s (- 11m 5s) (35 70%) Train Loss: 0.6184, Val Loss: 0.7741
+26m 36s (- 10m 21s) (36 72%) Train Loss: 0.6009, Val Loss: 0.7633
+27m 21s (- 9m 36s) (37 74%) Train Loss: 0.5838, Val Loss: 0.7526
+28m 6s (- 8m 52s) (38 76%) Train Loss: 0.5675, Val Loss: 0.7422
+28m 50s (- 8m 8s) (39 78%) Train Loss: 0.5511, Val Loss: 0.7327
+29m 34s (- 7m 23s) (40 80%) Train Loss: 0.5355, Val Loss: 0.7237
+30m 18s (- 6m 39s) (41 82%) Train Loss: 0.5205, Val Loss: 0.7149
+31m 3s (- 5m 54s) (42 84%) Train Loss: 0.5061, Val Loss: 0.7065
+31m 48s (- 5m 10s) (43 86%) Train Loss: 0.4919, Val Loss: 0.6995
+32m 32s (- 4m 26s) (44 88%) Train Loss: 0.4784, Val Loss: 0.6909
+33m 16s (- 3m 41s) (45 90%) Train Loss: 0.4648, Val Loss: 0.6840
+34m 1s (- 2m 57s) (46 92%) Train Loss: 0.4525, Val Loss: 0.6780
+34m 46s (- 2m 13s) (47 94%) Train Loss: 0.4399, Val Loss: 0.6711
+35m 30s (- 1m 28s) (48 96%) Train Loss: 0.4277, Val Loss: 0.6656
