@@ -1,0 +1,54 @@
+wandb_version: 1
+
+epochs:
+  desc: null
+  value: 50
+learning_rate:
+  desc: null
+  value: 0.0001
+cell_type:
+  desc: null
+  value: GRU
+opti:
+  desc: null
+  value: RMSprop
+dataset:
+  desc: null
+  value: eng-spa
+hidden_size:
+  desc: null
+  value: 512
+batch_size:
+  desc: null
+  value: 500
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.16
+    cli_version: 0.17.0
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1717411765
+    t:
+      1:
+      - 1
+      - 5
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 53
+      - 55
+      3:
+      - 13
+      - 15
+      - 16
+      - 23
+      - 61
+      4: 3.8.16
+      5: 0.17.0
+      8:
+      - 5
+      13: linux-x86_64
