@@ -2,10 +2,10 @@ import random
 
 # Proporciona la ruta al archivo de entrada
 input_filename = 'data/spa.txt'
-output_filename = 'data/spa_sample_frases_cortas.txt'
+output_filename = 'data/spa_sample_frases_largas.txt'
 
 # Número de líneas a seleccionar
-num_lines_to_select = 20000
+num_lines_to_select = 70000
 
 # Función para contar palabras en una línea
 def count_words(line):
@@ -15,8 +15,8 @@ def count_words(line):
 with open(input_filename, 'r', encoding='utf-8') as file:
     lines = file.readlines()
 
-# Filtra las líneas que tienen menos de 6 palabras
-filtered_lines = [line for line in lines if count_words(line) < 8]
+# Filtra las líneas que tienen menos de 8 palabras
+filtered_lines = [line for line in lines if count_words(line) >=11]
 
 # Verifica que hay suficientes líneas para seleccionar
 if len(filtered_lines) < num_lines_to_select:
