@@ -59,7 +59,7 @@ def normalizeString(s):
     s = re.sub(r"[^a-zA-Z!?]+", r" ", s)
     return s.strip()
 
-dataset = './data/cat_sample.txt'
+dataset = './data/cat.txt'
 
 def readLangs(lang1, lang2, reverse=False):
     print("Reading lines...")
