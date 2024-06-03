@@ -382,8 +382,8 @@ def train(train_dataloader, val_dataloader , encoder, decoder, n_epochs, learnin
     print_val_loss_total = 0  # Reset every print_every
     plot_loss_total = 0  # Reset every plot_every
     plot_val_loss_total = 0  # Reset every plot_every
-    encoder_optimizer = optim.Adam(encoder.parameters(), lr=learning_rate)
-    decoder_optimizer = optim.Adam(decoder.parameters(), lr=learning_rate)
+    encoder_optimizer = optim.SGD(encoder.parameters(), lr=learning_rate)
+    decoder_optimizer = optim.SGD(decoder.parameters(), lr=learning_rate)
     criterion = nn.CrossEntropyLoss()
 
     selected_indices = [2,4,6,8,10]
@@ -412,7 +412,7 @@ def train(train_dataloader, val_dataloader , encoder, decoder, n_epochs, learnin
             translations_per_epoch.append(epoch_translations)
 
             # Guardar las traducciones en un archivo JSON
-            with open('translations_optiAdam.json', 'w') as json_file:
+            with open('translations_optiSGD.json', 'w') as json_file:
                 json.dump(translations_per_epoch, json_file, ensure_ascii=False, indent=4)
   
         if epoch % plot_every == 0:
@@ -458,10 +458,10 @@ wandb.init(project="Machine Translation", config={
         									"epochs": epoch, 
                                             "learning_rate": learning_rate ,
                                             "cell_type": 'GRU', #'GRU', LSTM
-                                            "opti": "Adam", #"SDG",
+                                            "opti": "SGD", #"SDG",
                                             "dataset": "eng-spa",
                                             "hidden_size": hidden_size,
-                                            "batch_size": batch_size} , name="Opti Adam", tags=["Optimizer Adam"])
+                                            "batch_size": batch_size} , name="Opti SGD", tags=["Optimizer SGD"])
 
 
 train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
