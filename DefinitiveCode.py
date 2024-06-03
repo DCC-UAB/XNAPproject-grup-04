@@ -84,15 +84,6 @@ def readLangs(lang1, lang2, reverse=False):
 
 MAX_LENGTH = 25
 
-eng_prefixes = (
-    "i am ", "i m ",
-    "he is", "he s ",
-    "she is", "she s ",
-    "you are", "you re ",
-    "we are", "we re ",
-    "they are", "they re "
-)
-
 def filterPair(p):
     return len(p[0].split(' ')) < MAX_LENGTH and \
         len(p[1].split(' ')) < MAX_LENGTH 
@@ -453,7 +444,7 @@ def evaluate(encoder, decoder, sentence, input_lang, output_lang):
     return decoded_words, decoder_attn
 
 
-hidden_size = 64
+hidden_size = 512
 batch_size = 500
 epoch = 50
 learning_rate = 0.0001
@@ -470,7 +461,7 @@ wandb.init(project="Machine Translation", config={
                                             "opti": "Adam", #"SDG",
                                             "dataset": "eng-spa",
                                             "hidden_size": hidden_size,
-                                            "batch_size": batch_size} , name="hidden size", tags=["hidden size"])
+                                            "batch_size": batch_size} , name="Opti Adam", tags=["Optimizer Adam"])
 
 
 train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
