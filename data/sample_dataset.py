@@ -1,5 +1,7 @@
 import random
 
+
+"""
 # Proporciona la ruta al archivo de entrada
 input_filename = 'data/spa.txt'
 output_filename = 'data/spa_sample_frases_largas.txt'
@@ -30,3 +32,24 @@ with open(output_filename, 'w', encoding='utf-8') as file:
     file.writelines(selected_lines)
 
 print(f'{num_lines_to_select} líneas con menos de 6 palabras han sido guardadas en {output_filename}')
+"""
+
+
+
+
+# Define la ruta del archivo de entrada y de salida
+input_filename = 'data/cat.txt'
+output_filename = 'data/cat_sample.txt'
+
+# Lee las líneas del archivo de entrada
+with open(input_filename, "r", encoding="utf-8") as file:
+    lines = file.readlines()
+
+# Desordena las líneas
+random.shuffle(lines)
+
+# Escribe las líneas desordenadas en el archivo de salida
+with open(output_filename, "w", encoding="utf-8") as file:
+    file.writelines(lines)
+
+print("El archivo ha sido desordenado exitosamente.")

@@ -244,7 +244,7 @@ def tensorsFromPair(pair):
     return (input_tensor, target_tensor)
 
 def get_dataloaders(batch_size, val_split=0.2):
-    input_lang, output_lang, pairs = prepareData('eng', 'spa', False)
+    input_lang, output_lang, pairs = prepareData('eng', 'spa', True)
 
     n = len(pairs)
     input_ids = np.zeros((n, MAX_LENGTH), dtype=np.int32)
@@ -461,7 +461,11 @@ wandb.init(project="Machine Translation", config={
                                             "opti": "RMSprop", #"SDG",
                                             "dataset": "eng-spa",
                                             "hidden_size": hidden_size,
+<<<<<<< HEAD
                                             "batch_size": batch_size} , name="frases largas", tags=["comparacion segun longitud de frases"])
+=======
+                                            "batch_size": batch_size} , name="Bidireccionalidad", tags=["Spa - Eng"])
+>>>>>>> bbe0795862e5d4bc132f59552c7aa56249bf62dd
 
 
 train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
