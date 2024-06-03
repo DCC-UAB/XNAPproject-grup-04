@@ -412,7 +412,7 @@ def train(train_dataloader, val_dataloader , encoder, decoder, n_epochs, learnin
             translations_per_epoch.append(epoch_translations)
 
             # Guardar las traducciones en un archivo JSON
-            with open('translations_hidden.json', 'w') as json_file:
+            with open('translations_optiAdam.json', 'w') as json_file:
                 json.dump(translations_per_epoch, json_file, ensure_ascii=False, indent=4)
   
         if epoch % plot_every == 0:
