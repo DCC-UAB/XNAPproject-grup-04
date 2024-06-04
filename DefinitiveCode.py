@@ -288,6 +288,7 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
     decoder.train()
 
     total_loss = 0
+    bleu_scores_training = []
     for data in dataloader:
         input_tensor, target_tensor = data
 
@@ -307,8 +308,19 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
         decoder_optimizer.step()
 
         total_loss += loss.item()
-    
+        # Calcular el score BLEU per cada frase en el batch
+        for i in range(target_tensor.size(0)):  # Iterar sobre les secuencies en el batch
+            target_sentence = sentenceFromIndexes(output_lang, target_tensor[i].tolist())
+            predicted_indexes = torch.argmax(decoder_outputs[i], dim=1).tolist()
+            predicted_sentence = sentenceFromIndexes(output_lang, predicted_indexes)
+            
+            # Calcular BLEU per cada frase
+            bleu = sentence_bleu([target_sentence], predicted_sentence)
+            bleu_scores_training.append(bleu)
+        
     avg_train_loss = total_loss / len(dataloader)
+    avg_bleu_score_training = sum(bleu_scores_training) / len(bleu_scores_training) 
+    
 
     total_val_loss = 0
     bleu_scores = []
@@ -355,7 +367,7 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer, decoder_optimiz
         avg_bleu_score = sum(bleu_scores) / len(bleu_scores)
 
 
-    return avg_train_loss, avg_val_loss, avg_bleu_score, selected_translations
+    return avg_train_loss, avg_val_loss, avg_bleu_score,avg_bleu_score_training, selected_translations
 
 
 import time
@@ -391,7 +403,7 @@ def train(train_dataloader, val_dataloader , encoder, decoder, n_epochs, learnin
     translations_per_epoch = []
 
     for epoch in range(1, n_epochs + 1):
-        train_loss, val_loss, avg_bleu_score, translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+        train_loss, val_loss, avg_bleu_score, avg_bleu_score_training, translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
         print_loss_total += train_loss
         print_val_loss_total += val_loss
 
@@ -401,7 +413,7 @@ def train(train_dataloader, val_dataloader , encoder, decoder, n_epochs, learnin
         
             print_val_loss_avg = print_val_loss_total / print_every
             print_val_loss_total = 0
-            wandb.log({"Validation Loss": print_val_loss_avg,"Training loss": print_loss_avg, "Bleu Score": avg_bleu_score}, step = epoch)
+            wandb.log({"Validation Loss": print_val_loss_avg,"Training loss": print_loss_avg, "Bleu Score Validation": avg_bleu_score, "Bleu Score Training": avg_bleu_score_training}, step = epoch)
             print('%s (%d %d%%) Train Loss: %.4f, Val Loss: %.4f' % (timeSince(start, epoch / n_epochs),
                                                                          epoch, epoch / n_epochs * 100, print_loss_avg, print_val_loss_avg))
             
