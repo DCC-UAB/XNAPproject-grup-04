@@ -1,0 +1,1 @@
+{"Validation Loss": 0.8210888385772706, "Training loss": 0.6310199573636055, "Bleu Score Validation": 0.0491117411700013, "Bleu Score Training": 0.0676334140385302, "_timestamp": 1717548422.9089196, "_runtime": 2440.2525045871735, "_step": 50, "_wandb": {"runtime": 2440}}
