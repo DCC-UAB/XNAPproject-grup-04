@@ -41,12 +41,11 @@ Batch size = 500: La mida del lot, o batch size, determina el nombre d'exemples 
 - Nombre d'èpoques = 50: El nombre d'èpoques determina quantes vegades el model processa l'ensenyament complet durant l'entrenament. Un valor de 50 èpoques s'ha demostrat ser adequat per permetre al model aprendre els patrons necessaris per a una traducció precisa.
 A continuació, es presenten les quatre gràfiques corresponents a les mètriques obtingudes durant l'entrenament del model de traducció. Aquestes mètriques són essencials per avaluar el rendiment del model tant durant el procés d'entrenament com en la seva validació posterior
 
-Per facilitar una millor comprensió dels resultats, hem combinat les dues gràfiques de BLEU Score i les dues gràfiques de Loss en dues gràfiques addicionals. Aquesta combinació permet visualitzar més clarament la relació entre les mètriques d'entrenament i validació, facilitant la identificació de possibles problemes.
-
 
 
 ## Contributors
 Mar Blazquez (1641111@uab.cat)
+Laura Marín ()
 
 Xarxes Neuronals i Aprenentatge Profund
 Grau de Data Engineering 
