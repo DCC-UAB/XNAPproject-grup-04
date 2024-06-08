@@ -39,13 +39,12 @@ Batch size = 500: La mida del lot, o batch size, determina el nombre d'exemples 
 - Hidden size = 512: La mida de la capa oculta és un altre paràmetre clau que afecta la capacitat del model per capturar i aprendre patrons complexos en les dades. Un valor de 512 per a la mida de la capa oculta ha demostrat ser suficient per capturar les complexitats inherents dels patrons de traducció sense sobrecarregar el model amb una complexitat innecessària. 
 - Optimitzador = RMSprop: L'optimitzador RMSprop ha estat seleccionat després de comparar diversos optimitzadors com Adam i SGD. RMSprop adapta la taxa d'aprenentatge per a cada paràmetre individualment, el que ajuda a superar els problemes d'ajustament excessiu i convergència lenta. En els nostres experiments, RMSprop ha mostrat un rendiment superior en termes de pèrdua d'entrenament i validació, així com en la puntuació BLEU, una mesura clau de la qualitat de les traduccions. Aquest optimitzador ha demostrat proporcionar traduccions més precises i consistents.
 - Nombre d'èpoques = 50: El nombre d'èpoques determina quantes vegades el model processa l'ensenyament complet durant l'entrenament. Un valor de 50 èpoques s'ha demostrat ser adequat per permetre al model aprendre els patrons necessaris per a una traducció precisa.
-A continuació, es presenten les quatre gràfiques corresponents a les mètriques obtingudes durant l'entrenament del model de traducció. Aquestes mètriques són essencials per avaluar el rendiment del model tant durant el procés d'entrenament com en la seva validació posterior
 
 
 
 ## Contributors
-Mar Blazquez (1641111@uab.cat)
-Laura Marín ()
+Mar Blazquez (1641111@uab.cat) \n
+Laura Marín (1636713@uab.cat)
 
 Xarxes Neuronals i Aprenentatge Profund
 Grau de Data Engineering 
