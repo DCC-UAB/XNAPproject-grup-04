@@ -43,7 +43,7 @@ Batch size = 500: La mida del lot, o batch size, determina el nombre d'exemples 
 
 
 ## Contributors
-Mar Blazquez (1641111@uab.cat) \n
+Mar Blazquez (1641111@uab.cat)
 Laura Marín (1636713@uab.cat)
 
 Xarxes Neuronals i Aprenentatge Profund
