@@ -1,0 +1,38 @@
+/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+0m 39s (- 32m 9s) (1 2%) Train Loss: 2.2980, Val Loss: 1.7833
+1m 20s (- 32m 6s) (2 4%) Train Loss: 1.7345, Val Loss: 1.6823
+2m 3s (- 32m 11s) (3 6%) Train Loss: 1.6573, Val Loss: 1.6219
+2m 46s (- 32m 0s) (4 8%) Train Loss: 1.5965, Val Loss: 1.5672
+3m 30s (- 31m 33s) (5 10%) Train Loss: 1.5383, Val Loss: 1.5145
+4m 15s (- 31m 11s) (6 12%) Train Loss: 1.4877, Val Loss: 1.4732
+5m 0s (- 30m 43s) (7 14%) Train Loss: 1.4469, Val Loss: 1.4394
+5m 45s (- 30m 15s) (8 16%) Train Loss: 1.4095, Val Loss: 1.4083
+Traceback (most recent call last):
+  File "/home/xnmaster/testproject/XNAPproject-grup-04/CodPrueba.py", line 479, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "/home/xnmaster/testproject/XNAPproject-grup-04/CodPrueba.py", line 406, in train
+    train_loss, val_loss, avg_bleu_score, avg_bleu_score_training, translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "/home/xnmaster/testproject/XNAPproject-grup-04/CodPrueba.py", line 305, in train_epoch
+    loss.backward()
+  File "/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/torch/_tensor.py", line 396, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/torch/autograd/__init__.py", line 173, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

@@ -1,0 +1,47 @@
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+0m 39s (- 32m 4s) (1 2%) Train Loss: 1.8191, Val Loss: 1.5674
+1m 18s (- 31m 20s) (2 4%) Train Loss: 1.5073, Val Loss: 1.4345
+1m 57s (- 30m 39s) (3 6%) Train Loss: 1.3954, Val Loss: 1.3564
+2m 36s (- 30m 0s) (4 8%) Train Loss: 1.3167, Val Loss: 1.2829
+3m 15s (- 29m 21s) (5 10%) Train Loss: 1.2475, Val Loss: 1.2238
+3m 54s (- 28m 42s) (6 12%) Train Loss: 1.1912, Val Loss: 1.1789
+4m 34s (- 28m 3s) (7 14%) Train Loss: 1.1431, Val Loss: 1.1385
+5m 13s (- 27m 24s) (8 16%) Train Loss: 1.1019, Val Loss: 1.1128
+5m 52s (- 26m 46s) (9 18%) Train Loss: 1.0665, Val Loss: 1.0751
+6m 31s (- 26m 7s) (10 20%) Train Loss: 1.0347, Val Loss: 1.0490
+7m 11s (- 25m 28s) (11 22%) Train Loss: 1.0048, Val Loss: 1.0279
+Traceback (most recent call last):
+  File "/home/xnmaster/XNAPproject-grup-04/DefinitiveCode.py", line 467, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "/home/xnmaster/XNAPproject-grup-04/DefinitiveCode.py", line 394, in train
+    train_loss, val_loss, avg_bleu_score, translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "/home/xnmaster/XNAPproject-grup-04/DefinitiveCode.py", line 298, in train_epoch
+    decoder_outputs, _, _ = decoder(encoder_outputs, encoder_hidden, target_tensor)
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xnmaster/XNAPproject-grup-04/DefinitiveCode.py", line 197, in forward
+    decoder_output, decoder_hidden, attn_weights = self.forward_step(
+  File "/home/xnmaster/XNAPproject-grup-04/DefinitiveCode.py", line 222, in forward_step
+    context, attn_weights = self.attention(query, encoder_outputs)
+  File "/anaconda/envs/py38_default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xnmaster/XNAPproject-grup-04/DefinitiveCode.py", line 172, in forward
+    scores = self.Va(torch.tanh(self.Wa(query) + self.Ua(keys)))
+KeyboardInterrupt

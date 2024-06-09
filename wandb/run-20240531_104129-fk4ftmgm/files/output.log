@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 491, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 428, in train
+    train_loss, val_loss = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\CodigoLaura.py", line 348, in train_epoch
+    bleu_score = sentence_bleu([target_sentence.split()], decoded_sentence.split())
+AttributeError: 'list' object has no attribute 'split'

@@ -1,0 +1,12 @@
+Starting Training Loop...
+Epoch 1/10
+Validation Loss: 6.7901, Validation BLEU: 0.0000, Validation METEOR: 0.0000
+0m 4s (- 0m 0s) (50 100%) 0.0992
+Traceback (most recent call last):
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\TrainMar.py", line 253, in <module>
+    main()
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\TrainMar.py", line 250, in main
+    trainIters(encoder1, attn_decoder1, int(args.epochs), train_pairs, val_pairs, print_every=5000, learning_rate=float(args.lr))
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\TrainMar.py", line 212, in trainIters
+    json.dump(translations_per_epoch, json_file, ensure_ascii=False, indent=4)
+NameError: name 'json' is not defined

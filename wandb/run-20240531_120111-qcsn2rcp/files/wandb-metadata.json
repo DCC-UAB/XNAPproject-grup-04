@@ -1,0 +1,45 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.9.0",
+    "heartbeatAt": "2024-05-31T10:01:12.502548",
+    "startedAt": "2024-05-31T10:01:11.765808",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\LAURA\\Deep Learning\\XNAPproject-grup-04\\Codigo2.py",
+    "codePathLocal": "Codigo2.py",
+    "codePath": "Codigo2.py",
+    "git": {
+        "remote": "https://github.com/DCC-UAB/XNAPproject-grup-04.git",
+        "commit": "2797cda6722d65949ff1241ec61a1bcaba1f9e89"
+    },
+    "email": "1636713@uab.com",
+    "root": "C:/Users/LAURA/Deep Learning/XNAPproject-grup-04",
+    "host": "MSILAURA",
+    "username": "LAURA",
+    "executable": "C:\\Users\\LAURA\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "cpu_count": 10,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 1700.0,
+        "min": 0.0,
+        "max": 1700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1700.0,
+            "min": 0.0,
+            "max": 1700.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 953.0830039978027,
+            "used": 118.5197639465332
+        }
+    },
+    "memory": {
+        "total": 15.708599090576172
+    }
+}

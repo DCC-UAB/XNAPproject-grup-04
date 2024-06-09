@@ -1,0 +1,17 @@
+
+0m 20s (- 5m 3s) (5 6%) Train Loss: 2.1096, Val Loss: 1.9641
+0m 40s (- 4m 40s) (10 12%) Train Loss: 1.1351, Val Loss: 1.4790
+0m 59s (- 4m 19s) (15 18%) Train Loss: 0.6814, Val Loss: 1.3285
+1m 19s (- 3m 59s) (20 25%) Train Loss: 0.4044, Val Loss: 1.2837
+1m 39s (- 3m 38s) (25 31%) Train Loss: 0.2414, Val Loss: 1.2854
+1m 59s (- 3m 18s) (30 37%) Train Loss: 0.1497, Val Loss: 1.3120
+2m 18s (- 2m 58s) (35 43%) Train Loss: 0.0997, Val Loss: 1.3512
+2m 38s (- 2m 38s) (40 50%) Train Loss: 0.0706, Val Loss: 1.3988
+2m 58s (- 2m 18s) (45 56%) Train Loss: 0.0536, Val Loss: 1.4394
+3m 18s (- 1m 58s) (50 62%) Train Loss: 0.0436, Val Loss: 1.4788
+3m 37s (- 1m 39s) (55 68%) Train Loss: 0.0365, Val Loss: 1.5162
+3m 57s (- 1m 19s) (60 75%) Train Loss: 0.0314, Val Loss: 1.5470
+4m 17s (- 0m 59s) (65 81%) Train Loss: 0.0300, Val Loss: 1.5751
+4m 37s (- 0m 39s) (70 87%) Train Loss: 0.0265, Val Loss: 1.6126
+4m 57s (- 0m 19s) (75 93%) Train Loss: 0.0247, Val Loss: 1.6361
+5m 16s (- 0m 0s) (80 100%) Train Loss: 0.0228, Val Loss: 1.6716

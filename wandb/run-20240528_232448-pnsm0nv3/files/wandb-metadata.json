@@ -1,0 +1,45 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.0",
+    "heartbeatAt": "2024-05-28T21:24:49.292139",
+    "startedAt": "2024-05-28T21:24:48.592914",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\marbj\\Desktop\\Xarxes Neuronals i Aprenentatge Profund\\ProjecteDL\\XNAPproject-grup-04\\TrainMar.py",
+    "codePathLocal": "TrainMar.py",
+    "codePath": "TrainMar.py",
+    "git": {
+        "remote": "https://github.com/DCC-UAB/XNAPproject-grup-04.git",
+        "commit": "1d19d5d30bd50d7958f1a348aeb810cd9fc0e51e"
+    },
+    "email": "mar.blazquez@autonoma.cat",
+    "root": "C:/Users/marbj/Desktop/Xarxes Neuronals i Aprenentatge Profund/ProjecteDL/XNAPproject-grup-04",
+    "host": "LAPTOP-GH2S6GEQ",
+    "username": "marbj",
+    "executable": "C:\\Users\\marbj\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2300.0,
+        "min": 0.0,
+        "max": 2300.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2300.0,
+            "min": 0.0,
+            "max": 2300.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 256.71874618530273,
+            "used": 196.92468643188477
+        }
+    },
+    "memory": {
+        "total": 14.938488006591797
+    }
+}

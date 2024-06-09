@@ -1,0 +1,45 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.9.0",
+    "heartbeatAt": "2024-06-03T15:16:08.282407",
+    "startedAt": "2024-06-03T15:16:07.339471",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\LAURA\\Deep Learning\\XNAPproject-grup-04\\DefinitiveCode.py",
+    "codePathLocal": "DefinitiveCode.py",
+    "codePath": "DefinitiveCode.py",
+    "git": {
+        "remote": "https://github.com/DCC-UAB/XNAPproject-grup-04.git",
+        "commit": "f103ac43f4784276b673767a0a37ef0b903d90f4"
+    },
+    "email": "1636713@uab.com",
+    "root": "C:/Users/LAURA/Deep Learning/XNAPproject-grup-04",
+    "host": "MSILAURA",
+    "username": "LAURA",
+    "executable": "C:\\Users\\LAURA\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "cpu_count": 10,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 1700.0,
+        "min": 0.0,
+        "max": 1700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1700.0,
+            "min": 0.0,
+            "max": 1700.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 953.0830039978027,
+            "used": 119.57260513305664
+        }
+    },
+    "memory": {
+        "total": 15.708599090576172
+    }
+}

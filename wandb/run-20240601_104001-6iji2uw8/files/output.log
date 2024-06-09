@@ -1,0 +1,12 @@
+
+when
+Traceback (most recent call last):
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 462, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 399, in train
+    train_loss, val_loss, avg_bleu_score, avg_meteor_score = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 350, in train_epoch
+    target_sentences = [val_pairs[idx][0]]
+                        ^^^^^^^^^
+NameError: name 'val_pairs' is not defined

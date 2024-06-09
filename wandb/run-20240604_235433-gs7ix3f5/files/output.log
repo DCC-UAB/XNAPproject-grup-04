@@ -1,0 +1,35 @@
+/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+0m 44s (- 36m 38s) (1 2%) Train Loss: 2.1125, Val Loss: 1.7287
+1m 31s (- 36m 33s) (2 4%) Train Loss: 1.6988, Val Loss: 1.6628
+2m 17s (- 35m 56s) (3 6%) Train Loss: 1.6336, Val Loss: 1.6075
+Traceback (most recent call last):
+  File "/home/xnmaster/testproject/XNAPproject-grup-04/CodPrueba.py", line 528, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "/home/xnmaster/testproject/XNAPproject-grup-04/CodPrueba.py", line 456, in train
+    train_loss, val_loss, avg_bleu_score, avg_bleu_score_training, translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "/home/xnmaster/testproject/XNAPproject-grup-04/CodPrueba.py", line 368, in train_epoch
+    bleu = sentence_bleu([target_sentence], predicted_sentence)
+  File "/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/bleu_score.py", line 107, in sentence_bleu
+    return corpus_bleu(
+  File "/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/bleu_score.py", line 242, in corpus_bleu
+    p_n = smoothing_function(
+  File "/anaconda/envs/azureml_py38_PT_and_TF/lib/python3.8/site-packages/nltk/translate/bleu_score.py", line 552, in method0
+    warnings.warn(_msg)
+KeyboardInterrupt

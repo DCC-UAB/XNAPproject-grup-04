@@ -1,27 +1,51 @@
-# XNAP-Project title (replace it by the title of your project)
-Write here a short summary about your project. The text must include a short introduction and the targeted goals
 
-## Code structure
-You must create as many folders as you consider. You can use the proposed structure or replace it by the one in the base code that you use as starting point. Do not forget to add Markdown files as needed to explain well the code and how to use it.
+# XNAP-Projecte : Machine Translation
+Els objectius d'aquest projecte són diversos i amplis, abordant tant l'optimització del nostre model com la comprensió teòrica del model Seq2Seq en el context de la traducció automàtica.
+En primer lloc, aspirem a aconseguir que el model Seq2Seq funcioni de manera òptima per a la tasca de traducció automàtica. Això implica assegurar que les traduccions generades siguin no només coherents i precises, sinó també fluïdes i naturals. Per a assolir aquest objectiu, ens enfoquem en la millora contínua del model, ajustant els seus paràmetres i provant noves tècniques per augmentar la qualitat de les traduccions. 
+En segon lloc, busquem entendre profundament el funcionament de l'arquitectura Seq2Seq. Això implica estudiar detalladament com el model processa les dades d'entrada i genera les traduccions de sortida. Ens interessa comprendre els mecanismes interns del model, com l'encodificació de les frases d'entrada, el procés de decodificació, la capa d'attention  i com es maneja la informació.
+A més a més, busquem trobar els millors hiperparàmetres per al nostre model fent diversos experiments. Els hiperparàmetres, com la mida de les unitats amagades, el learning rate, els optimitzadors, la mida del batch, i altres factors, tenen un impacte significatiu en el rendiment del model. Mitjançant experiments sistemàtics, provem diferents configuracions per identificar aquells paràmetres que maximitzen l'eficàcia del model. 
+Finalment, ens proposem dur a terme una sèrie d'experiments per provar el model amb dades de diverses llargades i en diferents idiomes. Aquesta investigació té l'objectiu de comprendre com el model Seq2Seq maneja la diversitat lingüística, així com les variacions en la longitud de les frases. Analitzarem com el model processa frases curtes i llargues en diferents llengües, i com aquestes diferències afecten la precisió i la coherència de les traduccions generades.
 
-## Example Code
-The given code is a simple CNN example training on the MNIST dataset. It shows how to set up the [Weights & Biases](https://wandb.ai/site)  package to monitor how your network is learning, or not.
+## DADES
+En aquest projecte hem utilitzat principalment el spa-eng.zip(141543) que conté un fitxer anomenat spa.txt. Aquest fitxer conté parelles d’idiomes a cada línia, primer la frase en anglès i després traduïda al castellà. Com que hi havia masses dades en aquest fitxer, hem agafat 100.000 parells de frases de manera aleatòria pels nostres experiments.
+Per representar cada paraula en un idioma, es fa servir una tècnica anomenada vectorització "one-hot". Aquesta tècnica consisteix a crear un vector de zeros amb un únic un a la posició corresponent a cada paraula. 
+S'utilitza una classe auxiliar anomenada `Lang` per gestionar els índexs únics de cada paraula. Aquests índexs s'usaran com a entrades i objectius de les xarxes neuronals en etapes posteriors. La classe `Lang` conté diccionaris per a les conversions de paraula a índex i d'índex a paraula, així com un comptador de cada paraula.
+El processament dels fitxers de text es realitza en diverses etapes:
+Primer, tots els fitxers estan en format Unicode i es converteixen a ASCII per simplificar el processament.  Després, el fitxer de dades es llegeix i es divideix en línies, i després cada línia es divideix en parells de traducció. Com que els fitxers contenen traduccions de l'anglès al castellà, s'afegeix l'opció d'invertir els parells si voleu traduir del castellà a l'anglès. Finalment, es normalitza el text, convertint-lo a minúscules i eliminant caràcters no desitjats. Després, es filtren els parells de traducció per incloure només frases relativament curtes amb el parametre MAX_LENGHT. 
+Per l’entrenament, es prepara dades transformant frases en parells d'idiomes diferents en índexs numèrics i organitzant-los després en tensors. Aquests tensors representen tant la frase d'entrada com la de sortida, amb un token especial (EOS) afegit al final de cadascuna per indicar la seva conclusió. Finalment, aquestes dades s'agrupen en lots i es passen a través d'un DataLoader, que en facilita la iteració durant l'entrenament del model. Aquest procés assegura que les dades estiguin en el format correcte i estructurat per a l'entrenament efectiu del model de traducció.
 
-Before running the code you have to create a local environment with conda and activate it. The provided [environment.yml](https://github.com/DCC-UAB/XNAP-Project/environment.yml) file has all the required dependencies. Run the following command: ``conda env create --file environment.yml `` to create a conda environment with all the required dependencies and then activate it:
-```
-conda activate xnap-example
-```
 
-To run the example code:
-```
-python main.py
-```
+
+## MODEL
+L’arquitectura del nostre model es basa en els algoritmes Sequence to Sequence (Seq2Seq). El model Seq2Seq és una arquitectura de xarxa neuronal recurrent (RNN) especialitzada en tasques de seqüència a seqüència. Aquesta arquitectura està composta per dos components principals: l'encoder i el decodificador. L'objectiu principal d'aquest model, com ja s’ha esmentat,  és traduir una seqüència d'entrada a una seqüència de sortida.
+L'encoder rep com entrada la seqüència d'entrada i la processa passant-la a través d'un RNN. El seu objectiu és transformar la seqüència d'entrada en un vector fixe de dimensions determinades. Aquest vector codifica la "significació" de la seqüència d'entrada en un punt únic d'un espai multidimensional. La idea és que aquest vector conté tota la informació necessària per a la traducció sense tenir en compte l'ordre exacte o la longitud de la seqüència original.
+El decoder, per la seva banda, rep aquest vector codificat de l'encoder i el converteix de nou en una seqüència. A diferència de l'encoder, el decodificador opera en ordre seqüencial, generant cada paraula de la seqüència de sortida un pas després de l'altre. Aquest procés continua fins que es genera una paraula d'atzar o es completa un límit predefinit.
+La implementació del model seq2seq inclou tant el component d'encoder com el de decoder, així com una capa d'atenció Bahdanau per millorar la traducció al centrar-se en parts rellevants de la seqüència d'entrada durant la generació de la seqüència de sortida. L'EncoderRNN defineix un mida oculta, inicialitza una capa d'incrustació per convertir les entrades categòriques en vectors densos, i una unitat GRU per processar aquestes seqüències. També inclou una capa de dropout per regularitzar el model. En el seu procés, cada entrada es incrustada, s'aplica dropout i després es passa a través de la unitat GRU, que actualitza el seu estat ocult basat en la seqüència d'entrada. Finalment, retorna l'última sortida de la GRU i el seu estat ocult. 
+La capa d'atenció Bahdanau implementa tres capes lineals que transformen les entrades per calcular puntuacions d'atenció. En el seu procés, calcula les puntuacions d'atenció entre una consulta (l'estat ocult del decoder) i totes les claus (les sortides del encoder). Aquestes puntuacions es fan servir per ponderar les claus, creant així un context que combina informació rellevant de la seqüència d'entrada. Retorna aquest context i els pes d'atenció. L'AttnDecoderRNN és similar a l'encoder, però també inclou una instància de BahdanauAttention. Utilitza una GRU per processar les entrades decodificades juntes amb el context d'atenció, i una capa lineal final per reduir la dimensionalitat de la sortida. En el seu procés, inicialitza el tensor d'entrada del decoder i el seu estat ocult amb el darrer estat ocult del encoder. Per cada pas de temps, calcula el context d'atenció basat en l'estat ocult actual i les sortides del encoder, després concatena aquest context amb la entrada incrustada abans de passar-la a través de la GRU. Si hi ha una seqüència de destí proporcionada, es fa servir per alimentar el següent pas; de cas contrari, es fa servir la pròpia predicció del decoder. Al final, concatena totes les sortides i els pes d'atenció, aplicant softmax a les sortides per obtenir probabilitats sobre les possibles sortides.
+
+# Mètriques 
+En el desenvolupament de models de traducció automàtica, les mètriques serveixen per avaluar la qualitat de les prediccions generades pel model. Les tres mètriques principals que s'han utilitzat són el training loss, el validation loss i el score  de Bleu.
+Durant el procés d'entrenament, el training loss mesura la diferència entre les prediccions del model i les etiquetes reals. Aquesta métrica és crucial per monitoritzar si el model està aprenent correctament. Un valor baix de training loss indica que el model està fent prediccions precises en comparació amb les etiquetes reals durant el entrenament.
+Per a la validació, es calcula el validation loss de manera similar al training loss, però utilitzant les dades de validació en lloc de les dades d'entrenament. Aquesta mètrica serveix per estimar com el model es comportarà en nous datos no vistos. Un valor baix de validation loss indica que el model té una bona generalització i pot fer bones prediccions en dades no vistes durant el entrenament.
+Una altra métrica important és el score de Bleu (Bilingual Evaluation Understudy), que és popular per avaluar la qualitat de les traduccions automàtiques. A diferència del training loss i el validation loss, que es basen en la diferència directa entre les prediccions i les etiquetes reals, el score BLEU compara les prediccions del model amb les traduccions de referencia.
+El càlcul del score BLEU implica comparar les paraules generades pel model amb les paraules de referència. El score BLEU es calcula com la mitjana ponderada de les precisions de n-grams de diferents ordres. Una precisió de n-gram és la proporció de n-grams que apareixen en la traducció generada que també apareixen en la traducció humana. Aquests n-grams poden variar des de 1-gram (paraules individuals) fins a 4-grams (grups de quatre paraules).
+El score BLEU varia entre 0 i 1, on 1 indica una perfecta correspondència amb la traducció humana i 0 indica que no hi ha cap correspondència. 
+
+## RESULTAT I MODEL FINAL
+
+Després de realitzar diversos experiments amb l'objectiu d'optimitzar el rendiment del model de traducció automàtica, s'ha arribat a la conclusió que la configuració següent proporciona els millors resultats. A continuació, es detallen els paràmetres seleccionats i les raons que justifiquen la seva elecció:
+- Learning rate = 0.0001: Aquest valor permet que el model aprengui de manera estable i efectiva, evitant els problemes d'oscil·lació associats a una taxa d'aprenentatge massa alta i la convergència lenta associada a una taxa massa baixa. Així, el model aconsegueix una bona generalització, minimitzant el sobreajustament.
+Batch size = 500: La mida del lot, o batch size, determina el nombre d'exemples que el model processa abans d'actualitzar els seus pesos. Una mida de lot de 500 s'ha demostrat ser ideal, ja que proporciona una bona estabilitat durant l'entrenament. A més, aquest valor optimitza l'ús de la memòria i els recursos computacionals disponibles, equilibrant la càrrega entre eficiència i rendiment.
+- Hidden size = 512: La mida de la capa oculta és un altre paràmetre clau que afecta la capacitat del model per capturar i aprendre patrons complexos en les dades. Un valor de 512 per a la mida de la capa oculta ha demostrat ser suficient per capturar les complexitats inherents dels patrons de traducció sense sobrecarregar el model amb una complexitat innecessària. 
+- Optimitzador = RMSprop: L'optimitzador RMSprop ha estat seleccionat després de comparar diversos optimitzadors com Adam i SGD. RMSprop adapta la taxa d'aprenentatge per a cada paràmetre individualment, el que ajuda a superar els problemes d'ajustament excessiu i convergència lenta. En els nostres experiments, RMSprop ha mostrat un rendiment superior en termes de pèrdua d'entrenament i validació, així com en la puntuació BLEU, una mesura clau de la qualitat de les traduccions. Aquest optimitzador ha demostrat proporcionar traduccions més precises i consistents.
+- Nombre d'èpoques = 50: El nombre d'èpoques determina quantes vegades el model processa l'ensenyament complet durant l'entrenament. Un valor de 50 èpoques s'ha demostrat ser adequat per permetre al model aprendre els patrons necessaris per a una traducció precisa.
 
 
 
 ## Contributors
-Write here the name and UAB mail of the group members
+Mar Blazquez (1641111@uab.cat)
+Laura Marín (1636713@uab.cat)
 
 Xarxes Neuronals i Aprenentatge Profund
-Grau de __Write here the name of your estudies (Artificial Intelligence, Data Engineering or Computational Mathematics & Data analyitics)__, 
+Grau de Data Engineering 
 UAB, 2023

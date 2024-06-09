@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\Codigo2.py", line 500, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\Codigo2.py", line 431, in train
+    train_loss, val_loss = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\Codigo2.py", line 352, in train_epoch
+    meteor_score_value = meteor_score([target_sentence], decoded_words)
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\meteor_score.py", line 397, in meteor_score
+    return max(
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\meteor_score.py", line 398, in <genexpr>
+    single_meteor_score(
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\meteor_score.py", line 326, in single_meteor_score
+    enum_hypothesis, enum_reference = _generate_enums(
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\meteor_score.py", line 38, in _generate_enums
+    raise TypeError(
+TypeError: "reference" expects pre-tokenized reference (Iterable[str]): don t shut your eyes SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS
+Decoded Sentence: detained airmail something mug crowd headquarters hint ground framework too connection licorice pop fiber hazelnuts fully scientist shuffle sheet interrupted comment fingerprints explaining examine despite
+Target Sentence: don t shut your eyes SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS

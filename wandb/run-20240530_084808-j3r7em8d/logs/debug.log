@@ -1,0 +1,22 @@
+2024-05-30 08:48:08,514 INFO    MainThread:27115 [wandb_setup.py:_flush():76] Current SDK version is 0.17.0
+2024-05-30 08:48:08,514 INFO    MainThread:27115 [wandb_setup.py:_flush():76] Configure stats pid to 27115
+2024-05-30 08:48:08,514 INFO    MainThread:27115 [wandb_setup.py:_flush():76] Loading settings from /home/xnmaster/.config/wandb/settings
+2024-05-30 08:48:08,514 INFO    MainThread:27115 [wandb_setup.py:_flush():76] Loading settings from /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/settings
+2024-05-30 08:48:08,514 INFO    MainThread:27115 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-05-30 08:48:08,514 INFO    MainThread:27115 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-05-30 08:48:08,514 INFO    MainThread:27115 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'CodigoMar.py', 'program_abspath': '/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoMar.py', 'program': '/home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/CodigoMar.py'}
+2024-05-30 08:48:08,514 INFO    MainThread:27115 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-05-30 08:48:08,514 INFO    MainThread:27115 [wandb_init.py:_log_setup():520] Logging user logs to /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240530_084808-j3r7em8d/logs/debug.log
+2024-05-30 08:48:08,514 INFO    MainThread:27115 [wandb_init.py:_log_setup():521] Logging internal logs to /home/xnmaster/Projecte/XNAPproject-grup-04/XNAPproject-grup-04/wandb/run-20240530_084808-j3r7em8d/logs/debug-internal.log
+2024-05-30 08:48:08,514 INFO    MainThread:27115 [wandb_init.py:init():560] calling init triggers
+2024-05-30 08:48:08,515 INFO    MainThread:27115 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {'epochs': 50, 'learning_rate': 0.001, 'cell_type': 'GRU', 'opti': 'Adam', 'dataset': 'eng-spa', 'hidden_size': 128, 'batch_size': 32}
+2024-05-30 08:48:08,515 INFO    MainThread:27115 [wandb_init.py:init():610] starting backend
+2024-05-30 08:48:08,515 INFO    MainThread:27115 [wandb_init.py:init():614] setting up manager
+2024-05-30 08:48:08,516 INFO    MainThread:27115 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-05-30 08:48:08,517 INFO    MainThread:27115 [wandb_init.py:init():622] backend started and connected
+2024-05-30 08:48:08,519 INFO    MainThread:27115 [wandb_init.py:init():711] updated telemetry
+2024-05-30 08:48:08,549 INFO    MainThread:27115 [wandb_init.py:init():744] communicating run to backend with 90.0 second timeout
+2024-05-30 08:48:08,940 INFO    MainThread:27115 [wandb_run.py:_on_init():2396] communicating current version
+2024-05-30 08:48:08,972 INFO    MainThread:27115 [wandb_run.py:_on_init():2405] got version response 
+2024-05-30 08:48:08,972 INFO    MainThread:27115 [wandb_init.py:init():795] starting run threads in backend

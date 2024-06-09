@@ -1,0 +1,49 @@
+Starting Training Loop...
+Epoch 1/10
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/anaconda/envs/py38_default/lib/python3.8/site-packages/nltk/translate/bleu_score.py:552: UserWarning:
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+Validation Loss: 4.7143, Validation BLEU: 0.0000, Validation METEOR: 0.1544
+4m 8s (- 0m 0s) (15000 100%) 14.0614
+Epoch 2/10
+Validation Loss: 4.4323, Validation BLEU: 0.0000, Validation METEOR: 0.1688
+8m 21s (- 0m 0s) (15000 100%) 12.4127
+Epoch 3/10
+Validation Loss: 4.2703, Validation BLEU: 0.0000, Validation METEOR: 0.1863
+12m 32s (- 0m 0s) (15000 100%) 11.7282
+Epoch 4/10
+Validation Loss: 4.2101, Validation BLEU: 0.0000, Validation METEOR: 0.2048
+16m 41s (- 0m 0s) (15000 100%) 11.1067
+Epoch 5/10
+Validation Loss: 4.0945, Validation BLEU: 0.0001, Validation METEOR: 0.2123
+20m 52s (- 0m 0s) (15000 100%) 10.6488
+Epoch 6/10
+Validation Loss: 3.9892, Validation BLEU: 0.0005, Validation METEOR: 0.2330
+25m 1s (- 0m 0s) (15000 100%) 10.1783
+Epoch 7/10
+Validation Loss: 3.8982, Validation BLEU: 0.0009, Validation METEOR: 0.2446
+29m 10s (- 0m 0s) (15000 100%) 9.8543
+Epoch 8/10
+Validation Loss: 3.8883, Validation BLEU: 0.0010, Validation METEOR: 0.2521
+33m 13s (- 0m 0s) (15000 100%) 9.5420
+Epoch 9/10
+Validation Loss: 3.7903, Validation BLEU: 0.0012, Validation METEOR: 0.2606
+37m 16s (- 0m 0s) (15000 100%) 9.2803
+Epoch 10/10
+Validation Loss: 3.7536, Validation BLEU: 0.0018, Validation METEOR: 0.2641
+41m 18s (- 0m 0s) (15000 100%) 9.0015

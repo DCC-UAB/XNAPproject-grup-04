@@ -1,0 +1,300 @@
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  []
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  []
+0m 3s (- 2m 52s) (1 2%) Train Loss: 4.1985, Val Loss: 2.5325
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  []
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  []
+0m 3s (- 1m 32s) (2 4%) Train Loss: 2.6525, Val Loss: 1.6121
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  []
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  []
+0m 4s (- 1m 5s) (3 6%) Train Loss: 1.7633, Val Loss: 1.4262
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  []
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  []
+0m 4s (- 0m 51s) (4 8%) Train Loss: 1.5517, Val Loss: 1.4444
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  []
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  []
+0m 4s (- 0m 43s) (5 10%) Train Loss: 1.5493, Val Loss: 1.4411
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  []
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  []
+0m 5s (- 0m 37s) (6 12%) Train Loss: 1.4986, Val Loss: 1.3970
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  []
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  []
+0m 5s (- 0m 33s) (7 14%) Train Loss: 1.4035, Val Loss: 1.3500
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  []
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  []
+0m 5s (- 0m 30s) (8 16%) Train Loss: 1.3078, Val Loss: 1.3304
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  []
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  []
+0m 6s (- 0m 27s) (9 18%) Train Loss: 1.2339, Val Loss: 1.3351
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['que']
+0m 6s (- 0m 26s) (10 20%) Train Loss: 1.1995, Val Loss: 1.3466
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['les', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['les', 'que']
+0m 6s (- 0m 24s) (11 22%) Train Loss: 1.1680, Val Loss: 1.3523
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['les', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['les', 'que', 'que']
+0m 7s (- 0m 22s) (12 24%) Train Loss: 1.1271, Val Loss: 1.3507
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['les', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['les', 'que', 'la', 'que']
+0m 7s (- 0m 21s) (13 26%) Train Loss: 1.0809, Val Loss: 1.3453
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['no', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['no', 'que', 'la']
+0m 7s (- 0m 20s) (14 28%) Train Loss: 1.0252, Val Loss: 1.3403
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['no', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['no', 'que', 'la']
+0m 8s (- 0m 19s) (15 30%) Train Loss: 0.9707, Val Loss: 1.3385
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['no', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['no', 'que', 'la']
+0m 8s (- 0m 18s) (16 32%) Train Loss: 0.9147, Val Loss: 1.3411
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['no', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['no', 'que', 'la']
+0m 8s (- 0m 17s) (17 34%) Train Loss: 0.8727, Val Loss: 1.3466
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['no', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['no', 'que', 'la']
+0m 9s (- 0m 16s) (18 36%) Train Loss: 0.8236, Val Loss: 1.3529
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['a', 'no', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['a', 'que', 'la']
+0m 9s (- 0m 15s) (19 38%) Train Loss: 0.7850, Val Loss: 1.3578
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['a', 'no', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['a', 'que', 'la', 'recuerdo']
+0m 9s (- 0m 14s) (20 40%) Train Loss: 0.7456, Val Loss: 1.3601
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['a', 'no', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['a', 'que', 'la', 'recuerdo']
+0m 10s (- 0m 14s) (21 42%) Train Loss: 0.7063, Val Loss: 1.3598
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['a', 'no', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['a', 'que', 'la', 'recuerdo']
+0m 10s (- 0m 13s) (22 44%) Train Loss: 0.6588, Val Loss: 1.3593
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['a', 'no', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['a', 'encantaste', 'la', 'recuerdo']
+0m 10s (- 0m 12s) (23 46%) Train Loss: 0.6253, Val Loss: 1.3616
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['a', 'no', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['a', 'encantaste', 'la', 'recuerdo']
+0m 11s (- 0m 12s) (24 48%) Train Loss: 0.5869, Val Loss: 1.3668
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['a', 'no', 'que', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['a', 'encantaste', 'la', 'recuerdo']
+0m 11s (- 0m 11s) (25 50%) Train Loss: 0.5477, Val Loss: 1.3764
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['a', 'que', 'que', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['a', 'encantaste', 'la', 'recuerdo']
+0m 11s (- 0m 11s) (26 52%) Train Loss: 0.5022, Val Loss: 1.3892
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['a', 'que', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['a', 'encantaste', 'la', 'recuerdo']
+0m 12s (- 0m 10s) (27 54%) Train Loss: 0.4771, Val Loss: 1.4036
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['a', 'que', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['a', 'encantaste', 'la', 'recuerdo']
+0m 12s (- 0m 9s) (28 56%) Train Loss: 0.4341, Val Loss: 1.4187
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['a', 'que', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['a', 'encantaste', 'la', 'recuerdo']
+0m 12s (- 0m 9s) (29 57%) Train Loss: 0.3979, Val Loss: 1.4328
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['a', 'que', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['a', 'encantaste', 'la', 'recuerdo']
+0m 13s (- 0m 8s) (30 60%) Train Loss: 0.3662, Val Loss: 1.4442
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['a', 'que', 'que']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['a', 'encantaste', 'la', 'recuerdo']
+0m 13s (- 0m 8s) (31 62%) Train Loss: 0.3405, Val Loss: 1.4535
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['cuando', 'que', 'que', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['cuando', 'encantaste', 'la', 'recuerdo']
+0m 13s (- 0m 7s) (32 64%) Train Loss: 0.3180, Val Loss: 1.4603
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['cuando', 'que', 'que', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['cuando', 'encantaste', 'la', 'recuerdo']
+0m 14s (- 0m 7s) (33 66%) Train Loss: 0.2888, Val Loss: 1.4660
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['cuando', 'que', 'que', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['cuando', 'encantaste', 'la', 'recuerdo']
+0m 14s (- 0m 6s) (34 68%) Train Loss: 0.2698, Val Loss: 1.4714
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['cuando', 'que', 'que', 'que', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['cuando', 'encantaste', 'la', 'recuerdo']
+0m 14s (- 0m 6s) (35 70%) Train Loss: 0.2481, Val Loss: 1.4768
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['cuando', 'que', 'que', 'que', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['cuando', 'encantaste', 'la', 'recuerdo']
+0m 15s (- 0m 5s) (36 72%) Train Loss: 0.2297, Val Loss: 1.4826
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['cuando', 'que', 'que', 'que', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['cuando', 'encantaste', 'la', 'recuerdo']
+0m 15s (- 0m 5s) (37 74%) Train Loss: 0.2130, Val Loss: 1.4898
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['cuando', 'que', 'que', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['cuando', 'encantaste', 'la', 'recuerdo']
+0m 16s (- 0m 5s) (38 76%) Train Loss: 0.1990, Val Loss: 1.4986
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['cuando', 'no', 'que', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['cuando', 'encantaste', 'la', 'recuerdo']
+0m 16s (- 0m 4s) (39 78%) Train Loss: 0.1845, Val Loss: 1.5087
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['cuando', 'no', 'que', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['cuando', 'encantaste', 'la', 'recuerdo']
+0m 16s (- 0m 4s) (40 80%) Train Loss: 0.1714, Val Loss: 1.5196
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['me', 'no', 'que', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['por', 'encantaste', 'la', 'recuerdo']
+0m 17s (- 0m 3s) (41 82%) Train Loss: 0.1617, Val Loss: 1.5311
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['me', 'no', 'que', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['por', 'encantaste', 'la', 'recuerdo']
+0m 17s (- 0m 3s) (42 84%) Train Loss: 0.1529, Val Loss: 1.5425
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['me', 'no', 'que', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['por', 'encantaste', 'la', 'recuerdo']
+0m 17s (- 0m 2s) (43 86%) Train Loss: 0.1428, Val Loss: 1.5531
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['me', 'no', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['por', 'encantaste', 'la', 'recuerdo']
+0m 18s (- 0m 2s) (44 88%) Train Loss: 0.1383, Val Loss: 1.5624
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['me', 'no', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['por', 'encantaste', 'la', 'recuerdo']
+0m 19s (- 0m 2s) (45 90%) Train Loss: 0.1301, Val Loss: 1.5703
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['me', 'no', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['por', 'encantaste', 'la', 'recuerdo']
+0m 19s (- 0m 1s) (46 92%) Train Loss: 0.1223, Val Loss: 1.5766
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['me', 'no', 'que', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['por', 'encantaste', 'la', 'recuerdo']
+0m 19s (- 0m 1s) (47 94%) Train Loss: 0.1175, Val Loss: 1.5813
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['me', 'no', 'que', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['por', 'encantaste', 'la', 'recuerdo']
+0m 20s (- 0m 0s) (48 96%) Train Loss: 0.1107, Val Loss: 1.5845
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['me', 'no', 'que', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['por', 'encantaste', 'la', 'recuerdo']
+0m 20s (- 0m 0s) (49 98%) Train Loss: 0.1065, Val Loss: 1.5868
+2
+['i', 'plan', 'to', 'get', 'a', 'job', 'as', 'soon', 'as', 'i', 'can'] ['planeo', 'conseguir', 'un', 'empleo', 'tan', 'pronto', 'como', 'pueda']
+Predictet sentences:  ['me', 'no', 'que', 'la', 'la', 'la']
+['which', 'is', 'cheaper', '?'] ['cual', 'es', 'mas', 'barata', '?']
+Predictet sentences:  ['por', 'encantaste', 'la', 'recuerdo']
+0m 21s (- 0m 0s) (50 100%) Train Loss: 0.1013, Val Loss: 1.5888

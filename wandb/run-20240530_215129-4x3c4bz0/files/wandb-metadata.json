@@ -1,0 +1,45 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.0",
+    "heartbeatAt": "2024-05-30T19:51:30.510248",
+    "startedAt": "2024-05-30T19:51:29.259545",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\marbj\\Desktop\\Xarxes Neuronals i Aprenentatge Profund\\ProjecteDL\\XNAPproject-grup-04\\CodigoLaura.py",
+    "codePathLocal": "CodigoLaura.py",
+    "codePath": "CodigoLaura.py",
+    "git": {
+        "remote": "https://github.com/DCC-UAB/XNAPproject-grup-04.git",
+        "commit": "b278015c45cf749b1e12c13fef25bfb66354e3ce"
+    },
+    "email": "mar.blazquez@autonoma.cat",
+    "root": "C:/Users/marbj/Desktop/Xarxes Neuronals i Aprenentatge Profund/ProjecteDL/XNAPproject-grup-04",
+    "host": "LAPTOP-GH2S6GEQ",
+    "username": "marbj",
+    "executable": "C:\\Users\\marbj\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2300.0,
+        "min": 0.0,
+        "max": 2300.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2300.0,
+            "min": 0.0,
+            "max": 2300.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 256.71874618530273,
+            "used": 203.76930236816406
+        }
+    },
+    "memory": {
+        "total": 14.938488006591797
+    }
+}

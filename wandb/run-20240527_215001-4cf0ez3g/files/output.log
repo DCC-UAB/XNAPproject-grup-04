@@ -1,0 +1,17 @@
+
+Starting Training Loop...
+5m 24s (- 75m 40s) (5000 6%) 5.1982 (Training Accuracy: 0.1721) (Validation Loss: 3.7971, Validation Accuracy: 0.0296)
+11m 27s (- 74m 30s) (10000 13%) 5.0896 (Training Accuracy: 0.2343) (Validation Loss: 4.9750, Validation Accuracy: 0.0447)
+17m 25s (- 69m 43s) (15000 20%) 5.0084 (Training Accuracy: 0.2529) (Validation Loss: 4.6156, Validation Accuracy: 0.0420)
+23m 47s (- 65m 24s) (20000 26%) 4.9383 (Training Accuracy: 0.2632) (Validation Loss: 4.9769, Validation Accuracy: 0.0661)
+30m 1s (- 60m 3s) (25000 33%) 4.8726 (Training Accuracy: 0.2655) (Validation Loss: 4.9810, Validation Accuracy: 0.0603)
+36m 22s (- 54m 34s) (30000 40%) 4.8325 (Training Accuracy: 0.2724) (Validation Loss: 5.0405, Validation Accuracy: 0.0785)
+42m 23s (- 48m 27s) (35000 46%) 4.7408 (Training Accuracy: 0.2921) (Validation Loss: 4.7888, Validation Accuracy: 0.0752)
+48m 33s (- 42m 29s) (40000 53%) 4.6692 (Training Accuracy: 0.3016) (Validation Loss: 4.8538, Validation Accuracy: 0.0859)
+55m 33s (- 37m 2s) (45000 60%) 4.5876 (Training Accuracy: 0.3120) (Validation Loss: 5.3274, Validation Accuracy: 0.1308)
+61m 56s (- 30m 58s) (50000 66%) 4.5298 (Training Accuracy: 0.3208) (Validation Loss: 4.9074, Validation Accuracy: 0.1008)
+68m 4s (- 24m 45s) (55000 73%) 4.4767 (Training Accuracy: 0.3273) (Validation Loss: 4.6895, Validation Accuracy: 0.0924)
+75m 7s (- 18m 46s) (60000 80%) 4.4726 (Training Accuracy: 0.3242) (Validation Loss: 5.4369, Validation Accuracy: 0.1480)
+81m 15s (- 12m 30s) (65000 86%) 4.4122 (Training Accuracy: 0.3338) (Validation Loss: 4.6661, Validation Accuracy: 0.0972)
+87m 46s (- 6m 16s) (70000 93%) 4.3756 (Training Accuracy: 0.3359) (Validation Loss: 4.9242, Validation Accuracy: 0.1218)
+94m 0s (- 0m 0s) (75000 100%) 4.3149 (Training Accuracy: 0.3409) (Validation Loss: 4.7234, Validation Accuracy: 0.1068)

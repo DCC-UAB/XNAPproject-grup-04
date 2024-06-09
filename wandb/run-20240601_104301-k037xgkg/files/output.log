@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 462, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch,val_pairs, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 399, in train
+    train_loss, val_loss, avg_bleu_score, avg_meteor_score = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader, val_pairs)
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 355, in train_epoch
+    meteor = meteor_score([' '.join(target_sentences)], decoded_sentence)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marbj\AppData\Local\Programs\Python\Python311\Lib\site-packages\nltk\translate\meteor_score.py", line 397, in meteor_score
+    return max(
+           ^^^^
+  File "C:\Users\marbj\AppData\Local\Programs\Python\Python311\Lib\site-packages\nltk\translate\meteor_score.py", line 398, in <genexpr>
+    single_meteor_score(
+  File "C:\Users\marbj\AppData\Local\Programs\Python\Python311\Lib\site-packages\nltk\translate\meteor_score.py", line 326, in single_meteor_score
+    enum_hypothesis, enum_reference = _generate_enums(
+                                      ^^^^^^^^^^^^^^^^
+  File "C:\Users\marbj\AppData\Local\Programs\Python\Python311\Lib\site-packages\nltk\translate\meteor_score.py", line 33, in _generate_enums
+    raise TypeError(
+TypeError: "hypothesis" expects pre-tokenized hypothesis (Iterable[str]):

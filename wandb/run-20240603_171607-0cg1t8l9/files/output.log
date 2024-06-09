@@ -1,0 +1,15 @@
+
+0m 13s (- 10m 52s) (1 2%) Train Loss: 4.1402, Val Loss: 2.1562
+0m 25s (- 10m 16s) (2 4%) Train Loss: 2.0945, Val Loss: 1.9404
+Traceback (most recent call last):
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\DefinitiveCode.py", line 467, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\DefinitiveCode.py", line 394, in train
+    train_loss, val_loss, avg_bleu_score, translations = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\DefinitiveCode.py", line 304, in train_epoch
+    loss.backward()
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\autograd\__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

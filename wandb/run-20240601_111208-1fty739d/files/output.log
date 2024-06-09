@@ -1,0 +1,12 @@
+
+2
+Traceback (most recent call last):
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 456, in <module>
+    train(train_dataloader, val_dataloader, encoder, decoder, epoch, learning_rate =learning_rate, print_every=1, plot_every=5)
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 393, in train
+    train_loss, val_loss, avg_bleu_score = train_epoch(train_dataloader, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, val_dataloader)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\CodigoLaura.py", line 343, in train_epoch
+    input_sentence = sentenceFromIndexes(input_lang, input_tensor[j].tolist())
+                                                                  ^
+NameError: name 'j' is not defined

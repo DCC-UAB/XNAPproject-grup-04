@@ -1,0 +1,28 @@
+2024-06-01 10:52:00,324 INFO    MainThread:25392 [wandb_setup.py:_flush():76] Current SDK version is 0.17.0
+2024-06-01 10:52:00,324 INFO    MainThread:25392 [wandb_setup.py:_flush():76] Configure stats pid to 25392
+2024-06-01 10:52:00,325 INFO    MainThread:25392 [wandb_setup.py:_flush():76] Loading settings from C:\Users\marbj\.config\wandb\settings
+2024-06-01 10:52:00,325 INFO    MainThread:25392 [wandb_setup.py:_flush():76] Loading settings from C:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\wandb\settings
+2024-06-01 10:52:00,325 INFO    MainThread:25392 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-06-01 10:52:00,325 INFO    MainThread:25392 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-01 10:52:00,326 INFO    MainThread:25392 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'CodigoLaura.py', 'program_abspath': 'c:\\Users\\marbj\\Desktop\\Xarxes Neuronals i Aprenentatge Profund\\ProjecteDL\\XNAPproject-grup-04\\CodigoLaura.py', 'program': 'c:\\Users\\marbj\\Desktop\\Xarxes Neuronals i Aprenentatge Profund\\ProjecteDL\\XNAPproject-grup-04\\CodigoLaura.py'}
+2024-06-01 10:52:00,326 INFO    MainThread:25392 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-06-01 10:52:00,327 INFO    MainThread:25392 [wandb_init.py:_log_setup():520] Logging user logs to C:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\wandb\run-20240601_105200-3h2w7a0e\logs\debug.log
+2024-06-01 10:52:00,327 INFO    MainThread:25392 [wandb_init.py:_log_setup():521] Logging internal logs to C:\Users\marbj\Desktop\Xarxes Neuronals i Aprenentatge Profund\ProjecteDL\XNAPproject-grup-04\wandb\run-20240601_105200-3h2w7a0e\logs\debug-internal.log
+2024-06-01 10:52:00,327 INFO    MainThread:25392 [wandb_init.py:init():560] calling init triggers
+2024-06-01 10:52:00,328 INFO    MainThread:25392 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {'epochs': 50, 'learning_rate': 0.001, 'cell_type': 'GRU', 'opti': 'Adam', 'dataset': 'eng-spa', 'hidden_size': 256, 'batch_size': 128}
+2024-06-01 10:52:00,328 INFO    MainThread:25392 [wandb_init.py:init():610] starting backend
+2024-06-01 10:52:00,328 INFO    MainThread:25392 [wandb_init.py:init():614] setting up manager
+2024-06-01 10:52:00,334 INFO    MainThread:25392 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-06-01 10:52:00,340 INFO    MainThread:25392 [wandb_init.py:init():622] backend started and connected
+2024-06-01 10:52:00,354 INFO    MainThread:25392 [wandb_init.py:init():711] updated telemetry
+2024-06-01 10:52:00,500 INFO    MainThread:25392 [wandb_init.py:init():744] communicating run to backend with 90.0 second timeout
+2024-06-01 10:52:01,187 INFO    MainThread:25392 [wandb_run.py:_on_init():2396] communicating current version
+2024-06-01 10:52:01,416 INFO    MainThread:25392 [wandb_run.py:_on_init():2405] got version response 
+2024-06-01 10:52:01,417 INFO    MainThread:25392 [wandb_init.py:init():795] starting run threads in backend
+2024-06-01 10:52:02,147 INFO    MainThread:25392 [wandb_run.py:_console_start():2374] atexit reg
+2024-06-01 10:52:02,147 INFO    MainThread:25392 [wandb_run.py:_redirect():2229] redirect: wrap_raw
+2024-06-01 10:52:02,148 INFO    MainThread:25392 [wandb_run.py:_redirect():2294] Wrapping output streams.
+2024-06-01 10:52:02,148 INFO    MainThread:25392 [wandb_run.py:_redirect():2319] Redirects installed.
+2024-06-01 10:52:02,152 INFO    MainThread:25392 [wandb_init.py:init():838] run started, returning control to user process
+2024-06-01 10:52:13,805 WARNING MsgRouterThr:25392 [router.py:message_loop():77] message_loop has been closed

@@ -1,0 +1,20 @@
+Starting Training Loop...
+Epoch 1/10
+Traceback (most recent call last):
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\TrainMar.py", line 249, in <module>
+    main()
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\TrainMar.py", line 246, in main
+    trainIters(encoder1, attn_decoder1, int(args.epochs), train_pairs, val_pairs, print_every=5000, learning_rate=float(args.lr))
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\TrainMar.py", line 182, in trainIters
+    val_loss, val_bleu, val_meteor, selected_translations = validate(encoder, decoder, val_pairs, selected_indices, criterion=criterion)
+  File "c:\Users\LAURA\Deep Learning\XNAPproject-grup-04\TrainMar.py", line 140, in validate
+    total_meteor += meteor_score(reference, ' '.join(hypothesis))
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\meteor_score.py", line 397, in meteor_score
+    return max(
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\meteor_score.py", line 398, in <genexpr>
+    single_meteor_score(
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\meteor_score.py", line 326, in single_meteor_score
+    enum_hypothesis, enum_reference = _generate_enums(
+  File "C:\Users\LAURA\AppData\Local\Programs\Python\Python39\lib\site-packages\nltk\translate\meteor_score.py", line 33, in _generate_enums
+    raise TypeError(
+TypeError: "hypothesis" expects pre-tokenized hypothesis (Iterable[str]):   resistieron
